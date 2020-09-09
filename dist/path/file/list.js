@@ -7,7 +7,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../list", "../string/extension", "../string/replace-extension", "../string/file", "@dikac/t-string/safe-cast", "../string/replace-file", "../string/name", "../string/replace-name"], factory);
+        define(["require", "exports", "../list", "../string/extension", "../string/replace-extension", "../string/file", "@dikac/t-string/safe-cast", "../string/replace-file", "../string/name", "../string/replace-name", "./standard", "@dikac/t-string/remove-suffix-character"], factory);
     }
 })(function (require, exports) {
     "use strict";
@@ -20,6 +20,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     const replace_file_1 = __importDefault(require("../string/replace-file"));
     const name_1 = __importDefault(require("../string/name"));
     const replace_name_1 = __importDefault(require("../string/replace-name"));
+    const standard_1 = __importDefault(require("./standard"));
+    const remove_suffix_character_1 = __importDefault(require("@dikac/t-string/remove-suffix-character"));
     class List extends list_1.default {
         constructor(segments = [], delimiter = '/', delimiters = '/\\:') {
             super(segments, delimiter, delimiters);
@@ -30,6 +32,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
                 return extension_1.default(last);
             }
             return '';
+        }
+        set dir(dir) {
+            const datas = [dir, this.file];
+            this.splice(0);
+            this.push(...datas);
+            this.split();
+        }
+        get dir() {
+            let standard = new standard_1.default(this.join(this.delimiter[0]), this.delimiter, this.delimiters);
+            return remove_suffix_character_1.default(standard.dir, this.delimiter[0]);
         }
         set extension(extension) {
             let last = this[this.length - 1];

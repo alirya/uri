@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-uri",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",

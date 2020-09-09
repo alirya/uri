@@ -7,7 +7,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../standard", "../string/extension", "../string/replace-extension", "../string/name", "../string/file", "../string/replace-name", "../string/replace-file", "@dikac/t-string/safe-cast"], factory);
+        define(["require", "exports", "../standard", "../string/extension", "../string/replace-extension", "../string/name", "../string/file", "../string/replace-name", "../string/replace-file", "@dikac/t-string/safe-cast", "../string/join", "@dikac/t-string/remove-suffix-character"], factory);
     }
 })(function (require, exports) {
     "use strict";
@@ -20,9 +20,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     const replace_name_1 = __importDefault(require("../string/replace-name"));
     const replace_file_1 = __importDefault(require("../string/replace-file"));
     const safe_cast_1 = __importDefault(require("@dikac/t-string/safe-cast"));
+    const join_1 = __importDefault(require("../string/join"));
+    const remove_suffix_character_1 = __importDefault(require("@dikac/t-string/remove-suffix-character"));
     class Standard extends standard_1.default {
         get extension() {
             return extension_1.default(this.value);
+        }
+        get dir() {
+            return remove_suffix_character_1.default(this.toString().slice(0, this.file.length * -1), this.delimiter[0]);
+        }
+        set dir(dir) {
+            this.value = join_1.default(dir, this.file, this.delimiter[0], this.splitter);
         }
         set extension(extension) {
             this.value = replace_extension_1.default(this.value, extension);

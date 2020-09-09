@@ -14,6 +14,10 @@ describe('check integrity', ()=>{
         expect(std.delimiters).toBe('/\\:');
     });
 
+    it('dir', ()=>{
+        expect(std.dir).toBe('root/parent/child');
+    });
+
     it('file', ()=>{
         expect(std.file).toBe('file.ext');
     });
