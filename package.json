@@ -1,10 +1,10 @@
 {
   "name": "@dikac/t-uri",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-array": "^0.23.6",
+    "@dikac/t-array": "^0.23.8",
     "@dikac/t-function": "^0.12.4",
     "@dikac/t-message": "^0.10.3",
     "@dikac/t-number": "^0.15.12",
@@ -13,7 +13,6 @@
     "@dikac/t-validatable": "^0.18.8",
     "@dikac/t-validator": "^0.16.5",
     "@dikac/t-value": "^0.12.6",
-    "@dikac/ts-object": "^0.9.22",
     "@types/lodash": "^4.14.161",
     "is-domain-name": "^1.0.1",
     "is-ip": "^3.1.0",
