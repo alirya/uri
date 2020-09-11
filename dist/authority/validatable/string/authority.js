@@ -15,7 +15,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     const sentence_1 = __importDefault(require("@dikac/t-string/message/sentence"));
     function UserInfo(result) {
         let sentence = new sentence_1.default(result.valid);
-        sentence.object = 'authority';
+        sentence.expect = 'authority';
         if (result.valid) {
             return sentence.message;
         }

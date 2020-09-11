@@ -57,11 +57,11 @@ for(let [scheme, valid] of values) {
 
         if(validatable.valid) {
 
-            expect(validatable.message).toBe(`${Truncate(scheme, 20)} is valid domain name`);
+            expect(validatable.message).toBe(`is valid domain name.`);
 
         } else {
 
-            expect(validatable.message).toBe(`${Truncate(scheme, 20)} is not valid domain name`);
+            expect(validatable.message).toBe(`must valid domain name, actual "${Truncate(scheme, 20)}".`);
 
         }
 

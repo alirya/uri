@@ -7,18 +7,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-string/message/sentences-is", "@dikac/t-string/truncate"], factory);
+        define(["require", "exports", "@dikac/t-string/message/sentences-must", "@dikac/t-string/truncate"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const sentences_is_1 = __importDefault(require("@dikac/t-string/message/sentences-is"));
+    const sentences_must_1 = __importDefault(require("@dikac/t-string/message/sentences-must"));
     const truncate_1 = __importDefault(require("@dikac/t-string/truncate"));
     function Ipv6(result, subject = '') {
-        let sentence = sentences_is_1.default(result.valid);
+        let sentence = sentences_must_1.default(result.valid, [subject]);
         sentence.subject.push(subject);
-        sentence.subject.push(truncate_1.default(result.value, 20));
-        sentence.object = ['valid ipv6'];
+        sentence.comma.push('expect');
+        sentence.actual.push('actual', `"${truncate_1.default(result.value, 20)}"`);
+        sentence.expect = ['valid ipv6'];
         return sentence.message;
     }
     exports.default = Ipv6;

@@ -29,11 +29,11 @@ for(let [fragment, valid] of list) {
 
         if(validatable.valid) {
 
-            expect(validatable.message).toBe(`${fragment} is valid fragment`);
+            expect(validatable.message).toBe(`value is valid fragment.`);
 
         } else {
 
-            expect(validatable.message).toBe(`${fragment} is not valid fragment`);
+            expect(validatable.message).toBe(`value must valid fragment, actual "${fragment}".`);
 
         }
 

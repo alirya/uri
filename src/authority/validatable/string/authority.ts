@@ -8,7 +8,7 @@ export default function UserInfo(
 ) : string {
 
     let sentence = new Sentence(result.valid);
-    sentence.object = 'authority';
+    sentence.expect = 'authority';
 
     if(result.valid) {
 

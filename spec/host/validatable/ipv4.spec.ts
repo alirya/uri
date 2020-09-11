@@ -1,4 +1,5 @@
 import Ipv4 from "../../../dist/host/validatable/ipv4";
+import Truncate from "@dikac/t-string/truncate";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
 
@@ -27,11 +28,11 @@ for(let [scheme, valid] of list) {
 
         if(validatable.valid) {
 
-            expect(validatable.message).toBe(`${scheme} is valid ipv4`);
+            expect(validatable.message).toBe(`is valid ipv4.`);
 
         } else {
 
-            expect(validatable.message).toBe(`${scheme} is not valid ipv4`);
+            expect(validatable.message).toBe(`must valid ipv4, actual "${Truncate(scheme, 10)}".`);
 
         }
 

@@ -1,6 +1,6 @@
 import Value from "@dikac/t-value/value";
 import Validatable from "@dikac/t-validator/validatable/validatable";
-import SentencesIs from "@dikac/t-string/message/sentences-is";
+import SentencesIs from "@dikac/t-string/message/sentences-must";
 import Truncate from "@dikac/t-string/truncate";
 
 export default function Scheme(
@@ -8,10 +8,14 @@ export default function Scheme(
     subject : string = ''
 ) : string {
 
-    let sentence = SentencesIs(result.valid);
+    let sentence = SentencesIs(result.valid, ['value']);
+
     sentence.subject.push(subject);
-    sentence.subject.push(Truncate(result.value, 10));
-    sentence.object = ['valid scheme'];
+    sentence.comma.push('expect');
+
+    sentence.actual.push('actual', `"${Truncate(result.value, 10)}"`);
+
+    sentence.expect = ['valid scheme'];
 
     return sentence.message;
 

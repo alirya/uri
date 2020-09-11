@@ -10,7 +10,7 @@ export default function UserInfo(
 ) : string {
 
     let sentence = new Sentence(result.valid);
-    sentence.object = 'user info';
+    sentence.expect = 'user info';
 
     if(result.valid) {
 

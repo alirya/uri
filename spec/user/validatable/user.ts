@@ -29,11 +29,11 @@ for(let [user, valid] of list) {
 
         if(validatable.valid) {
 
-            expect(validatable.message).toBe(`${user} is valid user`);
+            expect(validatable.message).toBe(`value is valid user.`);
 
         } else {
 
-            expect(validatable.message).toBe(`${user} is not valid user`);
+            expect(validatable.message).toBe(`value must valid user, actual "${user}".`);
 
         }
 

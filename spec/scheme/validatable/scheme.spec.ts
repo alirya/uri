@@ -29,11 +29,11 @@ for(let [scheme, valid] of list) {
 
         if(validatable.valid) {
 
-            expect(validatable.message).toBe(`${scheme} is valid scheme`);
+            expect(validatable.message).toBe(`value is valid scheme.`);
 
         } else {
 
-            expect(validatable.message).toBe(`${scheme} is not valid scheme`);
+            expect(validatable.message).toBe(`value must valid scheme, actual "${scheme}".`);
 
         }
 
