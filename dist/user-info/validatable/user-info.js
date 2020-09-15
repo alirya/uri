@@ -7,7 +7,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../../user/validatable/user", "../../password/validatable/password", "@dikac/t-string/boolean/not-empty", "@dikac/t-object/value/set-getter"], factory);
+        define(["require", "exports", "../../user/validatable/user", "../../password/validatable/password", "@dikac/t-string/boolean/not-empty", "@dikac/t-object/value/value/set-getter"], factory);
     }
 })(function (require, exports) {
     "use strict";
@@ -15,7 +15,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     const user_1 = __importDefault(require("../../user/validatable/user"));
     const password_1 = __importDefault(require("../../password/validatable/password"));
     const not_empty_1 = __importDefault(require("@dikac/t-string/boolean/not-empty"));
-    const set_getter_1 = __importDefault(require("@dikac/t-object/value/set-getter"));
+    const set_getter_1 = __importDefault(require("@dikac/t-object/value/value/set-getter"));
     class UserInfo {
         constructor(value, messageFactory) {
             this.value = value;

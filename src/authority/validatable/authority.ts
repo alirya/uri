@@ -8,7 +8,7 @@ import AuthorityInterface from "./validatable";
 import Message from "@dikac/t-message/message";
 import NotEmpty from "@dikac/t-string/boolean/not-empty";
 import UserInfoFunction from "../../user-info/validatable/user-info-function";
-import SetGetter from "@dikac/t-object/value/set-getter";
+import SetGetter from "@dikac/t-object/value/value/set-getter";
 
 export default class Authority<MessageType = unknown> implements AuthorityInterface<
     MessageType,
