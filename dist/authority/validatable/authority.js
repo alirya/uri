@@ -7,7 +7,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../../port/validatable/port", "@dikac/t-string/remove-prefix-character", "../../host/validatable/host", "@dikac/t-string/boolean/not-empty", "../../user-info/validatable/user-info-function", "@dikac/t-object/value/set-getter"], factory);
+        define(["require", "exports", "../../port/validatable/port", "@dikac/t-string/remove-prefix-character", "../../host/validatable/host", "@dikac/t-string/boolean/not-empty", "../../user-info/validatable/user-info-function", "@dikac/t-object/value/value/set-getter"], factory);
     }
 })(function (require, exports) {
     "use strict";
@@ -17,7 +17,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     const host_1 = __importDefault(require("../../host/validatable/host"));
     const not_empty_1 = __importDefault(require("@dikac/t-string/boolean/not-empty"));
     const user_info_function_1 = __importDefault(require("../../user-info/validatable/user-info-function"));
-    const set_getter_1 = __importDefault(require("@dikac/t-object/value/set-getter"));
+    const set_getter_1 = __importDefault(require("@dikac/t-object/value/value/set-getter"));
     class Authority {
         constructor(value, messageFactory) {
             this.value = value;
