@@ -1,1 +1,1 @@
-{"version":3,"file":"to-uri-rootless.js","sourceRoot":"","sources":["../../../src/path/string/to-uri-rootless.ts"],"names":[],"mappings":";;;;;;;;;;;;;;IACA,8EAAqD;IAErD,SAAwB,aAAa,CAAC,IAAW;QAE7C,OAAO,qBAAU,CAAC,IAAI,CAAC,QAAQ,EAAE,EAAE,IAAI,CAAC,SAAS,CAAC,CAAC;IACvD,CAAC;IAHD,gCAGC"}
+{"version":3,"file":"to-uri-rootless.js","sourceRoot":"","sources":["../../../src/path/string/to-uri-rootless.ts"],"names":[],"mappings":"AACA,OAAO,UAAU,MAAM,6BAA6B,CAAC;AAErD,MAAM,CAAC,OAAO,UAAU,aAAa,CAAC,IAAW;IAE7C,OAAO,UAAU,CAAC,IAAI,CAAC,QAAQ,EAAE,EAAE,IAAI,CAAC,SAAS,CAAC,CAAC;AACvD,CAAC"}

@@ -1,23 +1,7 @@
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-string/validatable/callback", "../boolean/domain-name", "./string/domain-name"], factory);
-    }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    const callback_1 = __importDefault(require("@dikac/t-string/validatable/callback"));
-    const domain_name_1 = __importDefault(require("../boolean/domain-name"));
-    const domain_name_2 = __importDefault(require("./string/domain-name"));
-    function DomainName(string, message = domain_name_2.default) {
-        return new callback_1.default(string, domain_name_1.default, message);
-    }
-    exports.default = DomainName;
-});
+import Callback from "@dikac/t-string/validatable/callback";
+import DomainNameBoolean from "../boolean/domain-name";
+import DomainNameMessage from "./string/domain-name";
+export default function DomainName(string, message = DomainNameMessage) {
+    return new Callback(string, DomainNameBoolean, message);
+}
 //# sourceMappingURL=domain-name.js.map

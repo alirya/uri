@@ -1,1 +1,1 @@
-{"version":3,"file":"to-uri.js","sourceRoot":"","sources":["../../../src/path/string/to-uri.ts"],"names":[],"mappings":";;;;;;;;;;;;;;IACA,wEAA8C;IAE9C,SAAwB,KAAK,CAAC,IAAW;QAErC,OAAO,IAAI,CAAC,SAAS,GAAG,yBAAa,CAAC,IAAI,CAAC,CAAC;IAChD,CAAC;IAHD,wBAGC"}
+{"version":3,"file":"to-uri.js","sourceRoot":"","sources":["../../../src/path/string/to-uri.ts"],"names":[],"mappings":"AACA,OAAO,aAAa,MAAM,mBAAmB,CAAC;AAE9C,MAAM,CAAC,OAAO,UAAU,KAAK,CAAC,IAAW;IAErC,OAAO,IAAI,CAAC,SAAS,GAAG,aAAa,CAAC,IAAI,CAAC,CAAC;AAChD,CAAC"}

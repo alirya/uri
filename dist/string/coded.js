@@ -11,39 +11,26 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     }
     return privateMap.get(receiver);
 };
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+var _value;
+export default class Coded {
+    constructor(value, encoder = encodeURIComponent, decoder = decodeURIComponent) {
+        this.encoder = encoder;
+        this.decoder = decoder;
+        _value.set(this, '');
+        this.value = value;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    set value(string) {
+        __classPrivateFieldSet(this, _value, this.decoder(string));
     }
-})(function (require, exports) {
-    "use strict";
-    var _value;
-    Object.defineProperty(exports, "__esModule", { value: true });
-    class Coded {
-        constructor(value, encoder = encodeURIComponent, decoder = decodeURIComponent) {
-            this.encoder = encoder;
-            this.decoder = decoder;
-            _value.set(this, '');
-            this.value = value;
-        }
-        set value(string) {
-            __classPrivateFieldSet(this, _value, this.decoder(string));
-        }
-        get value() {
-            return __classPrivateFieldGet(this, _value);
-        }
-        valueOf() {
-            return this.toString();
-        }
-        toString() {
-            return this.encoder(this.value);
-        }
+    get value() {
+        return __classPrivateFieldGet(this, _value);
     }
-    exports.default = Coded;
-    _value = new WeakMap();
-});
+    valueOf() {
+        return this.toString();
+    }
+    toString() {
+        return this.encoder(this.value);
+    }
+}
+_value = new WeakMap();
 //# sourceMappingURL=coded.js.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"extension-prefix.js","sourceRoot":"","sources":["../../../src/path/string/extension-prefix.ts"],"names":[],"mappings":";;;;;;;;;;;IAAA,SAAwB,eAAe,CAAE,SAAkB;QAEvD,OAAO,SAAS,CAAC,MAAM,KAAK,CAAC,CAAC,CAAC,CAAC,GAAG,GAAG,SAAS,CAAC,CAAC,CAAC,EAAE,CAAC;IACzD,CAAC;IAHD,kCAGC"}
+{"version":3,"file":"extension-prefix.js","sourceRoot":"","sources":["../../../src/path/string/extension-prefix.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,UAAU,eAAe,CAAE,SAAkB;IAEvD,OAAO,SAAS,CAAC,MAAM,KAAK,CAAC,CAAC,CAAC,CAAC,GAAG,GAAG,SAAS,CAAC,CAAC,CAAC,EAAE,CAAC;AACzD,CAAC"}

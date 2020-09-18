@@ -1,1 +1,1 @@
-{"version":3,"file":"trim.js","sourceRoot":"","sources":["../../../src/authority/validatable/trim.ts"],"names":[],"mappings":";;;;;;;;;;;IAAA,SAAwB,IAAI,CAAC,SAAkB;QAE3C,OAAO,SAAS,CAAC,OAAO,CAAC,SAAS,EAAE,EAAE,CAAC,CAAA;IAC3C,CAAC;IAHD,uBAGC"}
+{"version":3,"file":"trim.js","sourceRoot":"","sources":["../../../src/authority/validatable/trim.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,UAAU,IAAI,CAAC,SAAkB;IAE3C,OAAO,SAAS,CAAC,OAAO,CAAC,SAAS,EAAE,EAAE,CAAC,CAAA;AAC3C,CAAC"}
