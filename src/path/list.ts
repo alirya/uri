@@ -2,8 +2,8 @@ import Path from "./path";
 import Standard from "./standard";
 import Split from "./array/split";
 
-export default class List extends Array<string> implements Path
-{
+export default class List extends Array<string> implements Path {
+
     static get [Symbol.species](): ArrayConstructor {
         return Array;
     }

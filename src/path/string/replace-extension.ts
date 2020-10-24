@@ -20,22 +20,19 @@ export default function ReplaceExtension(
     path = path.replace(new RegExp(`\\.[^${escaped}.]+$`), (substring, args) => {
 
         replaced = true;
-        //console.log([0, substring, args]);
         return extension;
     });
 
     if(replaced) {
-        //console.log([1, path]);
+
         return path;
     }
 
     // bare file
     if(path.match(new RegExp(`[^${escaped}]+$`))) {
 
-        //console.log([2, path]);
         return path + extension;
     }
 
-    //console.log([3, path]);
     return path;
 }
