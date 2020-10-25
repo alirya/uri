@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-uri",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
@@ -13,10 +13,8 @@
     "@dikac/t-validatable": "^0.19.2",
     "@dikac/t-validator": "^0.17.2",
     "@dikac/t-value": "^0.14.5",
-    "@types/lodash": "^4.14.162",
     "is-domain-name": "^1.0.1",
     "is-ip": "^3.1.0",
-    "lodash": "^4.17.20",
     "query-string": "^6.13.6",
     "ts-toolbelt": "^8.0.7",
     "utility-types": "^3.10.0"
