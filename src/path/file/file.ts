@@ -2,7 +2,7 @@ import Path from "../path";
 
 export default interface File extends Path {
 
-    dir : string;
+    directory : string;
     extension : string;
     name : string;
     file : string;

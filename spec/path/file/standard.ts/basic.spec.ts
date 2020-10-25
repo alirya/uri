@@ -15,7 +15,7 @@ describe('check integrity', ()=>{
     });
 
     it('dir', ()=>{
-        expect(std.dir).toBe('root/parent/child');
+        expect(std.directory).toBe('root/parent/child');
     });
 
     it('file', ()=>{
@@ -47,7 +47,7 @@ it('change file', ()=>{
 });
 
 it('change dir', ()=>{
-    std.dir = 'root\\:/parent\\:/child';
+    std.directory = 'root\\:/parent\\:/child';
     expect(std.value).toBe('root\\:/parent\\:/child/image');
     expect(std.file).toBe('image');
 });

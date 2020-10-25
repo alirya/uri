@@ -15,7 +15,7 @@ describe('check integrity', ()=>{
     });
 
     it('dir', ()=>{
-        expect(std.dir).toBe('root/parent/child');
+        expect(std.directory).toBe('root/parent/child');
     });
 
     it('file', ()=>{

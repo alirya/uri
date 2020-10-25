@@ -19,46 +19,49 @@ export default class List extends PathList {
         }
         return '';
     }
-    set dir(dir) {
+    set directory(dir) {
         const datas = [dir, this.file];
         this.splice(0);
         this.push(...datas);
         this.split();
     }
-    get dir() {
+    get directory() {
         let standard = new Standard(this.join(this.delimiter[0]), this.delimiter, this.delimiters);
-        return RemoveSuffixCharacter(standard.dir, this.delimiter[0]);
+        return RemoveSuffixCharacter(standard.directory, this.delimiter[0]);
     }
     set extension(extension) {
-        let last = this[this.length - 1];
+        const index = this.length - 1;
+        const last = this[index];
         if (last) {
-            this[this.length - 1] = ReplaceExtension(last, extension);
+            this[index] = ReplaceExtension(last, extension);
         }
     }
     get file() {
-        let last = this[this.length - 1];
+        const last = this[this.length - 1];
         if (last) {
             return GetFile(last, this.splitter);
         }
         return '';
     }
     set file(extension) {
-        let last = this[this.length - 1];
+        const index = this.length - 1;
+        const last = this[index];
         if (last) {
             this[this.length - 1] = SafeCast(ReplaceFile(last, extension, this.splitter));
         }
     }
     get name() {
-        let last = this[this.length - 1];
+        const last = this[this.length - 1];
         if (last) {
             return Name(last, this.splitter);
         }
         return '';
     }
     set name(name) {
-        let last = this[this.length - 1];
+        const index = this.length - 1;
+        const last = this[index];
         if (last) {
-            this[this.length - 1] = SafeCast(ReplaceName(last, name, this.splitter));
+            this[index] = SafeCast(ReplaceName(last, name, this.splitter));
         }
     }
 }

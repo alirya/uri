@@ -9,14 +9,14 @@ let map : {
     name:string,
     extension:string,
     expectation:string,
-    dir:string,
+    directory:string,
     value:string[]
 }[] = [];
 
 // 0
 map.push({
     value:['root','parent','child','file.ext'],
-    dir:'root/parent/child',
+    directory:'root/parent/child',
     delimiter:'/',
     delimiters:'/\\:',
     file:'file.ext',
@@ -28,7 +28,7 @@ map.push({
 map.push({
     value:['root','parent','child','file.ext'],
     delimiter:':',
-    dir:'root:parent:child',
+    directory:'root:parent:child',
     delimiters:'/\\:',
     file:'file.ext',
     name:'file',
@@ -38,7 +38,7 @@ map.push({
 // 2
 map.push({
     value:['root','parent','child','file.ext'],
-    dir:'root\\parent\\child',
+    directory:'root\\parent\\child',
     delimiter:'\\',
     delimiters:'/\\:',
     file:'file.ext',
@@ -50,7 +50,7 @@ map.push({
 map.push({
     value:['root/\\:parent','child/:\\file.ext'],
     delimiter:'/',
-    dir:'root/parent/child',
+    directory:'root/parent/child',
     delimiters:'/\\:',
     file:'file.ext',
     name:'file',
@@ -62,7 +62,7 @@ map.push({
 // 4
 map.push({
     value:['root/\\:parent','child/:\\file.ext'],
-    dir:'root:parent:child',
+    directory:'root:parent:child',
     delimiter:':',
     delimiters:'/\\:',
     file:'file.ext',
@@ -74,7 +74,7 @@ map.push({
 map.push({
     value:['root/\\:parent','child/:\\file.ext'],
     delimiter:'\\',
-    dir:'root\\parent\\child',
+    directory:'root\\parent\\child',
     delimiters:'/\\:',
     file:'file.ext',
     name:'file',
@@ -85,7 +85,7 @@ map.push({
 map.push({
     value:['','root/\\:parent:/\\child/:\\file.ext'],
     delimiter:'/',
-    dir:'/root/parent/child',
+    directory:'/root/parent/child',
     delimiters:'/\\:',
     file:'file.ext',
     name:'file',
@@ -96,7 +96,7 @@ map.push({
 map.push({
     value:['','root/\\:parent:/\\child/:\\file.ext'],
     delimiter:':',
-    dir:':root:parent:child',
+    directory:':root:parent:child',
     delimiters:'/\\:',
     file:'file.ext',
     name:'file',
@@ -107,7 +107,7 @@ map.push({
 map.push({
     value:['','root/\\:parent:/\\child/:\\file.ext'],
     delimiter:'\\',
-    dir:'\\root\\parent\\child',
+    directory:'\\root\\parent\\child',
     delimiters:'/\\:',
     file:'file.ext',
     name:'file',
@@ -118,7 +118,7 @@ map.push({
 map.push({
     value:['root/parent/child/file.ext'],
     delimiter:'//',
-    dir:'root/parent/child',
+    directory:'root/parent/child',
     delimiters:'/\\:',
     file:'file.ext',
     name:'file',
@@ -148,7 +148,7 @@ describe('constructor', ()=>{
             });
 
             it('dir', ()=>{
-                expect(standard.dir).toBe(value.dir);
+                expect(standard.directory).toBe(value.directory);
             });
 
             it('name', ()=>{
@@ -210,8 +210,8 @@ describe('mutate', ()=>{
 
             it('dir', ()=>{
 
-                standard.dir = value.dir;
-                expect(standard.dir).toBe(value.dir);
+                standard.directory = value.directory;
+                expect(standard.directory).toBe(value.directory);
             });
 
             it('name', ()=>{

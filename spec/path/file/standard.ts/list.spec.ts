@@ -153,7 +153,7 @@ describe('constructor', ()=>{
             });
 
             it('dir', ()=>{
-                expect(standard.dir).toBe(value.dir);
+                expect(standard.directory).toBe(value.dir);
             });
 
             it('name', ()=>{
@@ -213,8 +213,8 @@ describe('mutate', ()=>{
 
             it('dir', ()=>{
 
-                standard.dir = value.dir;
-                expect(standard.dir).toBe(value.dir);
+                standard.directory = value.dir;
+                expect(standard.directory).toBe(value.dir);
             });
 
             it('name', ()=>{

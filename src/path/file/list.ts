@@ -9,8 +9,9 @@ import Name from "../string/name";
 import ReplaceName from "../string/replace-name";
 import Standard from "./standard";
 import RemoveSuffixCharacter from "@dikac/t-string/remove-suffix-character";
+import File from "./file";
 
-export default class List extends PathList implements Path {
+export default class List extends PathList implements File {
 
     constructor(
         segments : Iterable<string> = [],
@@ -32,7 +33,7 @@ export default class List extends PathList implements Path {
         return '';
     }
 
-    set dir(dir : string)  {
+    set directory(dir : string)  {
 
         const datas = [dir, this.file];
 
@@ -41,28 +42,27 @@ export default class List extends PathList implements Path {
         this.split();
     }
 
-
-    get dir() : string {
+    get directory() : string {
 
         let standard = new Standard(this.join(this.delimiter[0]), this.delimiter, this.delimiters);
-
-        return RemoveSuffixCharacter(standard.dir, this.delimiter[0]);
+        return RemoveSuffixCharacter(standard.directory, this.delimiter[0]);
     }
 
 
     set extension(extension : string)  {
 
-        let last = this[this.length - 1]
+        const index = this.length - 1;
+        const last = this[index];
 
         if(last) {
 
-            this[this.length - 1] = ReplaceExtension(last, extension);
+            this[index] = ReplaceExtension(last, extension);
         }
     }
 
     get file () : string  {
 
-        let last = this[this.length - 1]
+        const last = this[this.length - 1]
 
         if(last) {
 
@@ -74,7 +74,8 @@ export default class List extends PathList implements Path {
 
     set file(extension : string)  {
 
-        let last = this[this.length - 1]
+        const index = this.length - 1;
+        const last = this[index]
 
         if(last) {
 
@@ -85,7 +86,7 @@ export default class List extends PathList implements Path {
 
     get name () : string {
 
-        let last = this[this.length - 1]
+        const last = this[this.length - 1]
 
         if(last) {
 
@@ -97,11 +98,12 @@ export default class List extends PathList implements Path {
 
     set name(name : string)  {
 
-        let last = this[this.length - 1]
+        const index = this.length - 1;
+        const last = this[index]
 
         if(last) {
 
-            this[this.length - 1] = SafeCast(ReplaceName(last, name, this.splitter));
+            this[index] = SafeCast(ReplaceName(last, name, this.splitter));
         }
     }
 }

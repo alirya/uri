@@ -17,12 +17,12 @@ export default class Standard extends PathStandard implements File {
         return Extension(this.value);
     }
 
-    get dir() : string {
+    get directory() : string {
 
         return RemoveSuffixCharacter(this.toString().slice(0, this.file.length * -1), this.delimiter[0]);
     }
 
-    set dir(dir : string)  {
+    set directory(dir : string)  {
 
         this.value = Join(dir, this.file, this.delimiter[0], this.splitter)
     }
