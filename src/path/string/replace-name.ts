@@ -13,7 +13,18 @@ export default function ReplaceName(
 
     if(file && name) {
 
-        parts.push(name  + '.' +  Extension(file))
+        let extension = Extension(file);
+
+        if(extension === '') {
+
+            parts.push(name)
+
+        } else {
+
+            parts.push(name  + '.' +  extension)
+        }
+
+
     }
 
     return parts.join(delimiter);
