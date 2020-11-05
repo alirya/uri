@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-uri",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
@@ -20,17 +20,17 @@
     "utility-types": "^3.10.0"
   },
   "devDependencies": {
-    "@types/jasmine": "^3.6.0",
+    "@types/jasmine": "^3.6.1",
     "cpy-cli": "^3.1.1",
     "esm": "^3.2.25",
-    "jasmine": "^3.6.2",
+    "jasmine": "^3.6.3",
     "jasmine-ts-console-reporter": "^3.1.1",
     "json-properties-remover": "^0.1.2",
     "mkdirp": "^1.0.4",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "ts-cleaner": "^1.0.5",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.5"
   },
   "scripts": {
     "spec-run-js": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine.json",
