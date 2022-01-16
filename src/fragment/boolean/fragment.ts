@@ -1,4 +1,4 @@
-import FragmentValidatable from "../validatable/fragment";
+import FragmentValidatable from '../validatable/fragment';
 
 export default function Fragment(string : string) : boolean {
 

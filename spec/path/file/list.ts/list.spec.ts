@@ -1,6 +1,6 @@
-import FileList from "../../../../dist/path/file/list";
+import FileList from '../../../../dist/path/file/list';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough()});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map : {
     delimiter:string,
@@ -133,7 +133,7 @@ describe('constructor', ()=>{
 
         describe(`[${i}]` + JSON.stringify(value.value), ()=>{
 
-            let standard = new FileList(value.value, value.delimiter, value.delimiters)
+            let standard = new FileList(value.value, value.delimiter, value.delimiters);
 
             it('delimiter', ()=>{
                 expect(standard.delimiter).toBe(value.delimiter);

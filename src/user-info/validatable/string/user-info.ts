@@ -1,6 +1,6 @@
-import Validatable from "@alirya/validator/validatable/validatable";
-import UserInfo from "../../validatable/validatable";
-import Sentence from "@alirya/string/message/sentence";
+import Validatable from '@alirya/validator/validatable/validatable';
+import UserInfo from '../../validatable/validatable';
+import Sentence from '@alirya/string/message/sentence';
 
 export default function UserInfo(
     result : Readonly<UserInfo<string,

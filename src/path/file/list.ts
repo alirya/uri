@@ -1,15 +1,15 @@
-import Path from "../path";
-import PathList from "../list";
-import Extension from "../string/extension";
-import ReplaceExtension from "../string/replace-extension";
-import GetFile from "../string/file";
-import SafeCast from "@alirya/string/safe-cast";
-import ReplaceFile from "../string/replace-file";
-import Name from "../string/name";
-import ReplaceName from "../string/replace-name";
-import Standard from "./standard";
-import RemoveSuffixCharacter from "@alirya/string/remove-suffix-character";
-import File from "./file";
+import Path from '../path';
+import PathList from '../list';
+import Extension from '../string/extension';
+import ReplaceExtension from '../string/replace-extension';
+import GetFile from '../string/file';
+import SafeCast from '@alirya/string/safe-cast';
+import ReplaceFile from '../string/replace-file';
+import Name from '../string/name';
+import ReplaceName from '../string/replace-name';
+import Standard from './standard';
+import RemoveSuffixCharacter from '@alirya/string/remove-suffix-character';
+import File from './file';
 
 export default class List extends PathList implements File {
 
@@ -23,7 +23,7 @@ export default class List extends PathList implements File {
 
     get extension () : string {
 
-        let last = this[this.length - 1]
+        let last = this[this.length - 1];
 
         if(last) {
 
@@ -62,7 +62,7 @@ export default class List extends PathList implements File {
 
     get file () : string  {
 
-        const last = this[this.length - 1]
+        const last = this[this.length - 1];
 
         if(last) {
 
@@ -75,7 +75,7 @@ export default class List extends PathList implements File {
     set file(extension : string)  {
 
         const index = this.length - 1;
-        const last = this[index]
+        const last = this[index];
 
         if(last) {
 
@@ -86,7 +86,7 @@ export default class List extends PathList implements File {
 
     get name () : string {
 
-        const last = this[this.length - 1]
+        const last = this[this.length - 1];
 
         if(last) {
 
@@ -99,7 +99,7 @@ export default class List extends PathList implements File {
     set name(name : string)  {
 
         const index = this.length - 1;
-        const last = this[index]
+        const last = this[index];
 
         if(last) {
 

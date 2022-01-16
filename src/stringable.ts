@@ -1,9 +1,9 @@
-import Path from "./path/path";
-import Authority from "./authority/authority";
-import Uri from "./uri";
-import ToString from "@alirya/string/to-string";
-import Standard from "./standard";
-import Join from "./string/join";
+import Path from './path/path';
+import Authority from './authority/authority';
+import Uri from './uri';
+import ToString from '@alirya/string/to-string';
+import Standard from './standard';
+import Join from './string/join';
 
 export default
     class Stringable<

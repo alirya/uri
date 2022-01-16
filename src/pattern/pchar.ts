@@ -1,8 +1,8 @@
-import Unreserved from "./unreserved";
-import Percent from "./percent-encoded";
-import SubDelimiter from "./sub-delimiter";
-import Escape from "@alirya/string/pattern/escape";
-import Unique from "@alirya/array/unique";
+import Unreserved from './unreserved';
+import Percent from './percent-encoded';
+import SubDelimiter from './sub-delimiter';
+import Escape from '@alirya/string/pattern/escape';
+import Unique from '@alirya/array/unique';
 
 const subDelimiter = SubDelimiter;
 const unreserved = Unreserved;

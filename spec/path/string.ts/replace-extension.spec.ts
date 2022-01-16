@@ -1,6 +1,6 @@
-import ReplaceExtension from "../../../dist/path/string/replace-extension";
+import ReplaceExtension from '../../../dist/path/string/replace-extension';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough()});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 for(let d of ['\\:/', ':', '\\:', ':/', '\\/']) {
 
@@ -12,12 +12,12 @@ for(let d of ['\\:/', ':', '\\:', ':/', '\\/']) {
     it('no name', ()=>{
         let path = `root${d}parent${d}child${d}.git`;
         expect(ReplaceExtension(path, 'gitkeep', d)).toBe(`root${d}parent${d}child${d}.gitkeep`);
-    })
+    });
 
     it('no extension', ()=>{
         let path = `root${d}parent${d}child${d}file`;
         expect(ReplaceExtension(path, 'txt', d)).toBe(`root${d}parent${d}child${d}file.txt`);
-    })
+    });
 
     it('empty dir', ()=>{
         let path = d;

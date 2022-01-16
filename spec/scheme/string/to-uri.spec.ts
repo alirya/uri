@@ -1,6 +1,6 @@
-import ToUri from "../../../dist/scheme/string/to-uri";
+import ToUri from '../../../dist/scheme/string/to-uri';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let list = new Map<string, string>();
 

@@ -1,7 +1,7 @@
-import DomainName from "../../../dist/host/validatable/domain-name";
-import Truncate from "@alirya/string/truncate";
+import DomainName from '../../../dist/host/validatable/domain-name';
+import Truncate from '@alirya/string/truncate';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let values : [string, boolean][] = [];
 

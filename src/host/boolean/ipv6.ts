@@ -1,5 +1,5 @@
-import {v6} from "is-ip"
-import Unclose from "@alirya/string/unclose";
+import {v6} from 'is-ip';
+import Unclose from '@alirya/string/unclose';
 
 export default function Ipv6(string : string) : boolean {
 

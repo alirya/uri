@@ -1,8 +1,8 @@
-import Callback from "@alirya/string/validatable/callback";
-import Ipv4Boolean from "../boolean/ipv4";
-import Ipv4Message from "./string/ipv4";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
+import Callback from '@alirya/string/validatable/callback';
+import Ipv4Boolean from '../boolean/ipv4';
+import Ipv4Message from './string/ipv4';
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
 
 export default function Ipv4(
     string : string,

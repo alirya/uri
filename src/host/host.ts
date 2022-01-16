@@ -1,9 +1,9 @@
-import HostValidatable from "./validatable/host";
-import AssertValid from "@alirya/validator/validatable/assert/valid";
-import Validatable from "@alirya/validator/validatable/validatable";
-import Value from "@alirya/value/value";
-import Callback from "@alirya/string/validatable/callback";
-import HostMessage from "./validatable/string/host";
+import HostValidatable from './validatable/host';
+import AssertValid from '@alirya/validator/validatable/assert/valid';
+import Validatable from '@alirya/validator/validatable/validatable';
+import Value from '@alirya/value/value';
+import Callback from '@alirya/string/validatable/callback';
+import HostMessage from './validatable/string/host';
 
 export default function Host(
     string : string,

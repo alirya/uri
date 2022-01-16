@@ -1,8 +1,8 @@
-import StringMatch from "@alirya/string/validatable/match";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import QueryPattern from "../pattern/query";
-import QueryMessage from "./string/query";
+import StringMatch from '@alirya/string/validatable/match';
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import QueryPattern from '../pattern/query';
+import QueryMessage from './string/query';
 
 export default function Query(
     query : string,

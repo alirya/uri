@@ -1,4 +1,4 @@
-import RemoveSuffixCharacter from "@alirya/string/remove-suffix-character";
+import RemoveSuffixCharacter from '@alirya/string/remove-suffix-character';
 
 
 export default function Trim(scheme : string) : string {

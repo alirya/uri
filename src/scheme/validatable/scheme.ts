@@ -1,8 +1,8 @@
-import StringMatch from "@alirya/string/validatable/match";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import SchemePattern from "../pattern/scheme";
-import SchemeMessage from "./string/scheme";
+import StringMatch from '@alirya/string/validatable/match';
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import SchemePattern from '../pattern/scheme';
+import SchemeMessage from './string/scheme';
 
 export default function Scheme(
     scheme : string,

@@ -1,6 +1,6 @@
-import UserInfo from "./validatable/user-info";
-import UserInfoMessage from "./validatable/string/user-info";
-import AssertValid from "@alirya/validator/validatable/assert/valid";
+import UserInfo from './validatable/user-info';
+import UserInfoMessage from './validatable/string/user-info';
+import AssertValid from '@alirya/validator/validatable/assert/valid';
 
 export default function String(
     value : string,

@@ -1,7 +1,7 @@
-import List from "../../../dist/path/list";
+import List from '../../../dist/path/list';
 
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough()});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map : {delimiter:string, delimiters:string, expectation:string, value:string[]}[] = [];
 
@@ -76,7 +76,7 @@ describe('constructor', ()=>{
 
         describe(JSON.stringify(value.value), ()=>{
 
-            let standard = new List(value.value, value.delimiter, value.delimiters)
+            let standard = new List(value.value, value.delimiter, value.delimiters);
 
             it('delimiter', ()=>{
                 expect(standard.delimiter).toBe(value.delimiter);

@@ -1,8 +1,8 @@
-import Callback from "@alirya/string/validatable/callback";
-import HostBoolean from "../boolean/host";
-import HostMessage from "./string/host";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
+import Callback from '@alirya/string/validatable/callback';
+import HostBoolean from '../boolean/host';
+import HostMessage from './string/host';
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
 
 export default function Host(
     string : string,

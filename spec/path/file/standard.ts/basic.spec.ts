@@ -1,6 +1,6 @@
-import Standard from "../../../../dist/path/file/standard";
+import Standard from '../../../../dist/path/file/standard';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough()});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let std = new Standard('root\\:/parent\\:/child\\:/file.ext', '/', '/\\:');
 

@@ -1,14 +1,14 @@
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import Port from "../../port/validatable/port";
-import RemovePrefixCharacter from "@alirya/string/remove-prefix-character";
-import Host from "../../host/validatable/host";
-import UserInfoInterface from "../../user-info/validatable/validatable";
-import AuthorityInterface from "./validatable";
-import Message from "@alirya/message/message";
-import NotEmpty from "@alirya/string/boolean/not-empty";
-import UserInfoFunction from "../../user-info/validatable/user-info-function";
-import SetGetter from "@alirya/object/value/value/set-getter";
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import Port from '../../port/validatable/port';
+import RemovePrefixCharacter from '@alirya/string/remove-prefix-character';
+import Host from '../../host/validatable/host';
+import UserInfoInterface from '../../user-info/validatable/validatable';
+import AuthorityInterface from './validatable';
+import Message from '@alirya/message/message';
+import NotEmpty from '@alirya/string/boolean/not-empty';
+import UserInfoFunction from '../../user-info/validatable/user-info-function';
+import SetGetter from '@alirya/object/value/value/set-getter';
 
 export default class Authority<MessageType = unknown> implements AuthorityInterface<
     MessageType,
@@ -51,11 +51,11 @@ export default class Authority<MessageType = unknown> implements AuthorityInterf
                 this.port = Port(RemovePrefixCharacter(port, ':'));
 
                 let remain = host.slice(0, host.length - port.length);
-                this.host = Host(remain)
+                this.host = Host(remain);
 
             } else {
 
-                this.host = Host(host)
+                this.host = Host(host);
             }
 
             if(userInfo !== undefined) {
@@ -73,7 +73,7 @@ export default class Authority<MessageType = unknown> implements AuthorityInterf
 
     get message() : MessageType {
 
-        return SetGetter(this, 'message', this.messageFactory(this))
+        return SetGetter(this, 'message', this.messageFactory(this));
     }
 
     get valid() {

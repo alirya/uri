@@ -1,9 +1,9 @@
-import Scheme from "./validatable/scheme";
-import AssertValid from "@alirya/validator/validatable/assert/valid";
-import Validatable from "@alirya/validator/validatable/validatable";
-import Value from "@alirya/value/value";
-import StringMatch from "@alirya/string/validatable/match";
-import SchemeMessage from "./validatable/string/scheme";
+import Scheme from './validatable/scheme';
+import AssertValid from '@alirya/validator/validatable/assert/valid';
+import Validatable from '@alirya/validator/validatable/validatable';
+import Value from '@alirya/value/value';
+import StringMatch from '@alirya/string/validatable/match';
+import SchemeMessage from './validatable/string/scheme';
 
 export default function String(
     scheme : string,

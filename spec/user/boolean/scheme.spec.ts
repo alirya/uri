@@ -1,6 +1,6 @@
-import User from "../../../dist/user/boolean/user";
+import User from '../../../dist/user/boolean/user';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let list = new Map<string, boolean>();
 

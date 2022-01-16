@@ -1,5 +1,5 @@
-import Extension from "./extension";
-import Split from "../array/split";
+import Extension from './extension';
+import Split from '../array/split';
 
 export default function ReplaceName(
     path : string,
@@ -17,11 +17,11 @@ export default function ReplaceName(
 
         if(extension === '') {
 
-            parts.push(name)
+            parts.push(name);
 
         } else {
 
-            parts.push(name  + '.' +  extension)
+            parts.push(name  + '.' +  extension);
         }
 
 

@@ -1,8 +1,8 @@
-import Uri from "../../../dist/uri";
-import Join from "../../../dist/string/join";
-import ToString from "@alirya/string/to-string";
+import Uri from '../../../dist/uri';
+import Join from '../../../dist/string/join';
+import ToString from '@alirya/string/to-string';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough()});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let rootless : [string, Uri][] = [];
 
@@ -41,7 +41,7 @@ rootless.push(['', {
 rootless.push(['/path', {
     path : {
         delimiter : '/',
-        toString(): string {return 'path'}
+        toString(): string {return 'path';}
     }
 }]);
 

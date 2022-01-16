@@ -1,4 +1,4 @@
-import UserValidatable from "../validatable/user";
+import UserValidatable from '../validatable/user';
 
 export default function User(string : string) : boolean {
 

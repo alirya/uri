@@ -1,8 +1,8 @@
-import Uri from "../../../dist/uri";
-import Join from "../../../dist/string/join";
-import ToString from "@alirya/string/to-string";
+import Uri from '../../../dist/uri';
+import Join from '../../../dist/string/join';
+import ToString from '@alirya/string/to-string';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough()});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let rootless : [string, Uri][] = [];
 
@@ -61,7 +61,7 @@ rootless.push(['scheme://user:password@host:1337/path', {
     },
     path : {
         delimiter : '/',
-        toString(): string {return 'path'}
+        toString(): string {return 'path';}
     }
 }]);
 
@@ -77,7 +77,7 @@ rootless.push(['scheme://user:password@host:1337/path?query', {
     },
     path : {
         delimiter : '/',
-        toString(): string {return 'path'}
+        toString(): string {return 'path';}
     },
     query : 'query'
 }]);
@@ -95,7 +95,7 @@ rootless.push(['scheme://user:password@host:1337/path?query#fragment', {
     },
     path : {
         delimiter : '/',
-        toString(): string {return 'path'}
+        toString(): string {return 'path';}
     },
     query : 'query',
     fragment : 'fragment'
@@ -112,7 +112,7 @@ rootless.push(['//user:password@host:1337/path?query#fragment', {
     },
     path : {
         delimiter : '/',
-        toString(): string {return 'path'}
+        toString(): string {return 'path';}
     },
     query : 'query',
     fragment : 'fragment'
@@ -128,7 +128,7 @@ rootless.push(['/path?query#fragment', {
     },
     path : {
         delimiter : '/',
-        toString(): string {return 'path'}
+        toString(): string {return 'path';}
     },
     query : 'query',
     fragment : 'fragment'
@@ -137,7 +137,7 @@ rootless.push(['/path?query#fragment', {
 rootless.push(['/path?query#fragment', {
     path : {
         delimiter : '/',
-        toString(): string {return 'path'}
+        toString(): string {return 'path';}
     },
     query : 'query',
     fragment : 'fragment'

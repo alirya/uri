@@ -1,7 +1,7 @@
-import Path from "./path/path";
-import Authority from "./authority/authority";
-import Uri from "./uri";
-import ToString from "@alirya/string/to-string";
+import Path from './path/path';
+import Authority from './authority/authority';
+import Uri from './uri';
+import ToString from '@alirya/string/to-string';
 
 export default
     class Standard<

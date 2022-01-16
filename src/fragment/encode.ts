@@ -1,5 +1,5 @@
-import SubDelimiter from "../pattern/sub-delimiter";
-import Trim from "./string/trim";
+import SubDelimiter from '../pattern/sub-delimiter';
+import Trim from './string/trim';
 
 let allowed : Map<string, string> = new Map<string, string>();
 

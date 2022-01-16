@@ -1,6 +1,6 @@
-import FileList from "../../../../dist/path/file/list";
+import FileList from '../../../../dist/path/file/list';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough()});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let std = new FileList(['root','parent','child', 'file.ext'], '/', '/\\:');
 
@@ -41,11 +41,11 @@ describe('check integrity', ()=>{
 });
 
 it('add path', ()=>{
-    std.push('file.ext')
+    std.push('file.ext');
     expect(std.toString()).toBe('root/parent/child/file.ext/file.ext');
 });
 
 it('prepend add', ()=>{
-    std.unshift('prepend')
+    std.unshift('prepend');
     expect(std.toString()).toBe('prepend/root/parent/child/file.ext/file.ext');
 });

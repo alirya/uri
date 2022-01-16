@@ -1,5 +1,5 @@
-import UserInfoInterface from "../user-info";
-import ValidatableInterface from "@alirya/validator/validatable/validatable";
+import UserInfoInterface from '../user-info';
+import ValidatableInterface from '@alirya/validator/validatable/validatable';
 
 export default interface Validatable<
     MessageType = unknown,

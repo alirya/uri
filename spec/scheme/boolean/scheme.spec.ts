@@ -1,6 +1,6 @@
-import Scheme from "../../../dist/scheme/boolean/scheme";
+import Scheme from '../../../dist/scheme/boolean/scheme';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 let list = new Map<string, boolean>();

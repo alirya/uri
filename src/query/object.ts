@@ -1,18 +1,18 @@
-import Value from "@alirya/value/value";
-import Pick from "@alirya/object/pick";
-import {StringifyOptions, stringify} from "query-string";
-import OmitUndefined from "@alirya/object/omit-undefined";
+import Value from '@alirya/value/value';
+import Pick from '@alirya/object/pick';
+import {StringifyOptions, stringify} from 'query-string';
+import OmitUndefined from '@alirya/object/omit-undefined';
 
 export type RecordRecursive<V> =  {
     [P in PropertyKey]: RecordRecursive<V>|any;
-}
+};
 
 export default class Object_ implements Value<RecordRecursive<any>>, Required<Omit<StringifyOptions, 'sort'>>, Pick<StringifyOptions, 'sort'> {
 
     /**
      * @see StringifyOptions.arrayFormat
      */
-    public arrayFormat: "bracket" | "index" | "comma" | "separator" | "none" = 'none';
+    public arrayFormat: 'bracket' | 'index' | 'comma' | 'separator' | 'none' = 'none';
     /**
      * @see StringifyOptions.arrayFormatSeparator
      */

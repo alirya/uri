@@ -1,7 +1,7 @@
-import Standard from "../../dist/path/standard";
+import Standard from '../../dist/path/standard';
 
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough()});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map : {delimiter:string, delimiters:string, expectation:string, value:string}[] = [];
 
@@ -78,7 +78,7 @@ describe('constructor', ()=>{
 
         describe(`[${i}]${value.value}`, ()=>{
 
-            let standard = new Standard(value.value, value.delimiter, value.delimiters)
+            let standard = new Standard(value.value, value.delimiter, value.delimiters);
 
             it('delimiter', ()=>{
                 expect(standard.delimiter).toBe(value.delimiter);

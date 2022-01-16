@@ -1,5 +1,5 @@
-import UserInfo from "../user-info";
-import ToUriParameter from "./to-uri-parameter";
+import UserInfo from '../user-info';
+import ToUriParameter from './to-uri-parameter';
 
 export default function Join(userInfo : UserInfo) : string {
 

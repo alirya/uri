@@ -1,14 +1,14 @@
-import File from "./file";
-import PathStandard from "../standard";
-import Extension from "../string/extension";
-import ReplaceExtension from "../string/replace-extension";
-import Name from "../string/name";
-import GetFile from "../string/file";
-import ReplaceName from "../string/replace-name";
-import ReplaceFile from "../string/replace-file";
-import SafeCast from "@alirya/string/safe-cast";
-import Join from "../string/join";
-import RemoveSuffixCharacter from "@alirya/string/remove-suffix-character";
+import File from './file';
+import PathStandard from '../standard';
+import Extension from '../string/extension';
+import ReplaceExtension from '../string/replace-extension';
+import Name from '../string/name';
+import GetFile from '../string/file';
+import ReplaceName from '../string/replace-name';
+import ReplaceFile from '../string/replace-file';
+import SafeCast from '@alirya/string/safe-cast';
+import Join from '../string/join';
+import RemoveSuffixCharacter from '@alirya/string/remove-suffix-character';
 
 export default class Standard extends PathStandard implements File {
 
@@ -24,7 +24,7 @@ export default class Standard extends PathStandard implements File {
 
     set directory(dir : string)  {
 
-        this.value = Join(dir, this.file, this.delimiter[0], this.splitter)
+        this.value = Join(dir, this.file, this.delimiter[0], this.splitter);
     }
 
     set extension(extension : string)  {

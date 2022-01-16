@@ -1,8 +1,8 @@
-import Pattern from "../pattern/password";
-import StringMatch from "@alirya/string/validatable/match";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import QueryMessage from "./string/password";
+import Pattern from '../pattern/password';
+import StringMatch from '@alirya/string/validatable/match';
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import QueryMessage from './string/password';
 
 export default function Password(
     source : string,

@@ -1,5 +1,5 @@
-import Value from "@alirya/value/value";
-import ValueOf from "@alirya/value/value-of/value-of";
+import Value from '@alirya/value/value';
+import ValueOf from '@alirya/value/value-of/value-of';
 
 export default class Coded implements Value<string>, ValueOf<string> {
 

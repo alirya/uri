@@ -1,7 +1,7 @@
-import Ipv4 from "../../../dist/host/validatable/ipv4";
-import Truncate from "@alirya/string/truncate";
+import Ipv4 from '../../../dist/host/validatable/ipv4';
+import Truncate from '@alirya/string/truncate';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 let list : [string, boolean][] = [];

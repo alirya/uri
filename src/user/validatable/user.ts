@@ -1,8 +1,8 @@
-import Pattern from "../pattern/user";
-import StringMatch from "@alirya/string/validatable/match";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import UserMessage from "./string/user";
+import Pattern from '../pattern/user';
+import StringMatch from '@alirya/string/validatable/match';
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import UserMessage from './string/user';
 
 export default function User(
     source : string,

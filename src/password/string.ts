@@ -1,9 +1,9 @@
-import Password from "./validatable/password";
-import AssertValid from "@alirya/validator/validatable/assert/valid";
-import Validatable from "@alirya/validator/validatable/validatable";
-import Value from "@alirya/value/value";
-import StringMatch from "@alirya/string/validatable/match";
-import PasswordMessage from "./validatable/string/password";
+import Password from './validatable/password';
+import AssertValid from '@alirya/validator/validatable/assert/valid';
+import Validatable from '@alirya/validator/validatable/validatable';
+import Value from '@alirya/value/value';
+import StringMatch from '@alirya/string/validatable/match';
+import PasswordMessage from './validatable/string/password';
 
 export default function String(
     password : string,

@@ -1,4 +1,4 @@
-import Split from "../array/split";
+import Split from '../array/split';
 
 export default function File(path : string, delimiter : string) : string {
 

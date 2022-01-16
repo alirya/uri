@@ -1,5 +1,5 @@
-import Port from "../port/port";
-import ToUri from "./to-uri";
+import Port from '../port/port';
+import ToUri from './to-uri';
 
 export default function ToUriObject(port : Port) : string {
 

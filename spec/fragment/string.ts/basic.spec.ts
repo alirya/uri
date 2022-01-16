@@ -1,6 +1,6 @@
-import String from "../../../dist/fragment/string";
+import String from '../../../dist/fragment/string';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let list : [string, boolean, string][] = [];
 

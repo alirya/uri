@@ -1,6 +1,6 @@
-import Path from "./path";
-import Value from "@alirya/value/value";
-import Escape from "@alirya/string/pattern/escape";
+import Path from './path';
+import Value from '@alirya/value/value';
+import Escape from '@alirya/string/pattern/escape';
 
 export default class Standard implements Path, Value<string> {
     constructor(
@@ -17,7 +17,7 @@ export default class Standard implements Path, Value<string> {
 
     toString(): string {
 
-        const escaped = Escape(this.splitter)
+        const escaped = Escape(this.splitter);
 
         const pattern = new RegExp(`[${escaped}]+`, 'g');
 

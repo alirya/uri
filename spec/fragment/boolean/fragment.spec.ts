@@ -1,6 +1,6 @@
-import Fragment from "../../../dist/fragment/boolean/fragment";
+import Fragment from '../../../dist/fragment/boolean/fragment';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 let list = new Map<string, boolean>();

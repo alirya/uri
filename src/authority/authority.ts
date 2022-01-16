@@ -1,5 +1,5 @@
-import ToString from "@alirya/string/to-string";
-import UserInfoInterface from "../user-info/user-info";
+import ToString from '@alirya/string/to-string';
+import UserInfoInterface from '../user-info/user-info';
 
 export default
    interface Authority<

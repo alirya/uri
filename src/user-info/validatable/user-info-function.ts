@@ -1,5 +1,5 @@
-import UserInfoMessage from "./string/user-info";
-import UserInfo from "./user-info";
+import UserInfoMessage from './string/user-info';
+import UserInfo from './user-info';
 
 export default function UserInfoFunction(
     value : string,
@@ -15,5 +15,5 @@ export default function UserInfoFunction(
     message : (result : Omit<UserInfo<string>, 'message'>) => string = UserInfoMessage
 ) : UserInfo<string> {
 
-    return new UserInfo<string>(value, message)
+    return new UserInfo<string>(value, message);
 }
