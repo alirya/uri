@@ -1,5 +1,5 @@
-import Standard from "./standard";
-import Split from "./array/split";
+import Standard from './standard';
+import Split from './array/split';
 export default class List extends Array {
     constructor(segments = [], delimiter = '/', delimiters = '/\\:') {
         super(...segments);

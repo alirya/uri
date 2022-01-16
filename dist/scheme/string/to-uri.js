@@ -1,4 +1,4 @@
-import SuffixCharacter from "@alirya/string/suffix-character";
+import SuffixCharacter from '@alirya/string/suffix-character';
 export default function ToUri(scheme) {
     return SuffixCharacter(scheme.toString(), ':');
 }

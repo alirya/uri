@@ -1,4 +1,4 @@
-import Sentence from "@alirya/string/message/sentence";
+import Sentence from '@alirya/string/message/sentence';
 export default function UserInfo(result) {
     let sentence = new Sentence(result.valid);
     sentence.expect = 'authority';

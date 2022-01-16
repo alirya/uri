@@ -1,4 +1,4 @@
-import SafeCast from "@alirya/string/safe-cast";
+import SafeCast from '@alirya/string/safe-cast';
 export default function ToUriParameter(user, password) {
     let result = SafeCast(user);
     let _password = SafeCast(password);

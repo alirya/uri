@@ -1,9 +1,9 @@
-import Port from "../../port/validatable/port";
-import RemovePrefixCharacter from "@alirya/string/remove-prefix-character";
-import Host from "../../host/validatable/host";
-import NotEmpty from "@alirya/string/boolean/not-empty";
-import UserInfoFunction from "../../user-info/validatable/user-info-function";
-import SetGetter from "@alirya/object/value/value/set-getter";
+import Port from '../../port/validatable/port';
+import RemovePrefixCharacter from '@alirya/string/remove-prefix-character';
+import Host from '../../host/validatable/host';
+import NotEmpty from '@alirya/string/boolean/not-empty';
+import UserInfoFunction from '../../user-info/validatable/user-info-function';
+import SetGetter from '@alirya/object/value/value/set-getter';
 export default class Authority {
     constructor(value, messageFactory) {
         this.value = value;

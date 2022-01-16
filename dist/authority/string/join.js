@@ -1,4 +1,4 @@
-import UserInfoJoin from "../../user-info/string/to-uri";
+import UserInfoJoin from '../../user-info/string/to-uri';
 export default function Join(authority, userInfoToString = UserInfoJoin) {
     let result = '';
     if (authority.host !== undefined) {

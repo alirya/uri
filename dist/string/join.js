@@ -1,5 +1,5 @@
-import PrefixCharacter from "@alirya/string/prefix-character";
-import JoinAuthority from "../authority/string/join";
+import PrefixCharacter from '@alirya/string/prefix-character';
+import JoinAuthority from '../authority/string/join';
 export default function Join(uri, authority = JoinAuthority) {
     let result = '';
     let scheme = uri.scheme ? uri.scheme.toString() : '';

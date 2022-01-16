@@ -1,4 +1,4 @@
-import ToUri from "./to-uri";
+import ToUri from './to-uri';
 export default function ToUriObject(port) {
     if (port.port) {
         return ToUri(port);

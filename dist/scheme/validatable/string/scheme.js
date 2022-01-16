@@ -1,5 +1,5 @@
-import SentencesIs from "@alirya/string/message/sentences-must";
-import Truncate from "@alirya/string/truncate";
+import SentencesIs from '@alirya/string/message/sentences-must';
+import Truncate from '@alirya/string/truncate';
 export default function Scheme(result, subject = '') {
     let sentence = SentencesIs(result.valid, ['value']);
     sentence.subject.push(subject);

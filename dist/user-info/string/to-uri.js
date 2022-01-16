@@ -1,4 +1,4 @@
-import ToUriParameter from "./to-uri-parameter";
+import ToUriParameter from './to-uri-parameter';
 export default function Join(userInfo) {
     return ToUriParameter(userInfo.user, userInfo.password);
 }

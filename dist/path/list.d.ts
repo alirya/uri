@@ -1,4 +1,4 @@
-import Path from "./path";
+import Path from './path';
 export default class List extends Array<string> implements Path {
     delimiter: string;
     delimiters: string;

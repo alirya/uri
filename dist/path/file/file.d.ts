@@ -1,4 +1,4 @@
-import Path from "../path";
+import Path from '../path';
 export default interface File extends Path {
     directory: string;
     extension: string;

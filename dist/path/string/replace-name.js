@@ -1,5 +1,5 @@
-import Extension from "./extension";
-import Split from "../array/split";
+import Extension from './extension';
+import Split from '../array/split';
 export default function ReplaceName(path, name, delimiter = ':/\\') {
     let parts = Split(path, delimiter);
     let file = parts.pop();

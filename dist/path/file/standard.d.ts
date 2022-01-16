@@ -1,5 +1,5 @@
-import File from "./file";
-import PathStandard from "../standard";
+import File from './file';
+import PathStandard from '../standard';
 export default class Standard extends PathStandard implements File {
     get extension(): string;
     get directory(): string;

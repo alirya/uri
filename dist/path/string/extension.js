@@ -1,4 +1,4 @@
-import Escape from "@alirya/string/pattern/escape";
+import Escape from '@alirya/string/pattern/escape';
 export default function Extension(path, delimiter = ':/\\') {
     let escaped = Escape(delimiter);
     let match = path.match(new RegExp(`\\.[^${escaped}.]*$`));

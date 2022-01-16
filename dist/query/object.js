@@ -1,6 +1,6 @@
-import Pick from "@alirya/object/pick";
-import { stringify } from "query-string";
-import OmitUndefined from "@alirya/object/omit-undefined";
+import Pick from '@alirya/object/pick';
+import { stringify } from 'query-string';
+import OmitUndefined from '@alirya/object/omit-undefined';
 export default class Object_ {
     constructor(value, option = {}) {
         this.value = value;

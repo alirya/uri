@@ -1,5 +1,5 @@
-import Value from "@alirya/value/value";
-import { StringifyOptions } from "query-string";
+import Value from '@alirya/value/value';
+import { StringifyOptions } from 'query-string';
 export declare type RecordRecursive<V> = {
     [P in PropertyKey]: RecordRecursive<V> | any;
 };
@@ -8,7 +8,7 @@ export default class Object_ implements Value<RecordRecursive<any>>, Required<Om
     /**
      * @see StringifyOptions.arrayFormat
      */
-    arrayFormat: "bracket" | "index" | "comma" | "separator" | "none";
+    arrayFormat: 'bracket' | 'index' | 'comma' | 'separator' | 'none';
     /**
      * @see StringifyOptions.arrayFormatSeparator
      */

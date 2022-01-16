@@ -1,10 +1,10 @@
-import Greater from "@alirya/number/validatable/greater";
-import GreaterMessage from "@alirya/number/validatable/string/greater";
-import Lower from "@alirya/number/validatable/lower";
-import LowerMessage from "@alirya/number/validatable/string/lower";
-import String from "@alirya/string/boolean/string";
-import Numeric from "@alirya/string/validatable/numeric";
-import NumericMessage from "@alirya/string/validatable/string/numeric";
+import Greater from '@alirya/number/validatable/greater';
+import GreaterMessage from '@alirya/number/validatable/string/greater';
+import Lower from '@alirya/number/validatable/lower';
+import LowerMessage from '@alirya/number/validatable/string/lower';
+import String from '@alirya/string/boolean/string';
+import Numeric from '@alirya/string/validatable/numeric';
+import NumericMessage from '@alirya/string/validatable/string/numeric';
 export default function Port(port, message) {
     if (String(port)) {
         let digit = new Numeric(port, message ? message : NumericMessage);

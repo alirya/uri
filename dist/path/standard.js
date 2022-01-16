@@ -1,4 +1,4 @@
-import Escape from "@alirya/string/pattern/escape";
+import Escape from '@alirya/string/pattern/escape';
 export default class Standard {
     constructor(value, delimiter = '/', delimiters = '/\\:') {
         this.value = value;
