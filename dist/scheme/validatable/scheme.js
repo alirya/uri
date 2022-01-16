@@ -1,4 +1,4 @@
-import StringMatch from "@dikac/t-string/validatable/match";
+import StringMatch from "@alirya/string/validatable/match";
 import SchemePattern from "../pattern/scheme";
 import SchemeMessage from "./string/scheme";
 export default function Scheme(scheme, message = SchemeMessage) {

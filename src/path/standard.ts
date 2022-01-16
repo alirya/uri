@@ -1,6 +1,6 @@
 import Path from "./path";
-import Value from "@dikac/t-value/value";
-import Escape from "@dikac/t-string/pattern/escape";
+import Value from "@alirya/value/value";
+import Escape from "@alirya/string/pattern/escape";
 
 export default class Standard implements Path, Value<string> {
     constructor(

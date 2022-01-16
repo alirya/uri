@@ -1,5 +1,5 @@
 import AuthorityInterface from "./authority/authority";
-import ToString from "@dikac/t-string/to-string";
+import ToString from "@alirya/string/to-string";
 import Path from "./path/path";
 import Query from "./query/query/query";
 import Scheme from "./scheme/scheme/scheme";

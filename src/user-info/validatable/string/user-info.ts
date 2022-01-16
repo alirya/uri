@@ -1,6 +1,6 @@
-import Validatable from "@dikac/t-validator/validatable/validatable";
+import Validatable from "@alirya/validator/validatable/validatable";
 import UserInfo from "../../validatable/validatable";
-import Sentence from "@dikac/t-string/message/sentence";
+import Sentence from "@alirya/string/message/sentence";
 
 export default function UserInfo(
     result : Readonly<UserInfo<string,

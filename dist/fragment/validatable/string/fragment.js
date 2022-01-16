@@ -1,5 +1,5 @@
-import SentencesIs from "@dikac/t-string/message/sentences-must";
-import Truncate from "@dikac/t-string/truncate";
+import SentencesIs from "@alirya/string/message/sentences-must";
+import Truncate from "@alirya/string/truncate";
 export default function Fragment(result) {
     let sentence = SentencesIs(result.valid, ['value']);
     sentence.expect.push('valid fragment');

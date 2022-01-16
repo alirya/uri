@@ -1,5 +1,5 @@
 import { v6 } from "is-ip";
-import Unclose from "@dikac/t-string/unclose";
+import Unclose from "@alirya/string/unclose";
 export default function Ipv6(string) {
     if (string[0] === '[' && string[string.length - 1] === ']') {
         string = Unclose(string, '[', ']');

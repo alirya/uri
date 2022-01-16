@@ -11,3 +11,4 @@ export default class List extends PathList implements File {
     get name(): string;
     set name(name: string);
 }
+//# sourceMappingURL=list.d.ts.map

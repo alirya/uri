@@ -1,7 +1,7 @@
 import User from "../../user/validatable/user";
 import Password from "../../password/validatable/password";
-import NotEmpty from "@dikac/t-string/boolean/not-empty";
-import SetGetter from "@dikac/t-object/value/value/set-getter";
+import NotEmpty from "@alirya/string/boolean/not-empty";
+import SetGetter from "@alirya/object/value/value/set-getter";
 export default class UserInfo {
     constructor(value, messageFactory) {
         this.value = value;

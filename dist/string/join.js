@@ -1,4 +1,4 @@
-import PrefixCharacter from "@dikac/t-string/prefix-character";
+import PrefixCharacter from "@alirya/string/prefix-character";
 import JoinAuthority from "../authority/string/join";
 export default function Join(uri, authority = JoinAuthority) {
     let result = '';

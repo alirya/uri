@@ -1,6 +1,6 @@
 import Uri from "../../../dist/uri";
 import Join from "../../../dist/string/join";
-import ToString from "@dikac/t-string/to-string";
+import ToString from "@alirya/string/to-string";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough()});
 

@@ -1,4 +1,4 @@
-import StringMatch from "@dikac/t-string/validatable/match";
+import StringMatch from "@alirya/string/validatable/match";
 import QueryPattern from "../pattern/query";
 import QueryMessage from "./string/query";
 export default function Query(query, message = QueryMessage) {

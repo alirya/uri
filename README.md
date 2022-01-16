@@ -1,2 +1,2 @@
-# t-uri
+# uri
 typescipt uri

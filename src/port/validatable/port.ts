@@ -1,14 +1,14 @@
-import Greater from "@dikac/t-number/validatable/greater";
-import GreaterMessage from "@dikac/t-number/validatable/string/greater";
-import Lower from "@dikac/t-number/validatable/lower";
-import LowerMessage from "@dikac/t-number/validatable/string/lower";
-import String from "@dikac/t-string/boolean/string";
-import Numeric from "@dikac/t-string/validatable/numeric";
-import NumericMessage from "@dikac/t-string/validatable/string/numeric";
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import ValueOf from "@dikac/t-value/value-of/value-of";
+import Greater from "@alirya/number/validatable/greater";
+import GreaterMessage from "@alirya/number/validatable/string/greater";
+import Lower from "@alirya/number/validatable/lower";
+import LowerMessage from "@alirya/number/validatable/string/lower";
+import String from "@alirya/string/boolean/string";
+import Numeric from "@alirya/string/validatable/numeric";
+import NumericMessage from "@alirya/string/validatable/string/numeric";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
+import Message from "@alirya/message/message";
+import ValueOf from "@alirya/value/value-of/value-of";
 
 export default function Port(
     port : number|string,

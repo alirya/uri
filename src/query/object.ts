@@ -1,7 +1,7 @@
-import Value from "@dikac/t-value/value";
-import Pick from "@dikac/t-object/pick";
+import Value from "@alirya/value/value";
+import Pick from "@alirya/object/pick";
 import {StringifyOptions, stringify} from "query-string";
-import OmitUndefined from "@dikac/t-object/omit-undefined";
+import OmitUndefined from "@alirya/object/omit-undefined";
 
 export type RecordRecursive<V> =  {
     [P in PropertyKey]: RecordRecursive<V>|any;

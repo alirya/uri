@@ -1,6 +1,6 @@
-import Pick from "@dikac/t-object/pick";
+import Pick from "@alirya/object/pick";
 import { stringify } from "query-string";
-import OmitUndefined from "@dikac/t-object/omit-undefined";
+import OmitUndefined from "@alirya/object/omit-undefined";
 export default class Object_ {
     constructor(value, option = {}) {
         this.value = value;

@@ -1,10 +1,10 @@
-import Greater from "@dikac/t-number/validatable/greater";
-import GreaterMessage from "@dikac/t-number/validatable/string/greater";
-import Lower from "@dikac/t-number/validatable/lower";
-import LowerMessage from "@dikac/t-number/validatable/string/lower";
-import String from "@dikac/t-string/boolean/string";
-import Numeric from "@dikac/t-string/validatable/numeric";
-import NumericMessage from "@dikac/t-string/validatable/string/numeric";
+import Greater from "@alirya/number/validatable/greater";
+import GreaterMessage from "@alirya/number/validatable/string/greater";
+import Lower from "@alirya/number/validatable/lower";
+import LowerMessage from "@alirya/number/validatable/string/lower";
+import String from "@alirya/string/boolean/string";
+import Numeric from "@alirya/string/validatable/numeric";
+import NumericMessage from "@alirya/string/validatable/string/numeric";
 export default function Port(port, message) {
     if (String(port)) {
         let digit = new Numeric(port, message ? message : NumericMessage);

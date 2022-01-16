@@ -5,3 +5,4 @@ export default interface File extends Path {
     name: string;
     file: string;
 }
+//# sourceMappingURL=file.d.ts.map

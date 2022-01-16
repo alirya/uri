@@ -1,6 +1,6 @@
 import Authority from "./authority";
 import UserInfoInterface from "../user-info/user-info";
-import ToString from "@dikac/t-string/to-string";
+import ToString from "@alirya/string/to-string";
 
 export default
     class Standard<

@@ -1,5 +1,5 @@
-import SentencesIs from "@dikac/t-string/message/sentences-must";
-import Truncate from "@dikac/t-string/truncate";
+import SentencesIs from "@alirya/string/message/sentences-must";
+import Truncate from "@alirya/string/truncate";
 export default function Ipv6(result, subject = '') {
     let sentence = SentencesIs(result.valid, [subject]);
     sentence.subject.push(subject);

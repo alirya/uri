@@ -1,4 +1,4 @@
-import ToString from "@dikac/t-string/to-string";
+import ToString from "@alirya/string/to-string";
 import UserInfoInterface from "../user-info/user-info";
 
 export default

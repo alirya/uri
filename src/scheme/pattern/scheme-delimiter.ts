@@ -1,5 +1,5 @@
 import Scheme from "./scheme";
-import Escape from "@dikac/t-string/pattern/escape";
+import Escape from "@alirya/string/pattern/escape";
 /**
  * @reference https://tools.ietf.org/html/rfc3986#appendix-B
  */

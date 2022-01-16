@@ -1,4 +1,4 @@
-import PadPrefix from "@dikac/t-string/pad-prefix";
+import PadPrefix from "@alirya/string/pad-prefix";
 
 
 export default function * PercentEncodedList() {

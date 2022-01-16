@@ -1,8 +1,8 @@
-import Callback from "@dikac/t-string/validatable/callback";
+import Callback from "@alirya/string/validatable/callback";
 import Ipv6Boolean from "../boolean/ipv6";
 import Ipv6Message from "./string/ipv6";
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
 
 export default function Ipv6(
     string : string,

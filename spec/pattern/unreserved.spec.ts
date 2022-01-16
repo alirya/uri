@@ -1,8 +1,8 @@
 import Unreserved from "../../dist/pattern/unreserved";
-import Shuffle from "@dikac/t-array/shuffle";
-import AlphabetLowercase from "@dikac/t-string/alphabet-lowercase";
-import AlphabetUppercase from "@dikac/t-string/alphabet-uppercase";
-import Digit from "@dikac/t-string/digit";
+import Shuffle from "@alirya/array/shuffle";
+import AlphabetLowercase from "@alirya/string/alphabet-lowercase";
+import AlphabetUppercase from "@alirya/string/alphabet-uppercase";
+import Digit from "@alirya/string/digit";
 import PercentEncodedList from "./percent-encoded";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough()});

@@ -1,8 +1,8 @@
-import Callback from "@dikac/t-string/validatable/callback";
+import Callback from "@alirya/string/validatable/callback";
 import HostBoolean from "../boolean/host";
 import HostMessage from "./string/host";
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
 
 export default function Host(
     string : string,

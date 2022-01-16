@@ -1,4 +1,4 @@
-import ValidatableIntrface from "@dikac/t-validator/validatable/validatable";
+import ValidatableIntrface from "@alirya/validator/validatable/validatable";
 import Validatable from "./validatable";
 export default class UserInfo<MessageType> implements Validatable<MessageType, Readonly<ValidatableIntrface<string, string>>, Readonly<ValidatableIntrface<string, string>>> {
     readonly value: string;
@@ -9,3 +9,4 @@ export default class UserInfo<MessageType> implements Validatable<MessageType, R
     get message(): MessageType;
     get valid(): boolean;
 }
+//# sourceMappingURL=user-info.d.ts.map

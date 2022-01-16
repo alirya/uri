@@ -3,3 +3,4 @@
  */
 declare const Scheme: RegExp;
 export default Scheme;
+//# sourceMappingURL=scheme.d.ts.map

@@ -8,3 +8,4 @@ export default class List extends Array<string> implements Path {
     split(): void;
     toString(): string;
 }
+//# sourceMappingURL=list.d.ts.map

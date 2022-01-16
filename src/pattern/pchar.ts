@@ -1,8 +1,8 @@
 import Unreserved from "./unreserved";
 import Percent from "./percent-encoded";
 import SubDelimiter from "./sub-delimiter";
-import Escape from "@dikac/t-string/pattern/escape";
-import Unique from "@dikac/t-array/unique";
+import Escape from "@alirya/string/pattern/escape";
+import Unique from "@alirya/array/unique";
 
 const subDelimiter = SubDelimiter;
 const unreserved = Unreserved;

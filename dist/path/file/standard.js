@@ -5,9 +5,9 @@ import Name from "../string/name";
 import GetFile from "../string/file";
 import ReplaceName from "../string/replace-name";
 import ReplaceFile from "../string/replace-file";
-import SafeCast from "@dikac/t-string/safe-cast";
+import SafeCast from "@alirya/string/safe-cast";
 import Join from "../string/join";
-import RemoveSuffixCharacter from "@dikac/t-string/remove-suffix-character";
+import RemoveSuffixCharacter from "@alirya/string/remove-suffix-character";
 export default class Standard extends PathStandard {
     get extension() {
         return Extension(this.value);

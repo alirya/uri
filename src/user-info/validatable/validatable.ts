@@ -1,5 +1,5 @@
 import UserInfoInterface from "../user-info";
-import ValidatableInterface from "@dikac/t-validator/validatable/validatable";
+import ValidatableInterface from "@alirya/validator/validatable/validatable";
 
 export default interface Validatable<
     MessageType = unknown,

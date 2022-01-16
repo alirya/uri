@@ -1,5 +1,5 @@
 import PercentEncoded from "../../dist/pattern/percent-encoded";
-import PadPrefix from "@dikac/t-string/pad-prefix";
+import PadPrefix from "@alirya/string/pad-prefix";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough()});
 

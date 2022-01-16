@@ -1,14 +1,14 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
 import Port from "../../port/validatable/port";
-import RemovePrefixCharacter from "@dikac/t-string/remove-prefix-character";
+import RemovePrefixCharacter from "@alirya/string/remove-prefix-character";
 import Host from "../../host/validatable/host";
 import UserInfoInterface from "../../user-info/validatable/validatable";
 import AuthorityInterface from "./validatable";
-import Message from "@dikac/t-message/message";
-import NotEmpty from "@dikac/t-string/boolean/not-empty";
+import Message from "@alirya/message/message";
+import NotEmpty from "@alirya/string/boolean/not-empty";
 import UserInfoFunction from "../../user-info/validatable/user-info-function";
-import SetGetter from "@dikac/t-object/value/value/set-getter";
+import SetGetter from "@alirya/object/value/value/set-getter";
 
 export default class Authority<MessageType = unknown> implements AuthorityInterface<
     MessageType,

@@ -1,5 +1,5 @@
 import Path from "../path";
-import TrimPrefix from "@dikac/t-string/trim-prefix";
+import TrimPrefix from "@alirya/string/trim-prefix";
 
 export default function ToUriRootless(path : Path) : string {
 

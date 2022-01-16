@@ -1,4 +1,4 @@
-import Escape from "@dikac/t-string/pattern/escape";
+import Escape from "@alirya/string/pattern/escape";
 
 export default function Split(
     string : string,

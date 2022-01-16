@@ -10,3 +10,4 @@ export default class Standard extends PathStandard implements File {
     get name(): string;
     set name(name: string);
 }
+//# sourceMappingURL=standard.d.ts.map

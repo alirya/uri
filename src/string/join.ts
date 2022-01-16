@@ -1,5 +1,5 @@
 import Uri from "../uri";
-import PrefixCharacter from "@dikac/t-string/prefix-character";
+import PrefixCharacter from "@alirya/string/prefix-character";
 import Path from "../path/path";
 import JoinAuthority from "../authority/string/join";
 import Authority from "../authority/authority";

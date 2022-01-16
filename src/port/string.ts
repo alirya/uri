@@ -1,8 +1,8 @@
 import PortMessage from "./validatable/string/port";
-import Value from "@dikac/t-value/value";
-import Message from "@dikac/t-message/message";
-import Validatable from "@dikac/t-validatable/validatable";
-import ValueOf from "@dikac/t-value/value-of/value-of";
+import Value from "@alirya/value/value";
+import Message from "@alirya/message/message";
+import Validatable from "@alirya/validatable/validatable";
+import ValueOf from "@alirya/value/value-of/value-of";
 import Port from "./validatable/port";
 
 export default function String(

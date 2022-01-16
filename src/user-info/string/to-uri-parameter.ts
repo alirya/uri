@@ -1,5 +1,5 @@
-import ToString from "@dikac/t-string/to-string";
-import SafeCast from "@dikac/t-string/safe-cast";
+import ToString from "@alirya/string/to-string";
+import SafeCast from "@alirya/string/safe-cast";
 
 export default function ToUriParameter(user ?: ToString, password ?: ToString) : string {
 

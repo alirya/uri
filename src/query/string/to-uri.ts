@@ -1,5 +1,5 @@
-import ToString from "@dikac/t-string/to-string";
-import PrefixCharacter from "@dikac/t-string/prefix-character";
+import ToString from "@alirya/string/to-string";
+import PrefixCharacter from "@alirya/string/prefix-character";
 
 export default function ToUri(query : ToString) : string {
 

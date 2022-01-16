@@ -1,7 +1,7 @@
 import Pattern from "../pattern/user";
-import StringMatch from "@dikac/t-string/validatable/match";
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
+import StringMatch from "@alirya/string/validatable/match";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
 import UserMessage from "./string/user";
 
 export default function User(

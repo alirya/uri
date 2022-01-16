@@ -1,4 +1,4 @@
-import PrefixCharacter from "@dikac/t-string/prefix-character";
+import PrefixCharacter from "@alirya/string/prefix-character";
 export default function ToUri(port) {
     return PrefixCharacter(port.toString(), ':');
 }

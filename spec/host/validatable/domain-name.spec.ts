@@ -1,5 +1,5 @@
 import DomainName from "../../../dist/host/validatable/domain-name";
-import Truncate from "@dikac/t-string/truncate";
+import Truncate from "@alirya/string/truncate";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
 

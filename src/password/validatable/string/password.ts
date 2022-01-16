@@ -1,7 +1,7 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validator/validatable/validatable";
-import SentencesIs from "@dikac/t-string/message/sentences-must";
-import Truncate from "@dikac/t-string/truncate";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validator/validatable/validatable";
+import SentencesIs from "@alirya/string/message/sentences-must";
+import Truncate from "@alirya/string/truncate";
 
 export default function Password(
     result : Readonly<Value<string> & Validatable>,

@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import { StringifyOptions } from "query-string";
 export declare type RecordRecursive<V> = {
     [P in PropertyKey]: RecordRecursive<V> | any;
@@ -36,3 +36,4 @@ export default class Object_ implements Value<RecordRecursive<any>>, Required<Om
     constructor(value: RecordRecursive<any>, option?: StringifyOptions);
     toString(): string;
 }
+//# sourceMappingURL=object.d.ts.map

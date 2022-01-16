@@ -1,4 +1,5 @@
-import ToString from "@dikac/t-string/to-string";
+import ToString from "@alirya/string/to-string";
 export default interface Query<QueryType extends ToString = ToString> {
     query?: QueryType;
 }
+//# sourceMappingURL=query.d.ts.map
