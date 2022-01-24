@@ -1,5 +1,5 @@
 import Unreserved from '../../dist/pattern/unreserved';
-import Shuffle from '@alirya/array/shuffle';
+import Shuffle from '@alirya/array/shuffle-parameters';
 import AlphabetLowercase from '@alirya/string/alphabet-lowercase';
 import AlphabetUppercase from '@alirya/string/alphabet-uppercase';
 import Digit from '@alirya/string/digit';

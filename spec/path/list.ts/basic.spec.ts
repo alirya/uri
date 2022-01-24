@@ -7,11 +7,11 @@ let std = new List(['root','parent','child'], '/', '/\\:');
 describe('check integrity', ()=>{
 
     it('delimiter', ()=>{
-        expect(std.delimiter).toBe('/');
+        expect(std.separator).toBe('/');
     });
 
     it('delimiters', ()=>{
-        expect(std.delimiters).toBe('/\\:');
+        expect(std.separators).toBe('/\\:');
     });
 
     it('value', ()=>{

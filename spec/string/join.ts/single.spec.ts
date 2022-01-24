@@ -40,7 +40,7 @@ rootless.push(['', {
 
 rootless.push(['/path', {
     path : {
-        delimiter : '/',
+        separator : '/',
         toString(): string {return 'path';}
     }
 }]);

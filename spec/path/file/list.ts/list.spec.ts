@@ -3,8 +3,8 @@ import FileList from '../../../../dist/path/file/list';
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map : {
-    delimiter:string,
-    delimiters:string,
+    separator:string,
+    separators:string,
     file:string,
     name:string,
     extension:string,
@@ -17,8 +17,8 @@ let map : {
 map.push({
     value:['root','parent','child','file.ext'],
     directory:'root/parent/child',
-    delimiter:'/',
-    delimiters:'/\\:',
+    separator:'/',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -27,9 +27,9 @@ map.push({
 // 1
 map.push({
     value:['root','parent','child','file.ext'],
-    delimiter:':',
+    separator:':',
     directory:'root:parent:child',
-    delimiters:'/\\:',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -39,8 +39,8 @@ map.push({
 map.push({
     value:['root','parent','child','file.ext'],
     directory:'root\\parent\\child',
-    delimiter:'\\',
-    delimiters:'/\\:',
+    separator:'\\',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -49,9 +49,9 @@ map.push({
 // 3
 map.push({
     value:['root/\\:parent','child/:\\file.ext'],
-    delimiter:'/',
+    separator:'/',
     directory:'root/parent/child',
-    delimiters:'/\\:',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -63,8 +63,8 @@ map.push({
 map.push({
     value:['root/\\:parent','child/:\\file.ext'],
     directory:'root:parent:child',
-    delimiter:':',
-    delimiters:'/\\:',
+    separator:':',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -73,9 +73,9 @@ map.push({
 // 5
 map.push({
     value:['root/\\:parent','child/:\\file.ext'],
-    delimiter:'\\',
+    separator:'\\',
     directory:'root\\parent\\child',
-    delimiters:'/\\:',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -84,9 +84,9 @@ map.push({
 // 6
 map.push({
     value:['','root/\\:parent:/\\child/:\\file.ext'],
-    delimiter:'/',
+    separator:'/',
     directory:'/root/parent/child',
-    delimiters:'/\\:',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -95,9 +95,9 @@ map.push({
 // 7
 map.push({
     value:['','root/\\:parent:/\\child/:\\file.ext'],
-    delimiter:':',
+    separator:':',
     directory:':root:parent:child',
-    delimiters:'/\\:',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -106,9 +106,9 @@ map.push({
 // 8
 map.push({
     value:['','root/\\:parent:/\\child/:\\file.ext'],
-    delimiter:'\\',
+    separator:'\\',
     directory:'\\root\\parent\\child',
-    delimiters:'/\\:',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -117,9 +117,9 @@ map.push({
 // 9
 map.push({
     value:['root/parent/child/file.ext'],
-    delimiter:'//',
+    separator:'//',
     directory:'root/parent/child',
-    delimiters:'/\\:',
+    separators:'/\\:',
     file:'file.ext',
     name:'file',
     extension:'ext',
@@ -133,14 +133,14 @@ describe('constructor', ()=>{
 
         describe(`[${i}]` + JSON.stringify(value.value), ()=>{
 
-            let standard = new FileList(value.value, value.delimiter, value.delimiters);
+            let standard = new FileList(value.value, value.separator, value.separators);
 
             it('delimiter', ()=>{
-                expect(standard.delimiter).toBe(value.delimiter);
+                expect(standard.separator).toBe(value.separator);
             });
 
             it('delimiters', ()=>{
-                expect(standard.delimiters).toBe(value.delimiters);
+                expect(standard.separators).toBe(value.separators);
             });
 
             it('file', ()=>{
@@ -185,14 +185,14 @@ describe('mutate', ()=>{
 
             it('delimiter', ()=>{
 
-                standard.delimiter = value.delimiter;
-                expect(standard.delimiter).toBe(value.delimiter);
+                standard.separator = value.separator;
+                expect(standard.separator).toBe(value.separator);
             });
 
             it('delimiters', ()=>{
 
-                standard.delimiters = value.delimiters;
-                expect(standard.delimiters).toBe(value.delimiters);
+                standard.separators = value.separators;
+                expect(standard.separators).toBe(value.separators);
             });
 
             it('value', ()=>{

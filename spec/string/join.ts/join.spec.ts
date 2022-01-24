@@ -60,7 +60,7 @@ rootless.push(['scheme://user:password@host:1337/path', {
         }
     },
     path : {
-        delimiter : '/',
+        separator : '/',
         toString(): string {return 'path';}
     }
 }]);
@@ -76,7 +76,7 @@ rootless.push(['scheme://user:password@host:1337/path?query', {
         }
     },
     path : {
-        delimiter : '/',
+        separator : '/',
         toString(): string {return 'path';}
     },
     query : 'query'
@@ -94,7 +94,7 @@ rootless.push(['scheme://user:password@host:1337/path?query#fragment', {
         }
     },
     path : {
-        delimiter : '/',
+        separator : '/',
         toString(): string {return 'path';}
     },
     query : 'query',
@@ -111,7 +111,7 @@ rootless.push(['//user:password@host:1337/path?query#fragment', {
         }
     },
     path : {
-        delimiter : '/',
+        separator : '/',
         toString(): string {return 'path';}
     },
     query : 'query',
@@ -127,7 +127,7 @@ rootless.push(['/path?query#fragment', {
         }
     },
     path : {
-        delimiter : '/',
+        separator : '/',
         toString(): string {return 'path';}
     },
     query : 'query',
@@ -136,7 +136,7 @@ rootless.push(['/path?query#fragment', {
 
 rootless.push(['/path?query#fragment', {
     path : {
-        delimiter : '/',
+        separator : '/',
         toString(): string {return 'path';}
     },
     query : 'query',

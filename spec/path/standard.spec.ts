@@ -3,70 +3,70 @@ import Standard from '../../dist/path/standard';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let map : {delimiter:string, delimiters:string, expectation:string, value:string}[] = [];
+let map : {separator:string, separators:string, expectation:string, value:string}[] = [];
 
 map.push({
     value:'root/parent/child/file.ext',
-    delimiter:'/',
-    delimiters:'/\\:',
+    separator:'/',
+    separators:'/\\:',
     expectation :'root/parent/child/file.ext'
 });
 map.push({
     value:'root/parent/child/file.ext',
-    delimiter:':',
-    delimiters:'/\\:',
+    separator:':',
+    separators:'/\\:',
     expectation :'root:parent:child:file.ext'
 });
 
 map.push({
     value:'root/parent/child/file.ext',
-    delimiter:'\\',
-    delimiters:'/\\:',
+    separator:'\\',
+    separators:'/\\:',
     expectation :'root\\parent\\child\\file.ext'
 });
 
 map.push({
     value:'root/\\:parent:/\\child/:\\file.ext',
-    delimiter:'/',
-    delimiters:'/\\:',
+    separator:'/',
+    separators:'/\\:',
     expectation :'root/parent/child/file.ext'
 });
 map.push({
     value:'root/\\:parent:/\\child/:\\file.ext',
-    delimiter:':',
-    delimiters:'/\\:',
+    separator:':',
+    separators:'/\\:',
     expectation :'root:parent:child:file.ext'
 });
 map.push({
     value:'root/\\:parent:/\\child/:\\file.ext',
-    delimiter:'\\',
-    delimiters:'/\\:',
+    separator:'\\',
+    separators:'/\\:',
     expectation :'root\\parent\\child\\file.ext'
 });
 
 map.push({
     value:'/\\:root/\\:parent:/\\child/:\\file.ext',
-    delimiter:'/',
-    delimiters:'/\\:',
+    separator:'/',
+    separators:'/\\:',
     expectation :'/root/parent/child/file.ext'
 });
 map.push({
     value:'/\\:root/\\:parent:/\\child/:\\file.ext',
-    delimiter:':',
-    delimiters:'/\\:',
+    separator:':',
+    separators:'/\\:',
     expectation : ':root:parent:child:file.ext'
 });
 map.push({
     value:'/\\:root/\\:parent:/\\child/:\\file.ext',
-    delimiter:'\\',
-    delimiters:'/\\:',
+    separator:'\\',
+    separators:'/\\:',
     expectation : '\\root\\parent\\child\\file.ext'
 });
 
 map.push({
     value:'root/parent/child/file.ext',
-    delimiter:'//',
-    delimiters:'/\\:',
+    separator:'//',
+    separators:'/\\:',
     expectation : 'root/parent/child/file.ext'
 });
 
@@ -78,14 +78,14 @@ describe('constructor', ()=>{
 
         describe(`[${i}]${value.value}`, ()=>{
 
-            let standard = new Standard(value.value, value.delimiter, value.delimiters);
+            let standard = new Standard(value.value, value.separator, value.separators);
 
             it('delimiter', ()=>{
-                expect(standard.delimiter).toBe(value.delimiter);
+                expect(standard.separator).toBe(value.separator);
             });
 
             it('delimiters', ()=>{
-                expect(standard.delimiters).toBe(value.delimiters);
+                expect(standard.separators).toBe(value.separators);
             });
 
             it('value', ()=>{
@@ -114,14 +114,14 @@ describe('mutate', ()=>{
 
             it('delimiter', ()=>{
 
-                standard.delimiter = value.delimiter;
-                expect(standard.delimiter).toBe(value.delimiter);
+                standard.separator = value.separator;
+                expect(standard.separator).toBe(value.separator);
             });
 
             it('delimiters', ()=>{
 
-                standard.delimiters = value.delimiters;
-                expect(standard.delimiters).toBe(value.delimiters);
+                standard.separators = value.separators;
+                expect(standard.separators).toBe(value.separators);
             });
 
             it('value', ()=>{
