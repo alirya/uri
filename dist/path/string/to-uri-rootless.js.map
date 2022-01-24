@@ -1,1 +1,0 @@
-{"version":3,"file":"to-uri-rootless.js","sourceRoot":"","sources":["../../../src/path/string/to-uri-rootless.ts"],"names":[],"mappings":"AACA,OAAO,UAAU,MAAM,4BAA4B,CAAC;AAEpD,MAAM,CAAC,OAAO,UAAU,aAAa,CAAC,IAAW;IAE7C,OAAO,UAAU,CAAC,IAAI,CAAC,QAAQ,EAAE,EAAE,IAAI,CAAC,SAAS,CAAC,CAAC;AACvD,CAAC"}
