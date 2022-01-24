@@ -1,10 +1,11 @@
-import Greater from '@alirya/number/validatable/greater';
-import GreaterMessage from '@alirya/number/validatable/string/greater';
-import Lower from '@alirya/number/validatable/lower';
-import LowerMessage from '@alirya/number/validatable/string/lower';
+import Greater from '@alirya/number/validatable/greater-parameters';
+import GreaterMessage from '@alirya/number/assert/string/greater-parameters';
+import Lower from '@alirya/number/validatable/lower-parameters';
+import LowerMessage from '@alirya/number/assert/string/lower-parameters';
 import String from '@alirya/string/boolean/string';
-import Numeric from '@alirya/string/validatable/numeric';
-import NumericMessage from '@alirya/string/validatable/string/numeric';
+import Numeric from '@alirya/string/validatable/numeric-parameters';
+import NumericMessage from '@alirya/string/assert/string/numeric-parameters';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
 import Message from '@alirya/message/message';
@@ -12,12 +13,12 @@ import ValueOf from '@alirya/value/value-of/value-of';
 
 export default function Port(
     port : number|string,
-    message ?: (result:Readonly<Value<number|string> & Validatable>)=>string
-) : Readonly<Value<string|number> & Message<string> & Validatable> & ValueOf<number|string> {
+    message ?: Dynamic<string|number, string>
+) : Readonly<Value<string|number> & Message<string> & Validatable> /*& ValueOf<number|string>*/ {
 
     if(String(port)) {
 
-        let digit = new Numeric(port, message ? message : NumericMessage);
+        let digit = Numeric(port, message ? message : NumericMessage);
 
         if(digit.valid) {
 

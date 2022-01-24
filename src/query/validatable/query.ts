@@ -1,4 +1,5 @@
-import StringMatch from '@alirya/string/validatable/match';
+import StringMatch from '@alirya/string/validatable/match-parameters';
+import Dynamic from '@alirya/validator/dist/message/function/validatable-parameters';
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
 import QueryPattern from '../pattern/query';
@@ -10,12 +11,12 @@ export default function Query(
 
 export default function Query<MessageT>(
     query : string,
-    message: (result:Readonly<Value<string> & Validatable>)=>MessageT
+    message: Dynamic<string, MessageT>
 ) : StringMatch<string, MessageT>;
 
-export default function Query(
+export default function Query<MessageT>(
     query : string,
-    message = QueryMessage
+    message: Dynamic<string, MessageT|string> = QueryMessage
 )  {
 
     return new StringMatch(query, new RegExp(`^${QueryPattern}*$`, QueryPattern.flags), message);

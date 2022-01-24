@@ -1,14 +1,14 @@
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
 import Port from '../../port/validatable/port';
-import RemovePrefixCharacter from '@alirya/string/remove-prefix-character';
+import RemovePrefixCharacter from '@alirya/string/remove-prefix-parameters';
 import Host from '../../host/validatable/host';
 import UserInfoInterface from '../../user-info/validatable/validatable';
 import AuthorityInterface from './validatable';
 import Message from '@alirya/message/message';
 import NotEmpty from '@alirya/string/boolean/not-empty';
 import UserInfoFunction from '../../user-info/validatable/user-info-function';
-import SetGetter from '@alirya/object/value/value/set-getter';
+import SetGetter from '@alirya/object/value/value/set-getter-parameters';
 
 export default class Authority<MessageType = unknown> implements AuthorityInterface<
     MessageType,

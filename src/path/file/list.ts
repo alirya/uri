@@ -8,17 +8,17 @@ import ReplaceFile from '../string/replace-file';
 import Name from '../string/name';
 import ReplaceName from '../string/replace-name';
 import Standard from './standard';
-import RemoveSuffixCharacter from '@alirya/string/remove-suffix-character';
+import RemoveSuffixCharacter from '@alirya/string/remove-suffix-parameters';
 import File from './file';
 
 export default class List extends PathList implements File {
 
     constructor(
         segments : Iterable<string> = [],
-        delimiter : string = '/',
-        delimiters : string = '/\\:'
+        separator : string = '/',
+        separators : string = '/\\:'
     ) {
-        super(segments, delimiter, delimiters);
+        super(segments, separator, separators);
     }
 
     get extension () : string {
@@ -44,8 +44,8 @@ export default class List extends PathList implements File {
 
     get directory() : string {
 
-        let standard = new Standard(this.join(this.delimiter[0]), this.delimiter, this.delimiters);
-        return RemoveSuffixCharacter(standard.directory, this.delimiter[0]);
+        let standard = new Standard(this.join(this.separator[0]), this.separator, this.separators);
+        return RemoveSuffixCharacter(standard.directory, this.separator[0]);
     }
 
 

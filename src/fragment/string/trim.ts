@@ -1,4 +1,4 @@
-import RemovePrefixCharacter from '@alirya/string/remove-prefix-character';
+import RemovePrefixCharacter from '@alirya/string/remove-prefix-parameters';
 
 export default function Trim(scheme : string) : string {
 

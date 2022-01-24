@@ -1,8 +1,9 @@
+import Dynamic from '@alirya/validator/dist/message/function/validatable-parameters';
 import Query from './validatable/query';
 import AssertValid from '@alirya/validator/validatable/assert/valid';
 import Validatable from '@alirya/validator/validatable/validatable';
 import Value from '@alirya/value/value';
-import StringMatch from '@alirya/string/validatable/match';
+import StringMatch from '@alirya/string/validatable/match-parameters';
 import QueryMessage from './validatable/string/query';
 
 export default function String(
@@ -11,13 +12,13 @@ export default function String(
 
 export default function String<MessageT>(
     query : string,
-    message: (result:Readonly<Value<string> & Validatable>)=>MessageT
+    message: Dynamic<string, MessageT>
 ) : StringMatch<string, MessageT>;
 
-export default function String(
+export default function String<MessageT>(
     query : string,
-    message = QueryMessage
-)  : StringMatch<string, string> {
+    message: Dynamic<string, MessageT|string> = QueryMessage
+)  : StringMatch<string, MessageT|string> {
 
     let validatable = Query(query, message);
 

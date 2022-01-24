@@ -1,5 +1,5 @@
 import Uri from '../uri';
-import PrefixCharacter from '@alirya/string/prefix-character';
+import PrefixCharacter from '@alirya/string/prefix-parameters';
 import Path from '../path/path';
 import JoinAuthority from '../authority/string/join';
 import Authority from '../authority/authority';
@@ -27,7 +27,7 @@ export default function Join (uri :  Uri, authority : (authority:Authority)=>str
 
     if(path) {
 
-        result += PrefixCharacter(path, (uri.path as Path).delimiter);
+        result += PrefixCharacter(path, (uri.path as Path).separator);
     }
 
     let query = uri.query ? uri.query.toString() : '';

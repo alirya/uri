@@ -1,3 +1,4 @@
+import Dynamic from '@alirya/validator/dist/message/function/validatable-parameter';
 import UserInfoMessage from './string/user-info';
 import UserInfo from './user-info';
 
@@ -7,13 +8,13 @@ export default function UserInfoFunction(
 
 export default function UserInfoFunction<MessageType>(
     value : string,
-    message : (result : Omit<UserInfo<MessageType>, 'message'>) => MessageType
+    message : Dynamic<string, MessageType>
 ) : UserInfo<MessageType>;
 
-export default function UserInfoFunction(
+export default function UserInfoFunction<MessageType>(
     value : string,
-    message : (result : Omit<UserInfo<string>, 'message'>) => string = UserInfoMessage
-) : UserInfo<string> {
+    message : Dynamic<string, MessageType|string> = UserInfoMessage
+) : UserInfo<MessageType|string> {
 
-    return new UserInfo<string>(value, message);
+    return new UserInfo(value, message);
 }

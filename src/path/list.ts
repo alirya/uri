@@ -10,8 +10,8 @@ export default class List extends Array<string> implements Path {
 
     constructor(
         segments : Iterable<string> = [],
-        public delimiter : string = '/',
-        public delimiters : string = '/\\:'
+        public separator : string = '/',
+        public separators : string = '/\\:'
     ) {
 
         super(...segments);
@@ -19,7 +19,7 @@ export default class List extends Array<string> implements Path {
 
     get splitter() : string {
 
-        return this.delimiters + this.delimiter;
+        return this.separators + this.separator;
     }
 
     split() {
@@ -29,7 +29,7 @@ export default class List extends Array<string> implements Path {
 
     toString(): string {
 
-        let standard = new Standard(this.join(this.delimiter[0]), this.delimiter[0], this.delimiters);
+        let standard = new Standard(this.join(this.separator[0]), this.separator[0], this.separators);
         return standard.toString();
     }
 }

@@ -1,5 +1,5 @@
 import ToString from '@alirya/string/to-string';
-import SuffixCharacter from '@alirya/string/suffix-character';
+import SuffixCharacter from '@alirya/string/suffix-parameters';
 
 export default function ToUri(scheme : ToString) : string {
 

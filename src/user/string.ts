@@ -1,3 +1,4 @@
+import Dynamic from '@alirya/validator/dist/message/function/validatable-parameters';
 import User from './validatable/user';
 import AssertValid from '@alirya/validator/validatable/assert/valid';
 import Validatable from '@alirya/validator/validatable/validatable';
@@ -11,13 +12,13 @@ export default function String(
 
 export default function String<MessageT>(
     user : string,
-    message: (result:Readonly<Value<string> & Validatable>)=>MessageT
+    message: Dynamic<string, MessageT>
 ) : StringMatch<string, MessageT>;
 
-export default function String(
+export default function String<MessageT>(
     user : string,
-    message = UserMessage
-)  : StringMatch<string, string> {
+    message: Dynamic<string, MessageT|string> =UserMessage
+)  : StringMatch<string, MessageT|string> {
 
     let validatable = User(user, message);
 

@@ -1,4 +1,5 @@
-import StringMatch from '@alirya/string/validatable/match';
+import StringMatch from '@alirya/string/validatable/match-parameters';
+import Dynamic from '@alirya/validator/dist/message/function/validatable-parameters';
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
 import FragmentPattern from '../pattern/fragment';
@@ -10,12 +11,12 @@ export default function Fragment(
 
 export default function Fragment<MessageT>(
     fragment : string,
-    message: (result:Readonly<Value<string> & Validatable>)=>MessageT
+    message: Dynamic<string, MessageT>
 ) : StringMatch<string, MessageT>;
 
-export default function Fragment(
+export default function Fragment<MessageT>(
     fragment : string,
-    message = FragmentMessage
+    message: Dynamic<string, MessageT|string> = FragmentMessage
 )  {
 
     return new StringMatch(fragment, new RegExp(`^${FragmentPattern.source}*$`, FragmentPattern.flags), message);

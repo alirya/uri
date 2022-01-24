@@ -1,5 +1,6 @@
+import Dynamic from '@alirya/validator/dist/message/function/validatable-parameters';
 import Pattern from '../pattern/user';
-import StringMatch from '@alirya/string/validatable/match';
+import StringMatch from '@alirya/string/validatable/match-parameters';
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
 import UserMessage from './string/user';
@@ -10,13 +11,13 @@ export default function User(
 
 export default function User<MessageT>(
     source : string,
-    message: (result:Readonly<Value<string> & Validatable>)=>MessageT
+    message: Dynamic<string, MessageT>
 ) : StringMatch<string, MessageT>;
 
-export default function User(
+export default function User<MessageT>(
     source : string,
-    message = UserMessage
-)  {
+    message: Dynamic<string, MessageT|string> = UserMessage
+)  : StringMatch<string, string|MessageT> {
 
     return new StringMatch(source, new RegExp(`^${Pattern.source}*$`, Pattern.flags), message);
 }

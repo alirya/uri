@@ -5,14 +5,14 @@ import Escape from '@alirya/string/pattern/escape';
 export default class Standard implements Path, Value<string> {
     constructor(
         public value : string,
-        public delimiter : string = '/',
-        public delimiters : string = '/\\:'
+        public separator : string = '/',
+        public separators : string = '/\\:'
     ) {
     }
 
     get splitter() : string {
 
-        return this.delimiters + this.delimiter;
+        return this.separators + this.separator;
     }
 
     toString(): string {
@@ -21,6 +21,6 @@ export default class Standard implements Path, Value<string> {
 
         const pattern = new RegExp(`[${escaped}]+`, 'g');
 
-        return this.value.replace(pattern, this.delimiter[0]);
+        return this.value.replace(pattern, this.separator[0]);
     }
 }

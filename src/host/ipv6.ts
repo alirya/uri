@@ -1,21 +1,22 @@
+import Dynamic from '@alirya/validator/dist/message/function/validatable-parameters';
+import { CallbackFunctionType } from '@alirya/validator/dist/validatable/callback-function-parameters';
 import AssertValid from '@alirya/validator/validatable/assert/valid';
 import Validatable from '@alirya/validator/validatable/validatable';
 import Value from '@alirya/value/value';
-import Callback from '@alirya/string/validatable/callback';
 import Ipv6Message from './validatable/string/ipv6';
 import Ipv6Validatable from './validatable/ipv6';
 
 
 export default function Ipv6(
     string : string,
-) : Callback<string, string>;
+) : CallbackFunctionType<string, string, string>;
 export default function Ipv6<MessageType>(
     string : string,
-    message: (result: Readonly<Value<string> & Validatable<boolean>>) => MessageType
-) : Callback<string, MessageType>;
+    message: Dynamic<string, MessageType>
+) : CallbackFunctionType<string, string, MessageType>;
 export default function Ipv6<MessageType>(
     string : string,
-    message  : (result: Readonly<Value<string> & Validatable<boolean>>) => string = Ipv6Message
+    message : Dynamic<string, string|MessageType> = Ipv6Message
 ) {
     let scheme = Ipv6Validatable(string, message);
 

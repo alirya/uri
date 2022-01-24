@@ -1,6 +1,6 @@
 import ToString from '@alirya/string/to-string';
-import Delimiter from '@alirya/string/delimiter/delimiter';
+import Separator from '@alirya/string/separator/separator';
 
-export default interface Path extends ToString, Delimiter {
+export default interface Path extends ToString, Separator {
 
 }
