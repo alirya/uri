@@ -1,4 +1,4 @@
-import TemplateParameter from '@alirya/string/dist/function/template-parameter';
+import TemplateParameter from '@alirya/string/function/template-parameter';
 import Validatable from '@alirya/validator/validatable/validatable';
 import UserInfo from '../validatable';
 

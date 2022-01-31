@@ -1,4 +1,4 @@
-import Dynamic from '@alirya/validator/dist/message/function/validatable-parameters';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 import PortMessage from './validatable/string/port-parameters';
 import Value from '@alirya/value/value';
 import Message from '@alirya/message/message';

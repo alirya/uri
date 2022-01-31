@@ -22,21 +22,23 @@
 // }
 
 
-import TemplateParameter from '@alirya/string/dist/function/template-parameter';
+import TemplateParameter from '@alirya/string/function/template-parameter';
 import Truncate from '@alirya/string/truncate-parameters';
 
 const templateValid = TemplateParameter({
-  string : '{subject} is valid domain name.'
+  string : '{subject} is valid domain name.',
+  callback : string=>string.trim()
 });
 const templateInvalid = TemplateParameter({
-  string : '{subject} is not valid domain name, actual "{actual}".'
+  string : '{subject} is not valid domain name, actual "{actual}".',
+  callback : string=>string.trim()
 });
 
 export default function DomainName(
   value : string,
   valid : boolean,
   // result : Readonly<Value<string> & Validatable>,
-  subject : string = ''
+  subject : string = 'value'
 ) : string {
 
   if(valid) {

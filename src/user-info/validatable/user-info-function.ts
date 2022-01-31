@@ -1,4 +1,4 @@
-import Dynamic from '@alirya/validator/dist/message/function/validatable-parameter';
+import Dynamic from '@alirya/validator/message/function/validatable-parameter';
 import UserInfoMessage from './string/user-info';
 import UserInfo from './user-info';
 

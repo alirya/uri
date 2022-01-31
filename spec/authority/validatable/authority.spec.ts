@@ -1,6 +1,7 @@
 import Authority from '../../../dist/authority/validatable/authority';
 import ValidatableAuthority from '../../../dist/authority/validatable/validatable';
 import StringAuthority from '../../../dist/authority/validatable/string/authority';
+import Truncate from "@alirya/string/dist/truncate-parameters";
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -277,7 +278,25 @@ for(let [value, expectation] of subject) {
 
                     expect(value.host.valid).toBe(expectation.host.valid);
                     expect(value.host.value).toBe(expectation.host.value);
-                    expect(value.host.toString()).toBe(expectation.host.toString());
+
+
+                    if(value.host.valid) {
+
+                        expect(value.host.toString()).toBe(expectation.host.toString());
+
+                    } else {
+
+                        try {
+                            expect(value.host.toString()).toBe(expectation.host.toString());
+                            fail('error should be thrown');
+
+                        } catch (error) {
+
+                            expect(error).toBeInstanceOf(Error);
+                            expect(error.toString()).toBe(`Error: "value is not valid host, actual \\"${Truncate(expectation.host.value, 10)}\\"."`);
+                        }
+                    }
+
 
                 } else {
 

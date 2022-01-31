@@ -1,4 +1,4 @@
-import TemplateParameter from '@alirya/string/dist/function/template-parameter';
+import TemplateParameter from '@alirya/string/function/template-parameter';
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validator/validatable/validatable';
 import Truncate from '@alirya/string/truncate-parameters';

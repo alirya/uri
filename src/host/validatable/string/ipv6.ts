@@ -19,23 +19,23 @@
 //     return sentence.message;
 //
 // }
-
-
-import TemplateParameter from '@alirya/string/dist/function/template-parameter';
+import TemplateParameter from '@alirya/string/function/template-parameter';
 import Truncate from '@alirya/string/truncate-parameters';
 
 const templateValid = TemplateParameter({
-  string : '{subject} is valid ipv6.'
+  string : '{subject} is valid ipv6.',
+  callback : string=>string.trim()
 });
 const templateInvalid = TemplateParameter({
-  string : '{subject} is not valid ipv6, actual "{actual}".'
+  string : '{subject} is not valid ipv6, actual "{actual}".',
+  callback : string=>string.trim()
 });
 
 export default function ipv6(
   value : string,
   valid : boolean,
   // result : Readonly<Value<string> & Validatable>,
-  subject : string = ''
+  subject : string = 'value'
 ) : string {
 
   if(valid) {

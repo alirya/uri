@@ -8,7 +8,7 @@ import ReplaceName from '../string/replace-name';
 import ReplaceFile from '../string/replace-file';
 import SafeCast from '@alirya/string/safe-cast';
 import Join from '../string/join';
-import RemoveSuffixCharacter from '@alirya/string/remove-prefix-parameters';
+import RemoveSuffixCharacter from '@alirya/string/remove-suffix-parameters';
 
 export default class Standard extends PathStandard implements File {
 

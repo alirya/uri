@@ -28,11 +28,11 @@ for(let [scheme, valid] of list) {
 
         if(validatable.valid) {
 
-            expect(validatable.message).toBe(`is valid ipv4.`);
+            expect(validatable.message).toBe(`value is valid ipv4.`);
 
         } else {
 
-            expect(validatable.message).toBe(`must valid ipv4, actual "${Truncate(scheme, 10)}".`);
+            expect(validatable.message).toBe(`value is not valid ipv4, actual "${Truncate(scheme, 10)}".`);
 
         }
 

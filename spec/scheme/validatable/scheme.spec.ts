@@ -33,7 +33,7 @@ for(let [scheme, valid] of list) {
 
         } else {
 
-            expect(validatable.message).toBe(`value must valid scheme, actual "${scheme}".`);
+            expect(validatable.message).toBe(`value is not valid scheme, actual "${scheme}".`);
 
         }
 

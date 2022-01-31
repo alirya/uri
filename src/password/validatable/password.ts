@@ -1,4 +1,4 @@
-import Dynamic from '@alirya/validator/dist/message/function/validatable-parameters';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 import Pattern from '../pattern/password';
 import StringMatch from '@alirya/string/validatable/match-parameters';
 import Value from '@alirya/value/value';

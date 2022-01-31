@@ -1,5 +1,5 @@
-import Dynamic from '@alirya/validator/dist/message/function/validatable-parameters';
-import { CallbackFunctionType } from '@alirya/validator/dist/validatable/callback-function-parameters';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
+import { CallbackFunctionType } from '@alirya/validator/validatable/callback-function-parameters';
 import DomainNameValidatable from './validatable/domain-name';
 import AssertValid from '@alirya/validator/validatable/assert/valid';
 import Validatable from '@alirya/validator/validatable/validatable';

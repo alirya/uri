@@ -65,7 +65,7 @@
 // console.log(output);
 
 
-import TemplateParameter from '@alirya/string/dist/function/template-parameter';
+import TemplateParameter from '@alirya/string/function/template-parameter';
 import Truncate from '@alirya/string/truncate-parameters';
 
 const templateValid = TemplateParameter({

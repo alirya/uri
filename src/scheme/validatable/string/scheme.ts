@@ -1,4 +1,4 @@
-import TemplateParameter from '@alirya/string/dist/function/template-parameter';
+import TemplateParameter from '@alirya/string/function/template-parameter';
 // import Value from '@alirya/value/value';
 // import Validatable from '@alirya/validator/validatable/validatable';
 // import SentencesIs from '@alirya/string/message/sentences-must';
@@ -15,7 +15,8 @@ export default function Scheme(
   value : string,
   valid : boolean,
     // result : Readonly<Value<string> & Validatable>,
-    subject : string = ''
+  pattern: RegExp,
+  subject : string = 'value'
 ) : string {
 
     if(valid) {

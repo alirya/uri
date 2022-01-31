@@ -1,5 +1,5 @@
-import MemoizeAccessor from '@alirya/object/dist/function/memoize-accessor';
-import Dynamic from '@alirya/validator/dist/message/function/validatable-parameter';
+import MemoizeAccessor from '@alirya/object/function/memoize-accessor';
+import Dynamic from '@alirya/validator/message/function/validatable-parameter';
 import ValidatableIntrface from '@alirya/validator/validatable/validatable';
 import ReadonlyValidatable from './readonly';
 import Validatable from './validatable';
@@ -7,7 +7,7 @@ import User from '../../user/validatable/user';
 import Password from '../../password/validatable/password';
 import NotEmpty from '@alirya/string/boolean/not-empty';
 import SetGetter from '@alirya/object/value/value/set-getter-parameters';
-import BaseValidatable from '@alirya/validator/dist/validatable/validatable';
+import BaseValidatable from '@alirya/validator/validatable/validatable';
 import { Object } from 'ts-toolbelt';
 
 // interface ReadOnlyValidatable<MessageType> extends Object.Readonly<

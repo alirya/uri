@@ -21,21 +21,23 @@
 //
 // }
 
-import TemplateParameter from '@alirya/string/dist/function/template-parameter';
+import TemplateParameter from '@alirya/string/function/template-parameter';
 import Truncate from '@alirya/string/truncate-parameters';
 
 const templateValid = TemplateParameter({
-  string : '{subject} is valid host.'
+  string : '{subject} is valid host.',
+  callback : string=>string.trim()
 });
 const templateInvalid = TemplateParameter({
-  string : '{subject} is not valid host, actual "{actual}".'
+  string : '{subject} is not valid host, actual "{actual}".',
+  callback : string=>string.trim()
 });
 
 export default function Host(
   value : string,
   valid : boolean,
   // result : Readonly<Value<string> & Validatable>,
-  subject : string = ''
+  subject : string = 'value'
 ) : string {
 
   if(valid) {
