@@ -1,4 +1,3 @@
-import Path from '../path';
 import PathList from '../list';
 import Extension from '../string/extension';
 import ReplaceExtension from '../string/replace-extension';

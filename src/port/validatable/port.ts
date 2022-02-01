@@ -9,7 +9,6 @@ import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
 import Message from '@alirya/message/message';
-import ValueOf from '@alirya/value/value-of/value-of';
 
 export default function Port(
     port : number|string,

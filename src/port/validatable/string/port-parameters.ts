@@ -1,7 +1,4 @@
 import TemplateParameter from '@alirya/string/function/template-parameter';
-import Truncate from '@alirya/string/truncate-parameters';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validator/validatable/validatable';
 
 const templateValid = TemplateParameter({
     string : '{subject} is valid port.'
@@ -15,7 +12,6 @@ export default function PortParameters(
     value : string|number,
     valid : boolean,
     subject : string = ''
-    //result : Readonly<Value<string|number> & Validatable>
 ) : string {
 
     if(valid) {
@@ -31,9 +27,4 @@ export default function PortParameters(
             actual : 10
         });
     }
-
-    // let sentence = SentencesIs(result.valid);
-    // sentence.expect.push('valid port');
-    // sentence.subject.push(Truncate(result.value.toString(), 6));
-    // return sentence.message;
 }
