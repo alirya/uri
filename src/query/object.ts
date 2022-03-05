@@ -1,5 +1,5 @@
 import Value from '@alirya/value/value';
-import Pick from '@alirya/object/pick';
+import Pick from '@alirya/object/pick-parameters';
 import {StringifyOptions, stringify} from 'query-string';
 import OmitUndefined from '@alirya/object/omit-undefined';
 
