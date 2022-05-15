@@ -1,6 +1,6 @@
 import Escape from '@alirya/string/pattern/escape';
 
-export default function Extension(
+export default function Join(
     start : string,
     end : string,
     delimiter : string = '/',

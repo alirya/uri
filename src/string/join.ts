@@ -4,10 +4,12 @@ import Path from '../path/path';
 import JoinAuthority from '../authority/string/join';
 import Authority from '../authority/authority';
 
-export default function Join (uri :  Uri, authority : (authority:Authority)=>string = JoinAuthority ) {
+export default function Join (
+    uri :  Uri,
+    authority : (authority:Authority)=>string = JoinAuthority
+) : string {
 
     let result : string = '';
-
 
     let scheme = uri.scheme ? uri.scheme.toString() : '';
 

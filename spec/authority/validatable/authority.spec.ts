@@ -1,6 +1,6 @@
-import Authority from '../../../dist/authority/validatable/authority';
+import Authority from '../../../dist/authority/validatable/authority-parameters';
 import ValidatableAuthority from '../../../dist/authority/validatable/validatable';
-import StringAuthority from '../../../dist/authority/validatable/string/authority';
+import StringAuthority from '../../../dist/authority/validatable/string/authority-parameter';
 import Truncate from "@alirya/string/truncate-parameters";
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});

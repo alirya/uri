@@ -1,4 +1,4 @@
-import String from '../../../dist/fragment/string';
+import String from '../../../dist/fragment/ensure-parameters';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

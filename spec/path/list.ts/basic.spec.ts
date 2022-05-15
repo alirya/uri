@@ -1,35 +1,48 @@
-import List from '../../../dist/path/list';
+import List from '../../../dist/path/list-parameters';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let std = new List(['root','parent','child'], '/', '/\\:');
+describe('single', ()=>{
+    let std = List(['root','parent','child'], '/', '/\\:');
 
-describe('check integrity', ()=>{
+    describe('check integrity', ()=>{
 
-    it('delimiter', ()=>{
-        expect(std.separator).toBe('/');
+        it('delimiter', ()=>{
+            expect(std.separator).toBe('/');
+        });
+
+        it('delimiters', ()=>{
+            expect(std.separators).toBe('/\\:');
+        });
+
+        it('value', ()=>{
+            expect([...std]).toEqual(['root','parent','child']);
+        });
+
+        it('path', ()=>{
+            expect(std.toString()).toBe('root/parent/child');
+        });
+
     });
 
-    it('delimiters', ()=>{
-        expect(std.separators).toBe('/\\:');
+    it('add path', ()=>{
+        std.push('file.ext');
+        expect(std.toString()).toBe('root/parent/child/file.ext');
     });
 
-    it('value', ()=>{
-        expect([...std]).toEqual(['root','parent','child']);
+    it('prepend add', ()=>{
+        std.unshift('prepend');
+        expect(std.toString()).toBe('prepend/root/parent/child/file.ext');
     });
-
-    it('path', ()=>{
-        expect(std.toString()).toBe('root/parent/child');
-    });
-
 });
 
-it('add path', ()=>{
-    std.push('file.ext');
-    expect(std.toString()).toBe('root/parent/child/file.ext');
-});
+describe('single', ()=>{
 
-it('prepend add', ()=>{
-    std.unshift('prepend');
-    expect(std.toString()).toBe('prepend/root/parent/child/file.ext');
+    let std = List([], '/', '/\\:');
+
+    std.push('root/\\:parent','child/:\\file.ext');
+
+    it('add path', ()=>{
+        expect(std.toString()).toBe('root/parent/child/file.ext');
+    });
 });

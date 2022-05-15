@@ -1,4 +1,4 @@
-import QueryValidatable from '../validatable/query';
+import QueryValidatable from '../validatable/query-parameters';
 
 export default function Query(string : string) : boolean {
 

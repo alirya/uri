@@ -1,4 +1,4 @@
-import Scheme from '../../../dist/scheme/validatable/scheme';
+import Scheme from '../../../dist/scheme/validatable/scheme-parameters';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

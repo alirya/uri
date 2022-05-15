@@ -1,4 +1,4 @@
-import Standard from '../../../../dist/path/file/standard';
+import Standard from '../../../../dist/path/file/standard-parameters';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,4 +1,4 @@
-import Fragment from '../../../dist/fragment/validatable/fragment';
+import Fragment from '../../../dist/fragment/validatable/fragment-parameters';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,4 +1,4 @@
-import SchemeValidatable from '../validatable/scheme';
+import SchemeValidatable from '../validatable/scheme-parameters';
 
 export default function Scheme(string : string) : boolean {
 

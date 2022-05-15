@@ -1,5 +1,5 @@
 import UserInfo from '../../user-info/user-info';
-import UserInfoJoin from '../../user-info/string/to-uri';
+import UserInfoJoin from '../../user-info/string/to-uri-parameter';
 import Authority from '../authority';
 
 export default function Join(

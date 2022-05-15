@@ -1,16 +1,8 @@
-import ToString from '@alirya/string/to-string';
-import SafeCast from '@alirya/string/safe-cast';
+import UserInfo from '../user-info';
+import ToUriParameters from './to-uri-parameters';
 
-export default function ToUriParameter(user ?: ToString, password ?: ToString) : string {
+export default function Join(userInfo : UserInfo) : string {
 
-    let result : string = SafeCast(user);
-
-    let _password = SafeCast(password);
-    if(_password.length !== 0) {
-
-        result =  result + ':' + _password;
-    }
-
-    return result;
+    return ToUriParameters(userInfo.user, userInfo.password);
 
 }

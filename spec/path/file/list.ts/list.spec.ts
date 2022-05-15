@@ -1,4 +1,4 @@
-import FileList from '../../../../dist/path/file/list';
+import FileList from '../../../../dist/path/file/list-parameters';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -25,106 +25,106 @@ map.push({
     expectation :'root/parent/child/file.ext',
 });
 // 1
-map.push({
-    value:['root','parent','child','file.ext'],
-    separator:':',
-    directory:'root:parent:child',
-    separators:'/\\:',
-    file:'file.ext',
-    name:'file',
-    extension:'ext',
-    expectation :'root:parent:child:file.ext'
-});
-// 2
-map.push({
-    value:['root','parent','child','file.ext'],
-    directory:'root\\parent\\child',
-    separator:'\\',
-    separators:'/\\:',
-    file:'file.ext',
-    name:'file',
-    extension:'ext',
-    expectation :'root\\parent\\child\\file.ext'
-});
-// 3
-map.push({
-    value:['root/\\:parent','child/:\\file.ext'],
-    separator:'/',
-    directory:'root/parent/child',
-    separators:'/\\:',
-    file:'file.ext',
-    name:'file',
-    extension:'ext',
-    expectation :'root/parent/child/file.ext'
-
-});
-
-// 4
-map.push({
-    value:['root/\\:parent','child/:\\file.ext'],
-    directory:'root:parent:child',
-    separator:':',
-    separators:'/\\:',
-    file:'file.ext',
-    name:'file',
-    extension:'ext',
-    expectation :'root:parent:child:file.ext'
-});
-// 5
-map.push({
-    value:['root/\\:parent','child/:\\file.ext'],
-    separator:'\\',
-    directory:'root\\parent\\child',
-    separators:'/\\:',
-    file:'file.ext',
-    name:'file',
-    extension:'ext',
-    expectation :'root\\parent\\child\\file.ext'
-});
-// 6
-map.push({
-    value:['','root/\\:parent:/\\child/:\\file.ext'],
-    separator:'/',
-    directory:'/root/parent/child',
-    separators:'/\\:',
-    file:'file.ext',
-    name:'file',
-    extension:'ext',
-    expectation :'/root/parent/child/file.ext'
-});
-// 7
-map.push({
-    value:['','root/\\:parent:/\\child/:\\file.ext'],
-    separator:':',
-    directory:':root:parent:child',
-    separators:'/\\:',
-    file:'file.ext',
-    name:'file',
-    extension:'ext',
-    expectation : ':root:parent:child:file.ext'
-});
-// 8
-map.push({
-    value:['','root/\\:parent:/\\child/:\\file.ext'],
-    separator:'\\',
-    directory:'\\root\\parent\\child',
-    separators:'/\\:',
-    file:'file.ext',
-    name:'file',
-    extension:'ext',
-    expectation : '\\root\\parent\\child\\file.ext'
-});
-// 9
-map.push({
-    value:['root/parent/child/file.ext'],
-    separator:'//',
-    directory:'root/parent/child',
-    separators:'/\\:',
-    file:'file.ext',
-    name:'file',
-    extension:'ext',
-    expectation : 'root/parent/child/file.ext'
-});
+// map.push({
+//     value:['root','parent','child','file.ext'],
+//     separator:':',
+//     directory:'root:parent:child',
+//     separators:'/\\:',
+//     file:'file.ext',
+//     name:'file',
+//     extension:'ext',
+//     expectation :'root:parent:child:file.ext'
+// });
+// // 2
+// map.push({
+//     value:['root','parent','child','file.ext'],
+//     directory:'root\\parent\\child',
+//     separator:'\\',
+//     separators:'/\\:',
+//     file:'file.ext',
+//     name:'file',
+//     extension:'ext',
+//     expectation :'root\\parent\\child\\file.ext'
+// });
+// // 3
+// map.push({
+//     value:['root/\\:parent','child/:\\file.ext'],
+//     separator:'/',
+//     directory:'root/parent/child',
+//     separators:'/\\:',
+//     file:'file.ext',
+//     name:'file',
+//     extension:'ext',
+//     expectation :'root/parent/child/file.ext'
+//
+// });
+//
+// // 4
+// map.push({
+//     value:['root/\\:parent','child/:\\file.ext'],
+//     directory:'root:parent:child',
+//     separator:':',
+//     separators:'/\\:',
+//     file:'file.ext',
+//     name:'file',
+//     extension:'ext',
+//     expectation :'root:parent:child:file.ext'
+// });
+// // 5
+// map.push({
+//     value:['root/\\:parent','child/:\\file.ext'],
+//     separator:'\\',
+//     directory:'root\\parent\\child',
+//     separators:'/\\:',
+//     file:'file.ext',
+//     name:'file',
+//     extension:'ext',
+//     expectation :'root\\parent\\child\\file.ext'
+// });
+// // 6
+// map.push({
+//     value:['','root/\\:parent:/\\child/:\\file.ext'],
+//     separator:'/',
+//     directory:'/root/parent/child',
+//     separators:'/\\:',
+//     file:'file.ext',
+//     name:'file',
+//     extension:'ext',
+//     expectation :'/root/parent/child/file.ext'
+// });
+// // 7
+// map.push({
+//     value:['','root/\\:parent:/\\child/:\\file.ext'],
+//     separator:':',
+//     directory:':root:parent:child',
+//     separators:'/\\:',
+//     file:'file.ext',
+//     name:'file',
+//     extension:'ext',
+//     expectation : ':root:parent:child:file.ext'
+// });
+// // 8
+// map.push({
+//     value:['','root/\\:parent:/\\child/:\\file.ext'],
+//     separator:'\\',
+//     directory:'\\root\\parent\\child',
+//     separators:'/\\:',
+//     file:'file.ext',
+//     name:'file',
+//     extension:'ext',
+//     expectation : '\\root\\parent\\child\\file.ext'
+// });
+// // 9
+// map.push({
+//     value:['root/parent/child/file.ext'],
+//     separator:'//',
+//     directory:'root/parent/child',
+//     separators:'/\\:',
+//     file:'file.ext',
+//     name:'file',
+//     extension:'ext',
+//     expectation : 'root/parent/child/file.ext'
+// });
 
 describe('constructor', ()=>{
 
@@ -133,7 +133,7 @@ describe('constructor', ()=>{
 
         describe(`[${i}]` + JSON.stringify(value.value), ()=>{
 
-            let standard = new FileList(value.value, value.separator, value.separators);
+            let standard = FileList(value.value, value.separator, value.separators);
 
             it('delimiter', ()=>{
                 expect(standard.separator).toBe(value.separator);
@@ -175,7 +175,7 @@ describe('constructor', ()=>{
 
 describe('mutate', ()=>{
 
-    let standard = new FileList([], '', '');
+    let standard = FileList([], '', '');
 
     let i = 0;
 

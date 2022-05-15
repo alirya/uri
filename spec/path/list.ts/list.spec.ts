@@ -1,44 +1,50 @@
-import List from '../../../dist/path/list';
+import List from '../../../dist/path/list-parameters';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let map : {separator:string, separators:string, expectation:string, value:string[]}[] = [];
+let map : {separator:string, separators:string, expectation:string, value:string[], expectations:string[] }[] = [];
 
 map.push({
     value:['root','parent','child','file.ext'],
     separator:'/',
     separators:'/\\:',
-    expectation :'root/parent/child/file.ext'
+    expectation :'root/parent/child/file.ext',
+    expectations:['root','parent','child','file.ext'],
 });
 
 map.push({
     value:['root','parent','child','file.ext'],
     separator:':',
     separators:'/\\:',
-    expectation :'root:parent:child:file.ext'
+    expectation :'root:parent:child:file.ext',
+    expectations:['root','parent','child','file.ext'],
 });
 map.push({
     value:['root','parent','child','file.ext'],
     separator:'\\',
     separators:'/\\:',
-    expectation :'root\\parent\\child\\file.ext'
+    expectation :'root\\parent\\child\\file.ext',
+    expectations:['root','parent','child','file.ext'],
 });
 
 map.push({
     value:['root/\\:parent','child/:\\file.ext'],
     separator:'/',
     separators:'/\\:',
-    expectation :'root/parent/child/file.ext'
+    expectations :['root','parent','child','file.ext'],
+    expectation :'root/parent/child/file.ext',
 });
 map.push({
     value:['root/\\:parent','child/:\\file.ext'],
+    expectations:['root','parent','child','file.ext'],
     separator:':',
     separators:'/\\:',
     expectation :'root:parent:child:file.ext'
 });
 map.push({
     value:['root/\\:parent','child/:\\file.ext'],
+    expectations:['root','parent','child','file.ext'],
     separator:'\\',
     separators:'/\\:',
     expectation :'root\\parent\\child\\file.ext'
@@ -46,18 +52,22 @@ map.push({
 
 map.push({
     value:['','root/\\:parent:/\\child/:\\file.ext'],
+    expectations:['','root','parent','child','file.ext'],
     separator:'/',
     separators:'/\\:',
     expectation :'/root/parent/child/file.ext'
 });
 map.push({
     value:['','root/\\:parent:/\\child/:\\file.ext'],
+    expectations:['','root','parent','child','file.ext'],
     separator:':',
     separators:'/\\:',
     expectation : ':root:parent:child:file.ext'
 });
+
 map.push({
     value:['','root/\\:parent:/\\child/:\\file.ext'],
+    expectations:['','root','parent','child','file.ext'],
     separator:'\\',
     separators:'/\\:',
     expectation : '\\root\\parent\\child\\file.ext'
@@ -65,6 +75,7 @@ map.push({
 
 map.push({
     value:['root/parent/child/file.ext'],
+    expectations:['root','parent','child','file.ext'],
     separator:'//',
     separators:'/\\:',
     expectation : 'root/parent/child/file.ext'
@@ -76,7 +87,7 @@ describe('constructor', ()=>{
 
         describe(JSON.stringify(value.value), ()=>{
 
-            let standard = new List(value.value, value.separator, value.separators);
+            let standard = List(value.value, value.separator, value.separators);
 
             it('delimiter', ()=>{
                 expect(standard.separator).toBe(value.separator);
@@ -87,7 +98,7 @@ describe('constructor', ()=>{
             });
 
             it('value', ()=>{
-                expect([...standard]).toEqual(value.value);
+                expect([...standard]).toEqual(value.expectations);
             });
 
             it('path', ()=>{
@@ -100,7 +111,7 @@ describe('constructor', ()=>{
 
 describe('mutate', ()=>{
 
-    let standard = new List([], '', '');
+    let standard = List([], '', '');
 
     for(let value of map) {
 
@@ -122,7 +133,7 @@ describe('mutate', ()=>{
 
                 standard.splice(0);
                 standard.push(...value.value);
-                expect([...standard]).toEqual(value.value);
+                expect([...standard]).toEqual(value.expectations);
             });
 
             it('path', ()=>{

@@ -11,8 +11,8 @@ const percentEncoded = PercentEncoded.source;
 const flag = Unique([
     ...SubDelimiter.flags,
     ...Unreserved.flags,
-    ...PercentEncoded.flags]
-).join('');
+    ...PercentEncoded.flags
+]).join('');
 
 const User : RegExp =  new RegExp(
     `(${subDelimiter}|${unreserved}|${percentEncoded})`,

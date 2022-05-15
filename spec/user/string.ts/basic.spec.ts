@@ -1,4 +1,4 @@
-import String from '../../../dist/user/string';
+import String from '../../../dist/user/ensure-parameters';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
