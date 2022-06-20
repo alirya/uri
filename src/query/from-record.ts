@@ -1,49 +1,52 @@
 import Value from '@alirya/value/value';
 import Pick from '@alirya/object/pick-parameters';
-import {StringifyOptions, stringify} from 'query-string';
 import OmitUndefined from '@alirya/object/omit-undefined';
+import {O} from 'ts-toolbelt';
+import {defaultEncoder, IStringifyOptions, stringify} from 'qs';
 
 export type RecordRecursive<V> =  {
     [P in PropertyKey]: RecordRecursive<V>|any;
 };
 
-export default class FromRecord implements Value<RecordRecursive<any>>, Required<Omit<StringifyOptions, 'sort'>>, Pick<StringifyOptions, 'sort'> {
+export interface FromRecordArgument extends
+    Omit<Exclude<Required<IStringifyOptions>, undefined>, 'encoder'|'filter'|'sort'|'serializeDate'>,
+    globalThis.Pick<IStringifyOptions, 'encoder'|'filter'|'sort'|'serializeDate'>
+{ }
 
+export default class FromRecord implements Value<RecordRecursive<any>>, FromRecordArgument {
+
+    encode: boolean = true;
+    allowDots: boolean = false;
+    charset: 'utf-8' | 'iso-8859-1' =  'utf-8';
+    charsetSentinel: boolean  = false;
+    comma: boolean = false;
+    delimiter: string = '&';
+    encoder : ((str: any, defaultEncoder: defaultEncoder, charset: string, type: 'key' | 'value') => string) | undefined = undefined;
+    strictNullHandling: boolean = false;
+    format: 'RFC1738' | 'RFC3986' = 'RFC3986';
     /**
-     * @see StringifyOptions.arrayFormat
+     * specify the format of the output array
+     *
+     * - indices a[0]=b&a[1]=c
+     * - brackets a[]=b&a[]=c
+     * - repeat a=b&a=c
+     * - comma a=b,c
      */
-    public arrayFormat: 'bracket' | 'index' | 'comma' | 'separator' | 'none' = 'none';
-    /**
-     * @see StringifyOptions.arrayFormatSeparator
-     */
-    public arrayFormatSeparator: string = ',';
-    /**
-     * @see StringifyOptions.encode
-     */
-    public encode: boolean = true;
-    /**
-     * @see StringifyOptions.skipEmptyString
-     */
-    public skipEmptyString: boolean = false;
-    /**
-     * @see StringifyOptions.skipNull
-     */
-    public skipNull: boolean = false;
-    /**
-     * @see StringifyOptions.sort
-     */
-    public sort ?: ((itemLeft: string, itemRight: string) => number) | false;
-    /**
-     * @see StringifyOptions.strict
-     */
-    public strict: boolean = true;
+    arrayFormat: 'indices' | 'brackets' | 'repeat' | 'comma' = 'indices';
+    encodeValuesOnly: boolean = false;
+    addQueryPrefix: boolean = false;
+    indices: boolean = false;
+    skipNulls: boolean = false;
+    filter: Array<string | number> | ((prefix: string, value: any) => any) | undefined = undefined;
+    sort: ((a: any, b: any) => number) | undefined = undefined;
+    serializeDate: ((d: Date) => string) | undefined = undefined;
 
     constructor(
         public value : RecordRecursive<any>,
-        option : StringifyOptions = {}
+        option : Partial<FromRecordArgument> = {}
     ) {
 
-        Object.assign(this, OmitUndefined(Pick(option, 'arrayFormat','arrayFormatSeparator','encode','skipEmptyString','skipNull','sort','strict')));
+        Object.assign(this, OmitUndefined(Pick(option, ...Object.keys(this) as (keyof FromRecordArgument)[])));
     }
 
     toString(): string {
