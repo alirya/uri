@@ -2,15 +2,26 @@ import Path from './path';
 import StandardParameters from './standard-parameters';
 import SplitParameters from './array/split-parameters';
 import Number from "../../../number/dist/boolean/number";
+import String from "../../../string/dist/boolean/string";
 
-export class ListContainer extends Array<string> implements Path {
+export interface ListParametersType extends Array<string>, Path {
+
+    separator : string,
+    separators : string,
+    empty : boolean,
+    prefix: boolean,
+    readonly splitter: string,
+    toString() : string;
+}
+
+export class ListContainer extends Array<string> implements ListParametersType {
 
     static get [Symbol.species](): ArrayConstructor {
         return Array;
     }
 
     constructor(
-        segments : Iterable<string> = [],
+        segments : string|Iterable<string> = [],
         public separator : string = '/',
         public separators : string = '/\\:',
         public empty : boolean = true,
@@ -18,8 +29,15 @@ export class ListContainer extends Array<string> implements Path {
         private proxyHandler : ReturnType<typeof ListGetterHandler>
     ) {
 
+        if(String(segments)) {
+
+            segments = [segments];
+        }
+
+        proxyHandler.split = false;
         super(...segments);
         this.split();
+        proxyHandler.split = true;
     }
 
     get splitter() : string {
@@ -37,6 +55,22 @@ export class ListContainer extends Array<string> implements Path {
 
         this.proxyHandler.unSplitUpdate(()=> {
             result = super.push(...items);
+            this.split()
+        })
+
+        return result;
+    }
+
+    unshift(...items : string[]): number {
+
+        /**
+         * temporary disable proxy handler, prevent repeat call on {@see ListGetterHandlerType.split} or this[number] = value
+         */
+
+        let result = 0;
+
+        this.proxyHandler.unSplitUpdate(()=> {
+            result = super.unshift(...items);
             this.split()
         })
 
@@ -101,13 +135,13 @@ export function ListGetterHandler() : ListGetterHandlerType{
 }
 
 
-export default function ListParameters(
+export default function ListParameters (
     segments : Iterable<string> = [],
     separator : string = '/',
     separators : string = '/\\:',
     empty : boolean = true,
     prefix: boolean = false
-) : Omit<ListContainer, 'split'> {
+) : ListParametersType {
 
     const handler = ListGetterHandler();
 

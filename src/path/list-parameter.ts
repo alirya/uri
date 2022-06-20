@@ -1,7 +1,9 @@
-import {ListContainer} from "./list-parameters";
+import {ListContainer, ListParametersType as ListParameterType} from "./list-parameters";
 import ListParameters from "./list-parameters";
 
-export interface ListParameter {
+export {ListParameterType}
+
+export interface ListParameterArgument {
     segments ?: Iterable<string>,
     separator ?: string,
     separators ?: string,
@@ -16,8 +18,8 @@ export default function ListParameter(
         separators = '/\\:',
         empty = true,
         prefix = false,
-    } : ListParameter
-) : Omit<ListContainer, 'split'> {
+    } : ListParameterArgument
+) : ListParameterType {
 
     return ListParameters(segments, separator, separators, empty, prefix);
 }

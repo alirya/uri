@@ -1,4 +1,4 @@
-import {ListContainer} from "./list-parameters";
+import {ListContainer, ListParametersType as ListParameterType} from "./list-parameters";
 import ListParameters from "./list-parameters";
 
 export interface ListParameter {
@@ -17,7 +17,7 @@ export default function ListParameter(
         empty = true,
         prefix = false,
     } : ListParameter
-) : Omit<ListContainer, 'split'> {
+) : ListParameterType {
 
     return ListParameters(segments, separator, separators, empty, prefix);
 }

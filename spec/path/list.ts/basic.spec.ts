@@ -46,3 +46,14 @@ describe('single', ()=>{
         expect(std.toString()).toBe('root/parent/child/file.ext');
     });
 });
+
+describe('non asceii', ()=>{
+
+    let std = List([], '/', '/\\');
+
+    std.push('/:foo+');
+
+    it('test', ()=>{
+        expect(std.toString()).toBe('/:foo+');
+    });
+});

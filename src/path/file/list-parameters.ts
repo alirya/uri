@@ -1,4 +1,4 @@
-import {ListContainer as PathList, ListGetterHandler} from '../list-parameters';
+import {ListContainer as PathList, ListGetterHandler, ListParametersType as PathListType} from '../list-parameters';
 import ExtensionParameters from './string/extension-parameters';
 import ReplaceExtensionParameters from './string/replace-extension-parameters';
 import GetFile from './string/file-parameters';
@@ -10,10 +10,18 @@ import StandardParameters from './standard-parameters';
 import RemoveSuffixCharacter from '@alirya/string/remove-suffix-parameters';
 import File from './file';
 
+export interface ListParametersType extends PathListType {
+
+    extension : string;
+    directory : string;
+    file : string;
+    name : string;
+}
+
 export class ListContainer extends PathList implements File {
 
     constructor(
-        segments : Iterable<string> = [],
+        segments : Iterable<string>|string = [],
         separator : string = '/',
         separators : string = '/\\:',
         empty : boolean = true,
@@ -116,7 +124,7 @@ export default function ListParameters(
     separators : string = '/\\:',
     empty : boolean = true,
     prefix: boolean = false
-) : Omit<ListContainer, 'split'> {
+) : ListParametersType {
 
     const handler = ListGetterHandler();
 
