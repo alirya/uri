@@ -46,10 +46,10 @@ export class StandardParameters implements Path, Value<string> {
 
 
 export interface StandardArgument {
-    value : string,
-    separator ?: string,
-    separators ?: string,
-    prefix ?: boolean,
+    value : string;
+    separator ?: string;
+    separators ?: string;
+    prefix ?: boolean;
 }
 
 export class StandardParameter extends StandardParameters {

@@ -2,8 +2,8 @@ import { CallbackReturnSimple as DomainNameReturn, CallbackParameters } from '@a
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
 import DomainNameBoolean from '../boolean/domain-name';
 import DomainNameMessage from './string/domain-name';
-import ToString from "@alirya/string/to-string";
-import AssertedToString from "@alirya/string/validatable/asserted-to-string";
+import ToString from '@alirya/string/to-string';
+import AssertedToString from '@alirya/string/validatable/asserted-to-string';
 
 export function DomainNameParameters(
     string : string,
@@ -24,8 +24,8 @@ export function DomainNameParameters<MessageType>(
 
 
 export interface DomainNameArgument<MessageType> {
-    string : string,
-    message ?: ValidatableParameter<string, MessageType>
+    string : string;
+    message ?: ValidatableParameter<string, MessageType>;
 }
 
 export function DomainNameParameter(

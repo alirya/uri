@@ -1,7 +1,7 @@
 import {TemplateParameter} from '@alirya/string/function/template';
 import {TruncateParameters} from '@alirya/string/truncate';
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
 
 const templateValid = TemplateParameter({
   string : '{subject} is valid user.'
@@ -44,7 +44,7 @@ export function UserParameter(
     } : UserArgument
 ) : string {
 
-    return UserParameters(value, valid, subject)
+    return UserParameters(value, valid, subject);
 
 }
 

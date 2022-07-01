@@ -2,8 +2,8 @@ import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/mes
 import { CallbackReturnSimple as Ipv4Return, CallbackParameters } from '@alirya/validator/validatable/callback';
 import Ipv4Boolean from '../boolean/ipv4';
 import Ipv4Message from './string/ipv4';
-import ToString from "@alirya/string/to-string";
-import AssertedToString from "@alirya/string/validatable/asserted-to-string";
+import ToString from '@alirya/string/to-string';
+import AssertedToString from '@alirya/string/validatable/asserted-to-string';
 
 export function Ipv4Parameters(
   string : string,
@@ -22,8 +22,8 @@ export function Ipv4Parameters<MessageType>(
 
 
 export interface Ipv4Argument<MessageType> {
-    string : string,
-    message ?: ValidatableParameter<string, MessageType>
+    string : string;
+    message ?: ValidatableParameter<string, MessageType>;
 }
 
 export function Ipv4Parameter(

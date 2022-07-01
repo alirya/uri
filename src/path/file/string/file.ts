@@ -1,5 +1,5 @@
-import FileArgumentToString from "../../path";
-import {NameArgumentPath as FileArgumentPath} from "./name";
+import FileArgumentToString from '../../path';
+import {NameArgumentPath as FileArgumentPath} from './name';
 import {SplitParameters} from '../../array/split';
 
 export function FileParameters(
@@ -32,7 +32,7 @@ export function FileParameter(
     return FileParameters(
         path || arguments[0].toString(),
         separator
-    )
+    );
 
 }
 

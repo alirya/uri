@@ -25,8 +25,8 @@ export function Ipv6Parameters<MessageType>(
 
 
 export interface Ipv6Argument<MessageType> {
-    string : string,
-    message ?: ValidatableParameter<string, MessageType>
+    string : string;
+    message ?: ValidatableParameter<string, MessageType>;
 }
 
 export function Ipv6Parameter(

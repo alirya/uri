@@ -9,7 +9,7 @@ import {ReplaceFileParameters} from './string/replace-file';
 import SafeCast from '@alirya/string/safe-cast';
 import Join from '../string/join';
 import {RemoveSuffixParameters} from '@alirya/string/remove-suffix';
-import {StandardArgument} from "../standard";
+import {StandardArgument} from '../standard';
 
 export class StandardParameters extends PathStandard.Parameters implements File {
 

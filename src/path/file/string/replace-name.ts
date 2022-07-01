@@ -33,9 +33,9 @@ export function ReplaceNameParameters(
 
 
 export interface ReplaceNameArgument {
-    path : string,
-    name : string|undefined,
-    delimiter ?: string,
+    path : string;
+    name : string|undefined;
+    delimiter ?: string;
 }
 
 export function ReplaceNameParameter(

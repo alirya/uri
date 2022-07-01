@@ -1,8 +1,8 @@
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
 import UserInfoMessage from '../validatable/string/user-info';
 import {UserInfoClassParameters} from '../validatable/user-info';
-import SimpleValidator from "@alirya/validator/simple";
-import ReadonlyValidatable from "../validatable/readonly";
+import SimpleValidator from '@alirya/validator/simple';
+import ReadonlyValidatable from '../validatable/readonly';
 
 export function UserInfoParameters() : SimpleValidator<string, string, ReadonlyValidatable<string>>;
 
@@ -23,7 +23,7 @@ export function UserInfoParameters<MessageType>(
 
 
 export interface UserInfoParameter<MessageType> {
-    message ?: ValidatableParameter<string, MessageType|string>
+    message ?: ValidatableParameter<string, MessageType|string>;
 }
 
 export function UserInfoParameter({}) : SimpleValidator<string, string, ReadonlyValidatable<string>>;

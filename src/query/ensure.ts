@@ -1,7 +1,7 @@
 import {QueryParameters} from './validatable/query';
 import AssertValid from '@alirya/validator/validatable/assert/valid';
 import {MatchParameters} from '@alirya/string/validatable/match';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
 import QueryMessage from './validatable/string/query';
 
@@ -31,7 +31,7 @@ export function EnsureParameters<MessageT>(
 
 export interface QueryArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string, MessageType|string>
+    message ?: ValidatableParameter<string, MessageType|string>;
 }
 
 export function EnsureParameter(

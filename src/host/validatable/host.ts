@@ -2,8 +2,8 @@ import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/mes
 import { CallbackReturnSimple as HostReturn, CallbackParameters } from '@alirya/validator/validatable/callback';
 import HostBoolean from '../boolean/host';
 import HostMessage from './string/host';
-import ToString from "@alirya/string/to-string";
-import AssertedToString from "@alirya/string/validatable/asserted-to-string";
+import ToString from '@alirya/string/to-string';
+import AssertedToString from '@alirya/string/validatable/asserted-to-string';
 
 export function HostParameters(
     string : string,
@@ -22,8 +22,8 @@ export function HostParameters<MessageType>(
 
 
 export interface HostArgument<MessageType> {
-    string : string,
-    message ?: ValidatableParameter<string, MessageType>
+    string : string;
+    message ?: ValidatableParameter<string, MessageType>;
 }
 
 export function HostParameter(

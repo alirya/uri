@@ -2,8 +2,8 @@ import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/mes
 import { CallbackReturnSimple as Ipv6Return, CallbackParameters } from '@alirya/validator/validatable/callback';
 import Ipv6Boolean from '../boolean/ipv6';
 import Ipv6Message from './string/ipv6';
-import ToString from "@alirya/string/to-string";
-import AssertedToString from "@alirya/string/validatable/asserted-to-string";
+import ToString from '@alirya/string/to-string';
+import AssertedToString from '@alirya/string/validatable/asserted-to-string';
 
 export function Ipv6Parameters(
   string : string,
@@ -25,8 +25,8 @@ export function Ipv6Parameters<MessageType>(
 
 
 export interface Ipv6Argument<MessageType> {
-    string : string,
-    message ?: ValidatableParameter<string, MessageType>
+    string : string;
+    message ?: ValidatableParameter<string, MessageType>;
 }
 
 export function Ipv6Parameter(

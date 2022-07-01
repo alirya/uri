@@ -24,8 +24,8 @@ export function HostParameters<MessageType>(
 
 
 export interface HostArgument<MessageType> {
-    string : string,
-    message ?: ValidatableParameter<string, MessageType>
+    string : string;
+    message ?: ValidatableParameter<string, MessageType>;
 }
 
 export function HostParameter(

@@ -1,9 +1,9 @@
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
 import PortMessage from './validatable/string/port';
 import {PortParameters, PortParametersType as EnsureReturn} from './validatable/port';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 
-export {EnsureReturn}
+export {EnsureReturn};
 
 export function EnsureParameters(
     value : string|number,
@@ -25,7 +25,7 @@ export function EnsureParameters(
 
 export interface EnsureArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string|number, MessageType|string>
+    message ?: ValidatableParameter<string|number, MessageType|string>;
 }
 
 

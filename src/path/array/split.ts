@@ -1,6 +1,6 @@
 import Escape from '@alirya/string/pattern/escape';
-import Path from "../path";
-import {NameArgumentPath} from "../file/string/name";
+import Path from '../path';
+import {NameArgumentPath} from '../file/string/name';
 
 export function SplitParameters(
     string : string,
@@ -19,7 +19,7 @@ export function SplitParameters(
 
     if(!empty) {
 
-        return paths.filter(path=>!!path)
+        return paths.filter(path=>!!path);
     }
 
     return paths;
@@ -28,9 +28,9 @@ export function SplitParameters(
 
 export type SplitArgumentEmpty =  {
     empty : boolean
-}
+};
 
-export type SplitArgumentToString = Path & SplitArgumentEmpty
+export type SplitArgumentToString = Path & SplitArgumentEmpty;
 
 export type SplitArgumentPath = NameArgumentPath & SplitArgumentEmpty;
 
@@ -56,7 +56,7 @@ export function SplitParameter(
         path || arguments[0].toString(),
         separator,
         empty
-    )
+    );
 
 }
 

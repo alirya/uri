@@ -1,7 +1,7 @@
 import {AuthorityParameters} from '../../../dist/authority/validatable/authority';
 import ValidatableAuthority from '../../../dist/authority/validatable/validatable';
 import {AuthorityParameter} from '../../../dist/authority/validatable/string/authority';
-import {TruncateParameters} from "@alirya/string/truncate";
+import {TruncateParameters} from '@alirya/string/truncate';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

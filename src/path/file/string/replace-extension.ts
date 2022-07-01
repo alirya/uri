@@ -41,9 +41,9 @@ export function ReplaceExtensionParameters(
 
 
 export interface ReplaceNameArgument {
-    path : string,
-    extension : string,
-    delimiter ?: string,
+    path : string;
+    extension : string;
+    delimiter ?: string;
 }
 
 export function ReplaceExtensionParameter(

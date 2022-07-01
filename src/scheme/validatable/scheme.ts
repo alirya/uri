@@ -2,9 +2,9 @@ import {MatchParameters, MatchType as SchemeReturn} from '@alirya/string/validat
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
 import SchemePattern from '../pattern/scheme';
 import SchemeMessage from './string/scheme';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 import Validatable from '@alirya/validator/value/validatable';
-import Pattern from "@alirya/string/pattern/pattern/pattern";
+import Pattern from '@alirya/string/pattern/pattern/pattern';
 
 export function SchemeParameters(
     scheme : string,
@@ -31,7 +31,7 @@ export {SchemeReturn};
 
 export interface SchemeArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string, MessageType|string, Validatable<string> & Pattern>
+    message ?: ValidatableParameter<string, MessageType|string, Validatable<string> & Pattern>;
 }
 
 export function SchemeParameter(

@@ -25,8 +25,8 @@ export function Ipv4Parameters<MessageType>(
 
 
 export interface Ipv4Argument<MessageType> {
-    string : string,
-    message ?: ValidatableParameter<string, MessageType>
+    string : string;
+    message ?: ValidatableParameter<string, MessageType>;
 }
 
 export function Ipv4Parameter(

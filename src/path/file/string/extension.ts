@@ -1,6 +1,6 @@
 import Escape from '@alirya/string/pattern/escape';
-import ExtensionArgumentToString from "../../path";
-import {NameArgumentPath as ExtensionArgumentPath} from "./name";
+import ExtensionArgumentToString from '../../path';
+import {NameArgumentPath as ExtensionArgumentPath} from './name';
 
 
 export function ExtensionParameters(
@@ -21,7 +21,7 @@ export function ExtensionParameters(
 
 }
 
-export type ExtensionArgument = ExtensionArgumentToString | ExtensionArgumentPath
+export type ExtensionArgument = ExtensionArgumentToString | ExtensionArgumentPath;
 
 export function ExtensionParameter(
     argument : ExtensionArgumentPath
@@ -41,7 +41,7 @@ export function ExtensionParameter(
     return ExtensionParameters(
         path || arguments[0].toString(),
         separator
-    )
+    );
 
 }
 

@@ -132,11 +132,11 @@ export function ListParameters(
 }
 
 export interface ListArgument {
-    segments ?: Iterable<string>,
-    separator ?: string,
-    separators ?: string,
-    empty ?: boolean,
-    prefix ?: boolean,
+    segments ?: Iterable<string>;
+    separator ?: string;
+    separators ?: string;
+    empty ?: boolean;
+    prefix ?: boolean;
 }
 
 export function ListParameter(

@@ -1,6 +1,6 @@
 import {ReplaceExtensionParameters} from './replace-extension';
 import {SplitParameters} from '../../array/split';
-import NameArgumentToString from "../../path";
+import NameArgumentToString from '../../path';
 
 export function NameParameters(
     path : string,
@@ -20,7 +20,7 @@ export function NameParameters(
 export type NameArgumentPath =  {
     path : string,
     separator ?: string,
-}
+};
 
 export {NameArgumentToString};
 
@@ -44,7 +44,7 @@ export function NameParameter(
     return NameParameters(
         path || arguments[0].toString(),
         separator
-    )
+    );
 
 }
 

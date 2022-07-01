@@ -1,16 +1,16 @@
 import Path from './path';
 import {StandardParameters} from './standard';
 import {SplitParameters} from './array/split';
-import Number from "../../../number/dist/boolean/number";
-import String from "@alirya/string/boolean/string";
+import Number from '../../../number/dist/boolean/number';
+import String from '@alirya/string/boolean/string';
 
 export interface ListType extends Array<string>, Path {
 
-    separator : string,
-    separators : string,
-    empty : boolean,
-    prefix: boolean,
-    readonly splitter: string,
+    separator : string;
+    separators : string;
+    empty : boolean;
+    prefix: boolean;
+    readonly splitter: string;
     toString() : string;
 
 }
@@ -56,8 +56,8 @@ export class ListContainer extends Array<string> implements ListType {
 
         this.proxyHandler.unSplitUpdate(()=> {
             result = super.push(...items);
-            this.split()
-        })
+            this.split();
+        });
 
         return result;
     }
@@ -72,8 +72,8 @@ export class ListContainer extends Array<string> implements ListType {
 
         this.proxyHandler.unSplitUpdate(()=> {
             result = super.unshift(...items);
-            this.split()
-        })
+            this.split();
+        });
 
         return result;
     }
@@ -90,7 +90,7 @@ export class ListContainer extends Array<string> implements ListType {
 
                 super[i] = value;
             }
-        })
+        });
     }
 
     toString(): string {
@@ -132,7 +132,7 @@ export function ListGetterHandler() : ListGetterHandlerType {
 
             return true;
         }
-    }
+    };
 }
 
 
@@ -151,11 +151,11 @@ export function ListParameters (
 
 
 export interface ListArgument {
-    segments ?: Iterable<string>,
-    separator ?: string,
-    separators ?: string,
-    empty ?: boolean,
-    prefix ?: boolean,
+    segments ?: Iterable<string>;
+    separator ?: string;
+    separators ?: string;
+    empty ?: boolean;
+    prefix ?: boolean;
 }
 
 export function ListParameter(

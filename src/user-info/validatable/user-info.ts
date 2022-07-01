@@ -1,13 +1,13 @@
 import UserInfoMessage from './string/user-info';
-import ReadonlyValidatable from "./readonly";
+import ReadonlyValidatable from './readonly';
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 import MemoizeAccessor from '@alirya/object/function/memoize-accessor';
 import ValidatableIntrface from '@alirya/validator/validatable/validatable';
 import {UserParameters} from '../../user/validatable/user';
 import {PasswordParameters} from '../../password/validatable/password';
 import NotEmpty from '@alirya/string/boolean/not-empty';
-import {Optional} from "utility-types";
+import {Optional} from 'utility-types';
 
 export class UserInfoClassParameters<MessageType> implements ReadonlyValidatable<MessageType> {
 
@@ -66,7 +66,7 @@ export class UserInfoClassParameters<MessageType> implements ReadonlyValidatable
 
 
 export interface UserInfoClassArgument<MessageType> extends Value<string> {
-    message : ValidatableParameter<string, MessageType>
+    message : ValidatableParameter<string, MessageType>;
 }
 
 export class UserInfoClassParameter<MessageType> extends UserInfoClassParameters<MessageType> {
@@ -78,7 +78,7 @@ export class UserInfoClassParameter<MessageType> extends UserInfoClassParameters
         } : UserInfoClassArgument<MessageType>
     ) {
 
-        super(value, (value, valid) => message({value, valid}))
+        super(value, (value, valid) => message({value, valid}));
     }
 }
 

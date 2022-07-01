@@ -86,7 +86,7 @@ export function AuthorityParameter(
       port
     } : AuthorityArgument) : string {
 
-  return AuthorityParameters(value, valid, userInfo, host, port)
+  return AuthorityParameters(value, valid, userInfo, host, port);
 
 }
 

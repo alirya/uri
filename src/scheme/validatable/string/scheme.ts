@@ -1,7 +1,7 @@
 import {TemplateParameter} from '@alirya/string/function/template';
 import {TruncateParameters} from '@alirya/string/truncate';
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
 
 const templateValid = TemplateParameter({
     string : '{subject} is valid scheme.'
@@ -42,7 +42,7 @@ export function SchemeParameter(
     }
 ) : string {
 
-  return SchemeParameters(value, valid, subject)
+  return SchemeParameters(value, valid, subject);
 
 }
 

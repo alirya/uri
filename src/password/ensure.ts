@@ -3,7 +3,7 @@ import {PasswordParameters} from './validatable/password';
 import AssertValid from '@alirya/validator/validatable/assert/valid';
 import {MatchType as EnsureReturn} from '@alirya/string/validatable/match';
 import PasswordMessage from './validatable/string/password';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 
 export function EnsureParameters(
     password : string,
@@ -26,12 +26,12 @@ export function EnsureParameters<MessageT>(
     return  validatable;
 }
 
-export {EnsureReturn}
+export {EnsureReturn};
 
 
 export interface EnsureArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string, MessageType|string>
+    message ?: ValidatableParameter<string, MessageType|string>;
 }
 
 export function EnsureParameter(

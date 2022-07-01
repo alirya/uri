@@ -2,7 +2,7 @@ import {MatchParameters} from '@alirya/string/validatable/match';
 import {ValidatableParameter, ValidatableParameters} from '@alirya/validator/message/function/validatable';
 import QueryPattern from '../pattern/query';
 import QueryMessage from './string/query';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 
 export function QueryParameters(
     query : string,
@@ -24,7 +24,7 @@ export function QueryParameters<MessageT>(
 
 export interface QueryArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string, MessageType|string>
+    message ?: ValidatableParameter<string, MessageType|string>;
 }
 
 export function QueryParameter(

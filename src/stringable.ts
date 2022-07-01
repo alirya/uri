@@ -4,7 +4,7 @@ import Uri from './uri';
 import ToString from '@alirya/string/to-string';
 import Standard from './standard';
 import Join from './string/join';
-import AuthorityInterface from "./authority/authority";
+import AuthorityInterface from './authority/authority';
 
 export class StringableParameters<
     Scheme extends ToString = ToString,
@@ -44,7 +44,7 @@ export interface StringableArgument<
     Fragment extends ToString  = ToString,
 > extends Uri<Scheme, Authority, PathType, Query, Fragment> {
 
-    converter ?: (uri : Uri) => string
+    converter ?: (uri : Uri) => string;
 }
 
 export

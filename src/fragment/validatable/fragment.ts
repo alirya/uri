@@ -20,11 +20,11 @@ export function FragmentParameters<MessageT>(
     return new MatchParameters(fragment, new RegExp(`^${FragmentPattern.source}*$`, FragmentPattern.flags), message);
 }
 
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 
 export interface FragmentArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string, MessageType|string>
+    message ?: ValidatableParameter<string, MessageType|string>;
 }
 
 export function FragmentParameter(

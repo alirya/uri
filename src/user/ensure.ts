@@ -3,7 +3,7 @@ import {UserParameters} from './validatable/user';
 import AssertValid from '@alirya/validator/validatable/assert/valid';
 import {MatchType} from '@alirya/string/validatable/match';
 import UserMessage from './validatable/string/user';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 
 export function EnsureParameters(
     user : string,
@@ -31,7 +31,7 @@ export function EnsureParameters<MessageT>(
 
 export interface EnsureArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string, MessageType|string>
+    message ?: ValidatableParameter<string, MessageType|string>;
 }
 
 export function EnsureParameter(

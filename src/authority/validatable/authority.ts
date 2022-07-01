@@ -120,7 +120,7 @@ export class AuthorityParameter<MessageType = unknown> extends AuthorityParamete
         }
     ) {
 
-        super(value, message)
+        super(value, message);
     }
 
 }

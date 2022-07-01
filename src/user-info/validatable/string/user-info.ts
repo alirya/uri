@@ -74,7 +74,7 @@ export interface AuthorityArgument extends Omit<Readonly<
 
 export function UserInfoParameter(result : AuthorityArgument) : string {
 
-  return UserInfoParameters(result.value, result.valid, result.user, result.password)
+  return UserInfoParameters(result.value, result.valid, result.user, result.password);
 
 
 }

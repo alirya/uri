@@ -1,7 +1,7 @@
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
 import Pattern from '../pattern/password';
 import {MatchParameters} from '@alirya/string/validatable/match';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 import PasswordMessage from './string/password';
 
 export function PasswordParameters(
@@ -24,7 +24,7 @@ export function PasswordParameters<MessageT>(
 
 export interface PasswordArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string, MessageType|string>
+    message ?: ValidatableParameter<string, MessageType|string>;
 }
 
 export function PasswordParameter(

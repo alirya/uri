@@ -25,8 +25,8 @@ export function DomainNameParameters<MessageType>(
 
 
 export interface DomainNameArgument<MessageType> {
-    string : string,
-    message ?: ValidatableParameter<string, MessageType>
+    string : string;
+    message ?: ValidatableParameter<string, MessageType>;
 }
 
 export function DomainNameParameter(

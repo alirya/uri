@@ -21,9 +21,9 @@ export function ReplaceFileParameters(
 
 
 export interface ReplaceNameArgument {
-    path : string,
-    file : string|undefined,
-    delimiter ?: string,
+    path : string;
+    file : string|undefined;
+    delimiter ?: string;
 }
 
 export function ReplaceFileParameter(

@@ -3,7 +3,7 @@ import {FragmentParameters} from './validatable/fragment';
 import AssertValid from '@alirya/validator/validatable/assert/valid';
 import {MatchType} from '@alirya/string/validatable/match';
 import FragmentMessage from './validatable/string/fragment';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 
 export function EnsureParameters(
     fragment : string,
@@ -31,7 +31,7 @@ export function EnsureParameters<MessageT>(
 
 export interface EnsureArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string, MessageType|string>
+    message ?: ValidatableParameter<string, MessageType|string>;
 }
 
 export function EnsureParameter(

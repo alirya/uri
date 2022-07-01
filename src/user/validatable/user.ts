@@ -1,10 +1,10 @@
 import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
 import Pattern from '../pattern/user';
 import {MatchParameters, MatchType} from '@alirya/string/validatable/match';
-import Value from "@alirya/value/value";
+import Value from '@alirya/value/value';
 import UserMessage from './string/user';
-import Validatable from "@alirya/validator/value/validatable";
-import PatternContainer from "@alirya/string/pattern/pattern/pattern";
+import Validatable from '@alirya/validator/value/validatable';
+import PatternContainer from '@alirya/string/pattern/pattern/pattern';
 
 export function UserParameters(
     source : string,
@@ -30,7 +30,7 @@ export function UserParameters<MessageT>(
 
 export interface UserArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string, MessageType|string, Validatable<string> & PatternContainer>
+    message ?: ValidatableParameter<string, MessageType|string, Validatable<string> & PatternContainer>;
 }
 
 export function UserParameter(

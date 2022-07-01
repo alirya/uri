@@ -56,7 +56,7 @@ export function PortParameters<MessageT>(
 
 export interface PortArgument<MessageType> extends Value<string> {
 
-    message ?: ValidatableParameter<string|number, MessageType>
+    message ?: ValidatableParameter<string|number, MessageType>;
 }
 
 export function PortParameter(

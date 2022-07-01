@@ -1,7 +1,7 @@
 import {TemplateParameter} from '@alirya/string/function/template';
 import {TruncateParameters} from '@alirya/string/truncate';
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
 
 const templateValid = TemplateParameter({
   string : '{subject} is valid ipv4.',
@@ -36,7 +36,7 @@ export function Ipv4Parameters(
 
 
 export interface Ipv4Argument extends Value<string>, Validatable {
-  subject ?: string
+  subject ?: string;
 }
 
 export function Ipv4Parameter(
