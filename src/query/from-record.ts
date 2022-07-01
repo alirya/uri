@@ -1,7 +1,6 @@
 import Value from '@alirya/value/value';
-import Pick from '@alirya/object/pick-parameters';
+import {PickParameters} from '@alirya/object/pick';
 import OmitUndefined from '@alirya/object/omit-undefined';
-import {O} from 'ts-toolbelt';
 import {defaultEncoder, IStringifyOptions, stringify} from 'qs';
 
 export type RecordRecursive<V> =  {
@@ -46,7 +45,7 @@ export default class FromRecord implements Value<RecordRecursive<any>>, FromReco
         option : Partial<FromRecordArgument> = {}
     ) {
 
-        Object.assign(this, OmitUndefined(Pick(option, ...Object.keys(this) as (keyof FromRecordArgument)[])));
+        Object.assign(this, OmitUndefined(PickParameters(option, ...Object.keys(this) as (keyof FromRecordArgument)[])));
     }
 
     toString(): string {

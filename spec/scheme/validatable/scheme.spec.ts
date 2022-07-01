@@ -1,4 +1,4 @@
-import Scheme from '../../../dist/scheme/validatable/scheme-parameters';
+import {SchemeParameters} from '../../../dist/scheme/validatable/scheme';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -21,7 +21,7 @@ list.set('://', false);
 
 for(let [scheme, valid] of list) {
 
-    let validatable = Scheme(scheme);
+    let validatable = SchemeParameters(scheme);
 
     it(scheme, ()=>{
 

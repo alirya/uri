@@ -1,4 +1,4 @@
-import FileList from '../../../../dist/path/file/list-parameters';
+import {ListParameters} from '../../../../dist/path/file/list';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -133,7 +133,7 @@ describe('constructor', ()=>{
 
         describe(`[${i}]` + JSON.stringify(value.value), ()=>{
 
-            let standard = FileList(value.value, value.separator, value.separators);
+            let standard = ListParameters(value.value, value.separator, value.separators);
 
             it('delimiter', ()=>{
                 expect(standard.separator).toBe(value.separator);
@@ -175,7 +175,7 @@ describe('constructor', ()=>{
 
 describe('mutate', ()=>{
 
-    let standard = FileList([], '', '');
+    let standard = ListParameters([], '', '');
 
     let i = 0;
 

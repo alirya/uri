@@ -1,7 +1,7 @@
 import Path from '../path';
-import TrimPrefix from '@alirya/string/trim-prefix-parameters';
+import {TrimPrefixParameters} from '@alirya/string/trim-prefix';
 
 export default function ToUriRootless(path : Path) : string {
 
-    return TrimPrefix(path.toString(), path.separator);
+    return TrimPrefixParameters(path.toString(), path.separator);
 }

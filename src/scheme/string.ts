@@ -1,22 +1,22 @@
-import Dynamic from '@alirya/validator/message/function/validatable-parameters';
-import SchemeParameters from './validatable/scheme-parameters';
+import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
+import {SchemeParameters} from './validatable/scheme';
 import AssertValid from '@alirya/validator/validatable/assert/valid';
-import StringMatch from '@alirya/string/validatable/match-parameters';
-import SchemeMessage from './validatable/string/scheme-parameters';
+import {MatchType} from '@alirya/string/validatable/match';
+import SchemeMessage from './validatable/string/scheme';
 
 export default function String(
     scheme : string,
-) : StringMatch<string, string>;
+) : MatchType<string, string>;
 
 export default function String<MessageT>(
     scheme : string,
-    message: Dynamic<string, MessageT>
-) : StringMatch<string, MessageT>;
+    message: ValidatableParameters<string, MessageT>
+) : MatchType<string, MessageT>;
 
 export default function String<MessageT>(
     scheme : string,
-    message: Dynamic<string, MessageT|string> = SchemeMessage
-)  : StringMatch<string, string|MessageT> {
+    message: ValidatableParameters<string, MessageT|string> = SchemeMessage.Parameters
+)  : MatchType<string, string|MessageT> {
 
     let validatable = SchemeParameters(scheme, message);
 

@@ -1,14 +1,14 @@
-import Authority from '../../../dist/authority/validatable/authority-parameters';
+import {AuthorityParameters} from '../../../dist/authority/validatable/authority';
 import ValidatableAuthority from '../../../dist/authority/validatable/validatable';
-import StringAuthority from '../../../dist/authority/validatable/string/authority-parameter';
-import Truncate from "@alirya/string/truncate-parameters";
+import {AuthorityParameter} from '../../../dist/authority/validatable/string/authority';
+import {TruncateParameters} from "@alirya/string/truncate";
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let subject = new Map<Authority, ValidatableAuthority>();
+let subject = new Map<AuthorityParameters, ValidatableAuthority>();
 
 
-subject.set(new Authority('www.google.com', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('www.google.com', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'www.google.com',
         valid:true,
@@ -17,7 +17,7 @@ subject.set(new Authority('www.google.com', StringAuthority), <Authority>{
     valid : true,
 });
 
-subject.set(new Authority('255.255.255.255', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('255.255.255.255', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'255.255.255.255',
         valid:true,
@@ -26,7 +26,7 @@ subject.set(new Authority('255.255.255.255', StringAuthority), <Authority>{
     valid : true,
 });
 
-subject.set(new Authority('2001:db8:1234:ffff:ffff:ffff:ffff:ffff', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('2001:db8:1234:ffff:ffff:ffff:ffff:ffff', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'2001:db8:1234:ffff:ffff:ffff:ffff:ffff',
         valid:true,
@@ -35,7 +35,7 @@ subject.set(new Authority('2001:db8:1234:ffff:ffff:ffff:ffff:ffff', StringAuthor
     valid : true,
 });
 
-subject.set(new Authority('[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]',
         valid:true,
@@ -49,7 +49,7 @@ subject.set(new Authority('[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]', StringAuth
 
 
 
-subject.set(new Authority('www.google.com:1337', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('www.google.com:1337', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'www.google.com',
         valid:true,
@@ -64,7 +64,7 @@ subject.set(new Authority('www.google.com:1337', StringAuthority), <Authority>{
 });
 
 
-subject.set(new Authority('www.google.com:abcd', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('www.google.com:abcd', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'www.google.com:abcd',
         valid:false,
@@ -73,7 +73,7 @@ subject.set(new Authority('www.google.com:abcd', StringAuthority), <Authority>{
     valid : false,
 });
 
-subject.set(new Authority('255.255.255.255:1337', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('255.255.255.255:1337', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'255.255.255.255',
         valid:true,
@@ -87,7 +87,7 @@ subject.set(new Authority('255.255.255.255:1337', StringAuthority), <Authority>{
     valid : true,
 });
 
-subject.set(new Authority('2001:db8:1234:ffff:ffff:ffff:ffff:ffff:1337', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('2001:db8:1234:ffff:ffff:ffff:ffff:ffff:1337', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'2001:db8:1234:ffff:ffff:ffff:ffff:ffff',
         valid:true,
@@ -101,7 +101,7 @@ subject.set(new Authority('2001:db8:1234:ffff:ffff:ffff:ffff:ffff:1337', StringA
     valid : true,
 });
 
-subject.set(new Authority('[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]:1337', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]:1337', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]',
         valid:true,
@@ -116,7 +116,7 @@ subject.set(new Authority('[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]:1337', Strin
 });
 
 
-subject.set(new Authority('[2001:db8:1234:ffff:ffff:ffff:ffff:ffff:1337', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('[2001:db8:1234:ffff:ffff:ffff:ffff:ffff:1337', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'[2001:db8:1234:ffff:ffff:ffff:ffff:ffff',
         valid:false,
@@ -134,7 +134,7 @@ subject.set(new Authority('[2001:db8:1234:ffff:ffff:ffff:ffff:ffff:1337', String
 
 
 
-subject.set(new Authority('user:password@www.google.com:1337', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('user:password@www.google.com:1337', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'www.google.com',
         valid:true,
@@ -161,7 +161,7 @@ subject.set(new Authority('user:password@www.google.com:1337', StringAuthority),
     valid : true,
 });
 
-subject.set(new Authority('user:password@255.255.255.255:1337', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('user:password@255.255.255.255:1337', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'255.255.255.255',
         valid:true,
@@ -188,7 +188,7 @@ subject.set(new Authority('user:password@255.255.255.255:1337', StringAuthority)
     valid : true,
 });
 
-subject.set(new Authority('user:password@2001:db8:1234:ffff:ffff:ffff:ffff:ffff:1337', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('user:password@2001:db8:1234:ffff:ffff:ffff:ffff:ffff:1337', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'2001:db8:1234:ffff:ffff:ffff:ffff:ffff',
         valid:true,
@@ -215,7 +215,7 @@ subject.set(new Authority('user:password@2001:db8:1234:ffff:ffff:ffff:ffff:ffff:
     valid : true,
 });
 
-subject.set(new Authority('user:password@[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]:1337', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('user:password@[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]:1337', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'[2001:db8:1234:ffff:ffff:ffff:ffff:ffff]',
         valid:true,
@@ -244,7 +244,7 @@ subject.set(new Authority('user:password@[2001:db8:1234:ffff:ffff:ffff:ffff:ffff
 
 
 
-subject.set(new Authority('/', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('/', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'/',
         valid:false,
@@ -254,7 +254,7 @@ subject.set(new Authority('/', StringAuthority), <Authority>{
 });
 
 
-subject.set(new Authority('1abc', StringAuthority), <Authority>{
+subject.set(new AuthorityParameters('1abc', AuthorityParameter), <AuthorityParameters>{
     host : {
         value:'1abc',
         valid:true,
@@ -293,7 +293,7 @@ for(let [value, expectation] of subject) {
                         } catch (error) {
 
                             expect(error).toBeInstanceOf(Error);
-                            expect(error.toString()).toBe(`Error: "value is not valid host, actual \\"${Truncate(expectation.host.value, 10)}\\"."`);
+                            expect(error.toString()).toBe(`Error: "value is not valid host, actual \\"${TruncateParameters(expectation.host.value, 10)}\\"."`);
                         }
                     }
 

@@ -1,4 +1,4 @@
-import Standard from '../../../dist/path/standard-parameters';
+import {StandardParameters} from '../../../dist/path/standard';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
@@ -78,7 +78,7 @@ describe('constructor', ()=>{
 
         describe(`[${i}]${value.value}`, ()=>{
 
-            let standard = new Standard(value.value, value.separator, value.separators);
+            let standard = new StandardParameters(value.value, value.separator, value.separators);
 
             it('delimiter', ()=>{
                 expect(standard.separator).toBe(value.separator);
@@ -104,7 +104,7 @@ describe('constructor', ()=>{
 
 describe('mutate', ()=>{
 
-    let standard = new Standard('', '', '');
+    let standard = new StandardParameters('', '', '');
 
     let i = 0;
 

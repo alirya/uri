@@ -1,4 +1,4 @@
-import User from '../../../dist/user/validatable/user-parameters';
+import {UserParameters} from '../../../dist/user/validatable/user';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -21,7 +21,7 @@ list.set('://', false);
 
 for(let [user, valid] of list) {
 
-    let validatable = User(user);
+    let validatable = UserParameters(user);
 
     it(user, ()=>{
 

@@ -1,4 +1,4 @@
-import String from '../../../dist/fragment/ensure-parameters';
+import {EnsureParameters} from '../../../dist/fragment/ensure';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -27,13 +27,13 @@ for(let [fragment, valid, uri] of list) {
 
         if(valid) {
 
-            expect(String(fragment).toString()).toBe(uri);
+            expect(EnsureParameters(fragment).toString()).toBe(uri);
 
         } else {
 
             try {
 
-                expect(String(fragment).toString()).toBe(uri);
+                expect(EnsureParameters(fragment).toString()).toBe(uri);
                 fail('error should thrown');
 
             } catch (error) {

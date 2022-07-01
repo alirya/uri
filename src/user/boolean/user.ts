@@ -1,6 +1,6 @@
-import UserValidatable from '../validatable/user-parameters';
+import {UserParameters} from '../validatable/user';
 
 export default function User(string : string) : boolean {
 
-    return UserValidatable(string).valid;
+    return UserParameters(string).valid;
 }

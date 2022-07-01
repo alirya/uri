@@ -1,5 +1,5 @@
-import Ipv4 from '../../../dist/host/validatable/ipv4-parameters';
-import Truncate from '@alirya/string/truncate-parameters';
+import {Ipv4Parameters} from '../../../dist/host/validatable/ipv4';
+import {TruncateParameters} from '@alirya/string/truncate';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -20,7 +20,7 @@ list.push(['google', false]);
 
 for(let [scheme, valid] of list) {
 
-    let validatable = Ipv4(scheme);
+    let validatable = Ipv4Parameters(scheme);
 
     it(scheme, ()=>{
 
@@ -32,7 +32,7 @@ for(let [scheme, valid] of list) {
 
         } else {
 
-            expect(validatable.message).toBe(`value is not valid ipv4, actual "${Truncate(scheme, 10)}".`);
+            expect(validatable.message).toBe(`value is not valid ipv4, actual "${TruncateParameters(scheme, 10)}".`);
 
         }
 

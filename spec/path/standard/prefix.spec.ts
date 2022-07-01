@@ -1,4 +1,4 @@
-import Standard from '../../../dist/path/standard-parameters';
+import {StandardParameters} from '../../../dist/path/standard';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
@@ -9,7 +9,7 @@ const path = 'root/parent/child/file.ext';
 
 describe(`prefix`, ()=>{
 
-    const standard = new Standard(path);
+    const standard = new StandardParameters(path);
 
     it('delimiter', ()=>{
 
@@ -20,7 +20,7 @@ describe(`prefix`, ()=>{
 
 describe(`no prefix`, ()=>{
 
-    const standard = new Standard(path, undefined, undefined, true);
+    const standard = new StandardParameters(path, undefined, undefined, true);
 
     it('delimiter', ()=>{
 

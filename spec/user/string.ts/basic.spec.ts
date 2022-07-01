@@ -1,4 +1,4 @@
-import String from '../../../dist/user/ensure-parameters';
+import {EnsureParameters} from '../../../dist/user/ensure';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -27,13 +27,13 @@ for(let [user, valid, uri] of list) {
 
         if(valid) {
 
-            expect(String(user).toString()).toBe(uri);
+            expect(EnsureParameters(user).toString()).toBe(uri);
 
         } else {
 
             try {
 
-                expect(String(user).toString()).toBe(uri);
+                expect(EnsureParameters(user).toString()).toBe(uri);
                 fail('error should thrown');
 
             } catch (error) {

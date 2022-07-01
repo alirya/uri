@@ -1,4 +1,4 @@
-import File from '../../../../dist/path/file/string/file-parameters';
+import {FileParameters} from '../../../../dist/path/file/string/file';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -6,32 +6,32 @@ for(let d of ['\\:/', ':', '\\:', ':/', '\\/']) {
 
     it('full', ()=>{
         let path = `root${d}parent${d}child${d}file.ext`;
-        expect(File(path, d)).toBe(`file.ext`);
+        expect(FileParameters(path, d)).toBe(`file.ext`);
     });
 
     it('no extension', ()=>{
         let path = `root${d}parent${d}child${d}file`;
-        expect(File(path, d)).toBe(`file`);
+        expect(FileParameters(path, d)).toBe(`file`);
     });
 
     it('no name', ()=>{
         let path = `root${d}parent${d}child${d}.git`;
-        expect(File(path, d)).toBe(`.git`);
+        expect(FileParameters(path, d)).toBe(`.git`);
     });
 
     it('empty dir', ()=>{
         let path = d;
-        expect(File(path, d)).toBe('');
+        expect(FileParameters(path, d)).toBe('');
     });
 
     it('empty file', ()=>{
         let path = `root${d}parent${d}child${d}`;
-        expect(File(path, d)).toBe(``);
+        expect(FileParameters(path, d)).toBe(``);
     });
 
     it('empty file', ()=>{
         let path = '';
-        expect(File(path, d)).toBe('');
+        expect(FileParameters(path, d)).toBe('');
     });
 
 }

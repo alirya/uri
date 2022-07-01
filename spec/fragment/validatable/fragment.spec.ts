@@ -1,4 +1,4 @@
-import Fragment from '../../../dist/fragment/validatable/fragment-parameters';
+import {FragmentParameters} from '../../../dist/fragment/validatable/fragment';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -21,7 +21,7 @@ list.set('://', false);
 
 for(let [fragment, valid] of list) {
 
-    let validatable = Fragment(fragment);
+    let validatable = FragmentParameters(fragment);
 
     it(fragment, ()=>{
 

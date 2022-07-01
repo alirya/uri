@@ -1,6 +1,6 @@
-import RemoveSuffixCharacter from '@alirya/string/remove-suffix-parameters';
+import {RemoveSuffixParameters} from '@alirya/string/remove-suffix';
 
 export default function Trim(scheme : string) : string {
 
-    return RemoveSuffixCharacter(scheme, ':');
+    return RemoveSuffixParameters(scheme, ':');
 }

@@ -1,10 +1,10 @@
 import UserInfo from '../../user-info/user-info';
-import UserInfoJoin from '../../user-info/string/to-uri-parameter';
+import UserInfoJoin from '../../user-info/string/to-uri';
 import Authority from '../authority';
 
 export default function Join(
     authority : Authority,
-    userInfoToString : (userInfo : UserInfo) => string = UserInfoJoin
+    userInfoToString : (userInfo : UserInfo) => string = UserInfoJoin.Parameter
 ) : string {
 
     let result : string = '';

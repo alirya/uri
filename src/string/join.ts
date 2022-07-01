@@ -1,5 +1,5 @@
 import Uri from '../uri';
-import PrefixCharacter from '@alirya/string/prefix-parameters';
+import {PrefixParameters} from '@alirya/string/prefix';
 import Path from '../path/path';
 import JoinAuthority from '../authority/string/join';
 import Authority from '../authority/authority';
@@ -29,21 +29,21 @@ export default function Join (
 
     if(path) {
 
-        result += PrefixCharacter(path, (uri.path as Path).separator);
+        result += PrefixParameters(path, (uri.path as Path).separator);
     }
 
     let query = uri.query ? uri.query.toString() : '';
 
     if(query) {
 
-        result += PrefixCharacter(query, '?');
+        result += PrefixParameters(query, '?');
     }
 
     let fragment = uri.fragment ? uri.fragment.toString() : '';
 
     if(fragment) {
 
-        result += PrefixCharacter(fragment, '#');
+        result += PrefixParameters(fragment, '#');
     }
 
     return result;

@@ -1,8 +1,8 @@
-import FileList from '../../../../dist/path/file/list-parameters';
+import {ListParameters} from '../../../../dist/path/file/list';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let std = FileList(['root','parent','child', 'file.ext'], '/', '/\\:');
+let std = ListParameters(['root','parent','child', 'file.ext'], '/', '/\\:');
 
 describe('check integrity', ()=>{
 

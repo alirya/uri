@@ -1,8 +1,8 @@
 import ToString from '@alirya/string/to-string';
-import SuffixCharacter from '@alirya/string/suffix-parameters';
+import {SuffixParameters} from '@alirya/string/suffix';
 
 export default function ToUri(scheme : ToString) : string {
 
-    return SuffixCharacter(scheme.toString(), ':');
+    return SuffixParameters(scheme.toString(), ':');
 
 }

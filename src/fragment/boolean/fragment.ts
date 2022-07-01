@@ -1,6 +1,6 @@
-import FragmentValidatable from '../validatable/fragment-parameters';
+import {FragmentParameters} from '../validatable/fragment';
 
 export default function Fragment(string : string) : boolean {
 
-    return FragmentValidatable(string).valid;
+    return FragmentParameters(string).valid;
 }

@@ -1,5 +1,5 @@
-import Ipv6 from '../../../dist/host/validatable/ipv6-parameters';
-import Truncate from '@alirya/string/truncate-parameters';
+import {Ipv6Parameters} from '../../../dist/host/validatable/ipv6';
+import {TruncateParameters} from '@alirya/string/truncate';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -19,7 +19,7 @@ list.push(['[2001:db8:85a3:8d3:1319:8a2e:370:7348]:80', false]);
 
 for(let [scheme, valid] of list) {
 
-    let validatable = Ipv6(scheme);
+    let validatable = Ipv6Parameters(scheme);
 
     it(scheme, ()=>{
 
@@ -31,7 +31,7 @@ for(let [scheme, valid] of list) {
 
         } else {
 
-            expect(validatable.message).toBe(`value is not valid ipv6, actual "${Truncate(scheme, 20)}".`);
+            expect(validatable.message).toBe(`value is not valid ipv6, actual "${TruncateParameters(scheme, 20)}".`);
 
         }
 
