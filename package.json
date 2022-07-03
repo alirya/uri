@@ -1,6 +1,6 @@
 {
   "name": "@alirya/uri",
-  "version": "0.7.4",
+  "version": "0.8.0",
   "description": "Typescript value",
   "publishConfig": {
     "directory": "dist"
@@ -16,14 +16,14 @@
   },
   "dependencies": {
     "tslib": "^2.3.1",
-    "@alirya/array": "^0.26.3",
-    "@alirya/message": "^0.12.2",
-    "@alirya/number": "^0.17.3",
-    "@alirya/object": "^0.37.8",
-    "@alirya/string": "^0.16.8",
-    "@alirya/validatable": "^0.20.2",
-    "@alirya/validator": "^0.19.4",
-    "@alirya/value": "^0.15.2",
+    "@alirya/array": "^0.27.0",
+    "@alirya/message": "^0.13.0",
+    "@alirya/number": "^0.18.0",
+    "@alirya/object": "^0.38.0",
+    "@alirya/string": "^0.17.0",
+    "@alirya/validatable": "^0.21.0",
+    "@alirya/validator": "^0.20.0",
+    "@alirya/value": "^0.16.0",
     "is-domain-name": "^1.0.1",
     "is-ip": "^3.1.0",
     "query-string": "^6.14.1",
