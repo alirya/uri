@@ -7,6 +7,7 @@ it('default', ()=>{
 
     let standard = new Standard({string:'string', array:[1,2,3,4]});
     standard.arrayFormat = 'brackets';
-    expect(standard.toString()).toBe('array[]=1&array[]=2&array[]=3&array[]=4&string=string');
+    standard.encode = false;
+    expect(standard.toString()).toBe('string=string&array[]=1&array[]=2&array[]=3&array[]=4');
 
 });
