@@ -1,7 +1,7 @@
-import {MatchParameters, MatchType} from '@alirya/string/validatable/match';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import FragmentPattern from '../pattern/fragment';
-import FragmentMessage from './string/fragment';
+import {MatchParameters, MatchType} from '@alirya/string/validatable/match.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import FragmentPattern from '../pattern/fragment.js';
+import FragmentMessage from './string/fragment.js';
 
 export function FragmentParameters(
     fragment : string,
@@ -20,7 +20,7 @@ export function FragmentParameters<MessageT>(
     return new MatchParameters(fragment, new RegExp(`^${FragmentPattern.source}*$`, FragmentPattern.flags), message);
 }
 
-import Value from '@alirya/value/value';
+import Value from '@alirya/value/value.js';
 
 export interface FragmentArgument<MessageType> extends Value<string> {
 

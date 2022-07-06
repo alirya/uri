@@ -1,12 +1,12 @@
-import {UserInfoClassParameters} from './validatable/user-info';
-import UserInfoMessage from './validatable/string/user-info';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
-import ReadonlyValidatable from './validatable/readonly';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
-import {UserInfoParameter} from './validatable/string/user-info';
+import {UserInfoClassParameters} from './validatable/user-info.js';
+import UserInfoMessage from './validatable/string/user-info.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import ReadonlyValidatable from './validatable/readonly.js';
+import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
+import {UserInfoParameter} from './validatable/string/user-info.js';
 import {
     UserInfoClassArgument as EnsureArgument
-} from './validatable/user-info';
+} from './validatable/user-info.js';
 
 export function EnsureParameters(
     value : string,

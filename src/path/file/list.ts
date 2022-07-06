@@ -1,14 +1,14 @@
-import {ListContainer as PathList, ListGetterHandler, ListType as PathListType} from '../list';
-import {ExtensionParameters} from './string/extension';
-import {ReplaceExtensionParameters} from './string/replace-extension';
-import {FileParameters} from './string/file';
-import SafeCast from '@alirya/string/safe-cast';
-import {ReplaceFileParameters} from './string/replace-file';
-import {NameParameters} from './string/name';
-import {ReplaceNameParameters} from './string/replace-name';
-import {StandardParameters} from './standard';
-import {RemoveSuffixParameters} from '@alirya/string/remove-suffix';
-import File from './file';
+import {ListContainer as PathList, ListGetterHandler, ListType as PathListType} from '../list.js';
+import {ExtensionParameters} from './string/extension.js';
+import {ReplaceExtensionParameters} from './string/replace-extension.js';
+import {FileParameters} from './string/file.js';
+import SafeCast from '@alirya/string/safe-cast.js';
+import {ReplaceFileParameters} from './string/replace-file.js';
+import {NameParameters} from './string/name.js';
+import {ReplaceNameParameters} from './string/replace-name.js';
+import {StandardParameters} from './standard.js';
+import {RemoveSuffixParameters} from '@alirya/string/remove-suffix.js';
+import File from './file.js';
 
 export interface ListType extends PathListType {
 

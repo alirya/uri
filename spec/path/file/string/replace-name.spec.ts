@@ -1,4 +1,4 @@
-import {ReplaceNameParameters} from '../../../../dist/path/file/string/replace-name';
+import {ReplaceNameParameters} from '../../../../dist/path/file/string/replace-name.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

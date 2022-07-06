@@ -1,8 +1,8 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import {CallbackReturnSimple as  Ipv6Return} from '@alirya/validator/validatable/callback';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
-import Ipv6Message from './validatable/string/ipv6';
-import Ipv6Validatable from './validatable/ipv6';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {CallbackReturnSimple as  Ipv6Return} from '@alirya/validator/validatable/callback.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import Ipv6Message from './validatable/string/ipv6.js';
+import Ipv6Validatable from './validatable/ipv6.js';
 
 
 export function Ipv6Parameters(

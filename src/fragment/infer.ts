@@ -1,4 +1,4 @@
-import Fragment from './fragment/fragment';
+import Fragment from './fragment/fragment.js';
 
 type Infer<Type> = Type extends Fragment<infer As> ? As : never;
 

@@ -1,5 +1,5 @@
-import {Ipv6Parameters} from '../../../dist/host/validatable/ipv6';
-import {TruncateParameters} from '@alirya/string/truncate';
+import {Ipv6Parameters} from '../../../dist/host/validatable/ipv6.js';
+import {TruncateParameters} from '@alirya/string/truncate.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

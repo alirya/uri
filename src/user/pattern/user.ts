@@ -1,7 +1,7 @@
-import SubDelimiter from '../../pattern/sub-delimiter';
-import Unreserved from '../../pattern/unreserved';
-import PercentEncoded from '../../pattern/percent-encoded';
-import Unique from '@alirya/array/unique-parameters';
+import SubDelimiter from '../../pattern/sub-delimiter.js';
+import Unreserved from '../../pattern/unreserved.js';
+import PercentEncoded from '../../pattern/percent-encoded.js';
+import Unique from '@alirya/array/unique-parameters.js';
 
 const subDelimiter = SubDelimiter.source;
 const unreserved = Unreserved.source;

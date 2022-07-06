@@ -1,9 +1,9 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import {FragmentParameters} from './validatable/fragment';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
-import {MatchType} from '@alirya/string/validatable/match';
-import FragmentMessage from './validatable/string/fragment';
-import Value from '@alirya/value/value';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {FragmentParameters} from './validatable/fragment.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import {MatchType} from '@alirya/string/validatable/match.js';
+import FragmentMessage from './validatable/string/fragment.js';
+import Value from '@alirya/value/value.js';
 
 export function EnsureParameters(
     fragment : string,

@@ -1,10 +1,10 @@
-import {MatchParameters, MatchType as SchemeReturn} from '@alirya/string/validatable/match';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import SchemePattern from '../pattern/scheme';
-import SchemeMessage from './string/scheme';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validator/value/validatable';
-import Pattern from '@alirya/string/pattern/pattern/pattern';
+import {MatchParameters, MatchType as SchemeReturn} from '@alirya/string/validatable/match.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import SchemePattern from '../pattern/scheme.js';
+import SchemeMessage from './string/scheme.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validator/value/validatable.js';
+import Pattern from '@alirya/string/pattern/pattern/pattern.js';
 
 export function SchemeParameters(
     scheme : string,

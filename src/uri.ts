@@ -1,11 +1,11 @@
-import AuthorityInterface from './authority/authority';
-import ToString from '@alirya/string/to-string';
-import Path from './path/path';
-import Query from './query/query/query';
-import Scheme from './scheme/scheme/scheme';
-import Fragment from './fragment/fragment/fragment';
-import Authority from './authority/authority/authority';
-import PathContainer from './path/path/path';
+import AuthorityInterface from './authority/authority.js';
+import ToString from '@alirya/string/to-string.js';
+import Path from './path/path.js';
+import Query from './query/query/query.js';
+import Scheme from './scheme/scheme/scheme.js';
+import Fragment from './fragment/fragment/fragment.js';
+import Authority from './authority/authority/authority.js';
+import PathContainer from './path/path/path.js';
 
 export default interface Uri<
     SchemeType extends ToString  = ToString,

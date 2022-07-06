@@ -1,4 +1,4 @@
-import {ExtensionParameters} from '../../../../dist/path/file/string/extension';
+import {ExtensionParameters} from '../../../../dist/path/file/string/extension.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

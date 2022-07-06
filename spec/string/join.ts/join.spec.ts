@@ -1,6 +1,6 @@
-import Uri from '../../../dist/uri';
-import Join from '../../../dist/string/join';
-import ToString from '@alirya/string/to-string';
+import Uri from '../../../dist/uri.js';
+import Join from '../../../dist/string/join.js';
+import ToString from '@alirya/string/to-string.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,8 +1,8 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import Pattern from '../pattern/password';
-import {MatchParameters} from '@alirya/string/validatable/match';
-import Value from '@alirya/value/value';
-import PasswordMessage from './string/password';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Pattern from '../pattern/password.js';
+import {MatchParameters} from '@alirya/string/validatable/match.js';
+import Value from '@alirya/value/value.js';
+import PasswordMessage from './string/password.js';
 
 export function PasswordParameters(
     source : string,

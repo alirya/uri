@@ -1,6 +1,6 @@
-import UserInfo from '../../user-info/user-info';
-import UserInfoJoin from '../../user-info/string/to-uri';
-import Authority from '../authority';
+import UserInfo from '../../user-info/user-info.js';
+import UserInfoJoin from '../../user-info/string/to-uri.js';
+import Authority from '../authority.js';
 
 export default function Join(
     authority : Authority,

@@ -1,5 +1,5 @@
-import {ExtensionParameters} from './extension';
-import {SplitParameters} from '../../array/split';
+import {ExtensionParameters} from './extension.js';
+import {SplitParameters} from '../../array/split.js';
 
 export function ReplaceNameParameters(
     path : string,

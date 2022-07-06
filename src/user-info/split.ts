@@ -1,4 +1,4 @@
-import UserInfo from './user-info';
+import UserInfo from './user-info.js';
 import {Required} from 'utility-types';
 
 export default function Split(userInfo : string) : Required<UserInfo<string, string>, 'user'> {

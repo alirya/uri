@@ -1,4 +1,4 @@
-import User from '../../../dist/user/boolean/user';
+import User from '../../../dist/user/boolean/user.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

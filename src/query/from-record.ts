@@ -1,7 +1,7 @@
-import Value from '@alirya/value/value';
-import {PickParameters} from '@alirya/object/pick';
-import OmitUndefined from '@alirya/object/omit-undefined';
-import {defaultEncoder, IStringifyOptions, stringify} from 'qs';
+import Value from '@alirya/value/value.js';
+import {PickParameters} from '@alirya/object/pick.js';
+import OmitUndefined from '@alirya/object/omit-undefined.js';
+import {defaultEncoder, IStringifyOptions, stringify} from 'qs.js';
 
 export type RecordRecursive<V> =  {
     [P in PropertyKey]: RecordRecursive<V>|any;

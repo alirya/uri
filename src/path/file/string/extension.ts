@@ -1,6 +1,6 @@
-import Escape from '@alirya/string/pattern/escape';
-import ExtensionArgumentToString from '../../path';
-import {NameArgumentPath as ExtensionArgumentPath} from './name';
+import Escape from '@alirya/string/pattern/escape.js';
+import ExtensionArgumentToString from '../../path.js';
+import {NameArgumentPath as ExtensionArgumentPath} from './name.js';
 
 
 export function ExtensionParameters(

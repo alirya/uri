@@ -1,15 +1,15 @@
-import {GreaterParameters} from '@alirya/number/validatable/greater';
-import GreaterMessage from '@alirya/number/assert/string/greater';
-import {LowerParameters} from '@alirya/number/validatable/lower';
-import LowerMessage from '@alirya/number/assert/string/lower';
-import String from '@alirya/string/boolean/string';
-import {NumericParameters} from '@alirya/string/validatable/numeric';
-import NumericMessage from '@alirya/string/assert/string/numeric';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import PortMessage from './string/port';
+import {GreaterParameters} from '@alirya/number/validatable/greater.js';
+import GreaterMessage from '@alirya/number/assert/string/greater.js';
+import {LowerParameters} from '@alirya/number/validatable/lower.js';
+import LowerMessage from '@alirya/number/assert/string/lower.js';
+import String from '@alirya/string/boolean/string.js';
+import {NumericParameters} from '@alirya/string/validatable/numeric.js';
+import NumericMessage from '@alirya/string/assert/string/numeric.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import PortMessage from './string/port.js';
 
 export interface PortParametersType<MessageT>extends Readonly<Value<string|number> & Message<MessageT> & Validatable> {
 

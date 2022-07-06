@@ -1,4 +1,4 @@
-import String from '../../../dist/scheme/string';
+import String from '../../../dist/scheme/string.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

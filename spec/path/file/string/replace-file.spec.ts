@@ -1,4 +1,4 @@
-import {ReplaceFileParameters} from '../../../../dist/path/file/string/replace-file';
+import {ReplaceFileParameters} from '../../../../dist/path/file/string/replace-file.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

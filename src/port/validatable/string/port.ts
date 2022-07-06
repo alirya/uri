@@ -1,6 +1,6 @@
-import {TemplateParameter} from '@alirya/string/function/template';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
+import {TemplateParameter} from '@alirya/string/function/template.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
 
 const templateValid = TemplateParameter({
     string : '{subject} is valid port.'

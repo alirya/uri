@@ -1,5 +1,5 @@
-import Path from '../path';
-import {TrimPrefixParameters} from '@alirya/string/trim-prefix';
+import Path from '../path.js';
+import {TrimPrefixParameters} from '@alirya/string/trim-prefix.js';
 
 export default function ToUriRootless(path : Path) : string {
 

@@ -1,9 +1,9 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import {PasswordParameters} from './validatable/password';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
-import {MatchType as EnsureReturn} from '@alirya/string/validatable/match';
-import PasswordMessage from './validatable/string/password';
-import Value from '@alirya/value/value';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {PasswordParameters} from './validatable/password.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import {MatchType as EnsureReturn} from '@alirya/string/validatable/match.js';
+import PasswordMessage from './validatable/string/password.js';
+import Value from '@alirya/value/value.js';
 
 export function EnsureParameters(
     password : string,

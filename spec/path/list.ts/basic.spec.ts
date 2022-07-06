@@ -1,4 +1,4 @@
-import {ListParameters} from '../../../dist/path/list';
+import {ListParameters} from '../../../dist/path/list.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

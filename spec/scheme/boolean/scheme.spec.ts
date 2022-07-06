@@ -1,4 +1,4 @@
-import Scheme from '../../../dist/scheme/boolean/scheme';
+import Scheme from '../../../dist/scheme/boolean/scheme.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

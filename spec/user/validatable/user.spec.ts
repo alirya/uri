@@ -1,4 +1,4 @@
-import {UserParameters} from '../../../dist/user/validatable/user';
+import {UserParameters} from '../../../dist/user/validatable/user.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

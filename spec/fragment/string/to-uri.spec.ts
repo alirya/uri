@@ -1,4 +1,4 @@
-import ToUri from '../../../dist/fragment/string/to-uri';
+import ToUri from '../../../dist/fragment/string/to-uri.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

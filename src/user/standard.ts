@@ -1,3 +1,3 @@
-import Standard from '../string/coded';
+import Standard from '../string/coded.js';
 
 export default Standard;

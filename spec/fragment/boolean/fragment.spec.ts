@@ -1,4 +1,4 @@
-import Fragment from '../../../dist/fragment/boolean/fragment';
+import Fragment from '../../../dist/fragment/boolean/fragment.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

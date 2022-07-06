@@ -1,6 +1,6 @@
-import ValidatableInterface from '@alirya/validator/validatable/validatable';
+import ValidatableInterface from '@alirya/validator/validatable/validatable.js';
 import { O } from 'ts-toolbelt';
-import Validatable from './validatable';
+import Validatable from './validatable.js';
 
 export default interface Readonly<
   MessageType = unknown,

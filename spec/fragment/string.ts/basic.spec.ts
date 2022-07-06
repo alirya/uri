@@ -1,4 +1,4 @@
-import {EnsureParameters} from '../../../dist/fragment/ensure';
+import {EnsureParameters} from '../../../dist/fragment/ensure.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

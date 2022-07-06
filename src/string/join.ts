@@ -1,8 +1,8 @@
-import Uri from '../uri';
-import {PrefixParameters} from '@alirya/string/prefix';
-import Path from '../path/path';
-import JoinAuthority from '../authority/string/join';
-import Authority from '../authority/authority';
+import Uri from '../uri.js';
+import {PrefixParameters} from '@alirya/string/prefix.js';
+import Path from '../path/path.js';
+import JoinAuthority from '../authority/string/join.js';
+import Authority from '../authority/authority.js';
 
 export default function Join (
     uri :  Uri,

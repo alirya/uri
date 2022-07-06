@@ -1,4 +1,4 @@
-import {ReplaceExtensionParameters} from '../../../../dist/path/file/string/replace-extension';
+import {ReplaceExtensionParameters} from '../../../../dist/path/file/string/replace-extension.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

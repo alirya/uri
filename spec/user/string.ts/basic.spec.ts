@@ -1,4 +1,4 @@
-import {EnsureParameters} from '../../../dist/user/ensure';
+import {EnsureParameters} from '../../../dist/user/ensure.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

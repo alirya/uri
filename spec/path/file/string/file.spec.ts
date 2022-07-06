@@ -1,4 +1,4 @@
-import {FileParameters} from '../../../../dist/path/file/string/file';
+import {FileParameters} from '../../../../dist/path/file/string/file.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

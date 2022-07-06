@@ -1,8 +1,8 @@
-import Path from './path';
-import {StandardParameters} from './standard';
-import {SplitParameters} from './array/split';
-import Number from '../../../number/dist/boolean/number';
-import String from '@alirya/string/boolean/string';
+import Path from './path.js';
+import {StandardParameters} from './standard.js';
+import {SplitParameters} from './array/split.js';
+import Number from '../../../number/dist/boolean/number.js';
+import String from '@alirya/string/boolean/string.js';
 
 export interface ListType extends Array<string>, Path {
 

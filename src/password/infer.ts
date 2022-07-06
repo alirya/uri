@@ -1,4 +1,4 @@
-import Password from './password/password';
+import Password from './password/password.js';
 
 type Infer<Type> = Type extends Password<infer As> ? As : never;
 

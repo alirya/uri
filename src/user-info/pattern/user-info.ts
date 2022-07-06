@@ -1,6 +1,6 @@
-import SubDelimiter from '../../pattern/sub-delimiter';
-import Unreserved from '../../pattern/unreserved';
-import PercentEncoded from '../../pattern/percent-encoded';
+import SubDelimiter from '../../pattern/sub-delimiter.js';
+import Unreserved from '../../pattern/unreserved.js';
+import PercentEncoded from '../../pattern/percent-encoded.js';
 
 let subDelimiter = SubDelimiter.source;
 let unreserved = Unreserved.source;

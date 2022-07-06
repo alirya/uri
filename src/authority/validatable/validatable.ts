@@ -1,7 +1,7 @@
-import UserInfoValidatable from '../../user-info/validatable/validatable';
-import ValidatableInterface from '@alirya/validator/validatable/validatable';
-import Authority from '../authority';
-import ToString from '@alirya/string/to-string';
+import UserInfoValidatable from '../../user-info/validatable/validatable.js';
+import ValidatableInterface from '@alirya/validator/validatable/validatable.js';
+import Authority from '../authority.js';
+import ToString from '@alirya/string/to-string.js';
 
 export default interface Validatable<
     MessageType = unknown,

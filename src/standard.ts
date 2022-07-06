@@ -1,7 +1,7 @@
-import Path from './path/path';
-import Authority from './authority/authority';
-import Uri from './uri';
-import ToString from '@alirya/string/to-string';
+import Path from './path/path.js';
+import Authority from './authority/authority.js';
+import Uri from './uri.js';
+import ToString from '@alirya/string/to-string.js';
 
 export default
     class Standard<

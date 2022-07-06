@@ -1,4 +1,4 @@
-import Escape from '@alirya/string/pattern/escape';
+import Escape from '@alirya/string/pattern/escape.js';
 
 export default function Join(
     start : string,

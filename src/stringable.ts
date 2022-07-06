@@ -1,10 +1,10 @@
-import Path from './path/path';
-import Authority from './authority/authority';
-import Uri from './uri';
-import ToString from '@alirya/string/to-string';
-import Standard from './standard';
-import Join from './string/join';
-import AuthorityInterface from './authority/authority';
+import Path from './path/path.js';
+import Authority from './authority/authority.js';
+import Uri from './uri.js';
+import ToString from '@alirya/string/to-string.js';
+import Standard from './standard.js';
+import Join from './string/join.js';
+import AuthorityInterface from './authority/authority.js';
 
 export class StringableParameters<
     Scheme extends ToString = ToString,

@@ -1,7 +1,7 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import PortMessage from './validatable/string/port';
-import {PortParameters, PortParametersType as EnsureReturn} from './validatable/port';
-import Value from '@alirya/value/value';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import PortMessage from './validatable/string/port.js';
+import {PortParameters, PortParametersType as EnsureReturn} from './validatable/port.js';
+import Value from '@alirya/value/value.js';
 
 export {EnsureReturn};
 

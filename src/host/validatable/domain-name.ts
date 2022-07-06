@@ -1,9 +1,9 @@
-import { CallbackReturnSimple as DomainNameReturn, CallbackParameters } from '@alirya/validator/validatable/callback';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import DomainNameBoolean from '../boolean/domain-name';
-import DomainNameMessage from './string/domain-name';
-import ToString from '@alirya/string/to-string';
-import AssertedToString from '@alirya/string/validatable/asserted-to-string';
+import { CallbackReturnSimple as DomainNameReturn, CallbackParameters } from '@alirya/validator/validatable/callback.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import DomainNameBoolean from '../boolean/domain-name.js';
+import DomainNameMessage from './string/domain-name.js';
+import ToString from '@alirya/string/to-string.js';
+import AssertedToString from '@alirya/string/validatable/asserted-to-string.js';
 
 export function DomainNameParameters(
     string : string,

@@ -1,5 +1,5 @@
-import PercentEncoded from '../../dist/pattern/percent-encoded';
-import {PadParameters} from '@alirya/string/pad';
+import PercentEncoded from '../../dist/pattern/percent-encoded.js';
+import {PadParameters} from '@alirya/string/pad.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

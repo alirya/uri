@@ -1,4 +1,4 @@
-import Standard from '../../../dist/query/from-record';
+import Standard from '../../../dist/query/from-record.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
