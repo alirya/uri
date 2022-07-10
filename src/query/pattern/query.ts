@@ -1,7 +1,7 @@
 import SubDelimiter from '../../pattern/sub-delimiter';
 import Unreserved from '../../pattern/unreserved';
 import PercentEncoded from '../../pattern/percent-encoded';
-import Unique from '@alirya/array/unique-parameters';
+import { UniqueParameters } from '@alirya/array/unique';
 import Escape from '@alirya/string/pattern/escape';
 
 const subDelimiter = SubDelimiter.source;
@@ -10,7 +10,7 @@ const percentEncoded = PercentEncoded.source;
 
 const extra = Escape('?/');
 
-const flag = Unique([
+const flag = UniqueParameters([
     ...SubDelimiter.flags,
     ...Unreserved.flags,
     ...PercentEncoded.flags]
