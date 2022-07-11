@@ -1,6 +1,6 @@
 {
   "name": "@alirya/uri",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Typescript value",
   "publishConfig": {
     "directory": "dist"
