@@ -1,5 +1,5 @@
 import Unreserved from '../../dist/pattern/unreserved';
-import Shuffle from '@alirya/array/shuffle-parameters';
+import {ShuffleParameters} from '@alirya/array/shuffle';
 import AlphabetLowercase from '@alirya/string/alphabet-lowercase';
 import AlphabetUppercase from '@alirya/string/alphabet-uppercase';
 import Digit from '@alirya/string/digit';
@@ -33,7 +33,7 @@ for(let percent of PercentEncodedList()) {
 
     it('all', ()=>{
 
-        let all = Shuffle([symbol, percent, AlphabetLowercase, AlphabetUppercase, Digit]).join('');
+        let all = ShuffleParameters([symbol, percent, AlphabetLowercase, AlphabetUppercase, Digit]).join('');
 
         expect(all.match(Unreserved)).toBeTruthy();
     });
