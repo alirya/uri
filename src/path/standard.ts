@@ -1,7 +1,7 @@
 import Path from './path';
 import Value from '@alirya/value/value';
 import Escape from '@alirya/string/pattern/escape';
-import Normalize from './string/normalize';
+import Normalize, {NormalizeParameters} from './string/normalize';
 
 export interface StandardType extends Path, Value<string> {
     value : string;
@@ -23,7 +23,7 @@ export class StandardParameters implements Path, Value<string> {
 
     toString(): string {
 
-        const path =  Normalize(this.value, this.separator, this.separators);
+        const path =  NormalizeParameters(this.value, this.separator, this.separators);
 
         const separator = this.separator[0];
 
