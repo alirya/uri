@@ -1,12 +1,15 @@
 {
   "name": "@alirya/uri",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Typescript value",
   "publishConfig": {
     "directory": "dist"
   },
   "author": {
     "name": "Andika Candra"
+  },
+  "esm": {
+    "cache": false
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/alirya/uri",
