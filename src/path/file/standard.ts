@@ -25,7 +25,7 @@ export class StandardParameters extends PathStandard.Parameters implements File 
 
     set directory(dir : string)  {
 
-        this.value = Join(dir, this.file, this.separator[0], this.splitter);
+        this.value = Join([dir, this.file], this.separator, this.separators);
     }
 
     set extension(extension : string)  {
@@ -35,22 +35,22 @@ export class StandardParameters extends PathStandard.Parameters implements File 
 
     get file () : string {
 
-        return FileParameters(this.value, this.splitter);
+        return FileParameters(this.value, this.separators);
     }
 
-    set file(extension : string)  {
+    set file(file : string)  {
 
-        this.value = SafeCast(ReplaceFileParameters(this.value, extension, this.splitter));
+        this.value = SafeCast(ReplaceFileParameters(this.value, file, this.separators));
     }
 
     get name () : string {
 
-        return NameParameters(this.value, this.splitter);
+        return NameParameters(this.value, this.separators);
     }
 
     set name(name : string)  {
 
-        this.value = SafeCast(ReplaceNameParameters(this.value, name, this.splitter));
+        this.value = SafeCast(ReplaceNameParameters(this.value, name, this.separators));
     }
 }
 

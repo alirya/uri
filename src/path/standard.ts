@@ -1,6 +1,7 @@
 import Path from './path';
 import Value from '@alirya/value/value';
 import Escape from '@alirya/string/pattern/escape';
+import Normalize from './string/normalize';
 
 export interface StandardType extends Path, Value<string> {
     value : string;
@@ -17,26 +18,20 @@ export class StandardParameters implements Path, Value<string> {
         public separators : string = '/\\:',
         public prefix : boolean = false,
     ) {
-    }
 
-    get splitter() : string {
-
-        return this.separators + this.separator;
     }
 
     toString(): string {
 
-        const escaped = Escape(this.splitter);
+        const path =  Normalize(this.value, this.separator, this.separators);
 
-        const pattern = new RegExp(`[${escaped}]+`, 'g');
-
-        const path =  this.value.replace(pattern, this.separator[0]);
+        const separator = this.separator[0];
 
         if(this.prefix) {
 
-            if(path[0] !== this.separator[0]) {
+            if(path[0] !== separator) {
 
-                return this.separator[0] + path;
+                return separator + path;
             }
         }
 

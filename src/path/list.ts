@@ -1,7 +1,7 @@
 import Path from './path';
 import {StandardParameters} from './standard';
 import {SplitParameters} from './array/split';
-import Number from '../../../number/dist/boolean/number';
+import Number from '@alirya/number/boolean/number';
 import String from '@alirya/string/boolean/string';
 
 export interface ListType extends Array<string>, Path {
