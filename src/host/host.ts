@@ -1,8 +1,8 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import { CallbackReturnSimple as HostReturn} from '@alirya/validator/validatable/callback';
-import HostValidatable from './validatable/host';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
-import HostMessage from './validatable/string/host';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import { CallbackReturnSimple as HostReturn} from '@alirya/validator/validatable/callback.js';
+import HostValidatable from './validatable/host.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import HostMessage from './validatable/string/host.js';
 
 export function HostParameters(
     string : string,
@@ -15,7 +15,7 @@ export function HostParameters<MessageType>(
     string : string,
     message : ValidatableParameters<string, string|MessageType>= HostMessage.Parameters
 ) {
-    let scheme = HostValidatable.Parameters(string, message);
+    const scheme = HostValidatable.Parameters(string, message);
 
     AssertValid(scheme);
 

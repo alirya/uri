@@ -1,11 +1,11 @@
-import {AuthorityParameters} from '../../../dist/authority/validatable/authority';
-import ValidatableAuthority from '../../../dist/authority/validatable/validatable';
-import {AuthorityParameter} from '../../../dist/authority/validatable/string/authority';
-import {TruncateParameters} from '@alirya/string/truncate';
+import {AuthorityParameters} from '../../../dist/authority/validatable/authority.js';
+import ValidatableAuthority from '../../../dist/authority/validatable/validatable.js';
+import {AuthorityParameter} from '../../../dist/authority/validatable/string/authority.js';
+import {TruncateParameters} from '@alirya/string/truncate.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let subject = new Map<AuthorityParameters, ValidatableAuthority>();
+const subject = new Map<AuthorityParameters, ValidatableAuthority>();
 
 
 subject.set(new AuthorityParameters('www.google.com', AuthorityParameter), <AuthorityParameters>{
@@ -266,7 +266,7 @@ subject.set(new AuthorityParameters('1abc', AuthorityParameter), <AuthorityParam
 
 
 
-for(let [value, expectation] of subject) {
+for(const [value, expectation] of subject) {
 
     describe(value.value, ()=>{
 

@@ -1,36 +1,36 @@
-import {ExtensionParameters} from '../../../../dist/path/file/string/extension';
+import {ExtensionParameters} from '../../../../dist/path/file/string/extension.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-for(let d of ['\\:/', ':', '\\:', ':/', '\\/']) {
+for(const d of ['\\:/', ':', '\\:', ':/', '\\/']) {
 
     it('full', ()=>{
-        let path = `root${d}parent${d}child${d}file.ext`;
+        const path = `root${d}parent${d}child${d}file.ext`;
         expect(ExtensionParameters(path, d)).toBe(`ext`);
     });
 
     it('no extension', ()=>{
-        let path = `root${d}parent${d}child${d}file`;
+        const path = `root${d}parent${d}child${d}file`;
         expect(ExtensionParameters(path, d)).toBe(``);
     });
 
     it('no name', ()=>{
-        let path = `root${d}parent${d}child${d}.git`;
+        const path = `root${d}parent${d}child${d}.git`;
         expect(ExtensionParameters(path, d)).toBe(`git`);
     });
 
     it('empty dir', ()=>{
-        let path = d;
+        const path = d;
         expect(ExtensionParameters(path, d)).toBe('');
     });
 
     it('empty file', ()=>{
-        let path = `root${d}parent${d}child${d}`;
+        const path = `root${d}parent${d}child${d}`;
         expect(ExtensionParameters(path, d)).toBe(``);
     });
 
     it('empty file', ()=>{
-        let path = '';
+        const path = '';
         expect(ExtensionParameters(path, d)).toBe('');
     });
 

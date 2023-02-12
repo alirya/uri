@@ -1,10 +1,10 @@
-import {Ipv4Parameters} from '../../../dist/host/validatable/ipv4';
-import {TruncateParameters} from '@alirya/string/truncate';
+import {Ipv4Parameters} from '../../../dist/host/validatable/ipv4.js';
+import {TruncateParameters} from '@alirya/string/truncate.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-let list : [string, boolean][] = [];
+const list : [string, boolean][] = [];
 
 list.push(['255.255.255.255', true]);
 list.push(['0.0.0.0', true]);
@@ -18,9 +18,9 @@ list.push(['google', false]);
 
 
 
-for(let [scheme, valid] of list) {
+for(const [scheme, valid] of list) {
 
-    let validatable = Ipv4Parameters(scheme);
+    const validatable = Ipv4Parameters(scheme);
 
     it(scheme, ()=>{
 

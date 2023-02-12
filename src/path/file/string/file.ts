@@ -1,10 +1,10 @@
-import FileArgumentToString from '../../path';
-import {NameArgumentPath as FileArgumentPath} from './name';
-import {SplitParameters} from '../../array/split';
+import FileArgumentToString from '../../path.js';
+import {NameArgumentPath as FileArgumentPath} from './name.js';
+import {SplitParameters} from '../../array/split.js';
 
 export function FileParameters(
     path : string,
-    delimiter : string = ':/\\'
+    delimiter  = ':/\\'
 ) : string {
 
     return SplitParameters(path, delimiter).pop() || '';

@@ -1,36 +1,36 @@
-import {ReplaceExtensionParameters} from '../../../../dist/path/file/string/replace-extension';
+import {ReplaceExtensionParameters} from '../../../../dist/path/file/string/replace-extension.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-for(let d of ['\\:/', ':', '\\:', ':/', '\\/']) {
+for(const d of ['\\:/', ':', '\\:', ':/', '\\/']) {
 
     it('full', ()=>{
-        let path = `root${d}parent${d}child${d}file.ext`;
+        const path = `root${d}parent${d}child${d}file.ext`;
         expect(ReplaceExtensionParameters(path, 'txt', d)).toBe(`root${d}parent${d}child${d}file.txt`);
     });
 
     it('no name', ()=>{
-        let path = `root${d}parent${d}child${d}.git`;
+        const path = `root${d}parent${d}child${d}.git`;
         expect(ReplaceExtensionParameters(path, 'gitkeep', d)).toBe(`root${d}parent${d}child${d}.gitkeep`);
     });
 
     it('no extension', ()=>{
-        let path = `root${d}parent${d}child${d}file`;
+        const path = `root${d}parent${d}child${d}file`;
         expect(ReplaceExtensionParameters(path, 'txt', d)).toBe(`root${d}parent${d}child${d}file.txt`);
     });
 
     it('empty dir', ()=>{
-        let path = d;
+        const path = d;
         expect(ReplaceExtensionParameters(path, 'txt', d)).toBe(d);
     });
 
     it('empty file', ()=>{
-        let path = `root${d}parent${d}child${d}`;
+        const path = `root${d}parent${d}child${d}`;
         expect(ReplaceExtensionParameters(path, 'txt', d)).toBe(`root${d}parent${d}child${d}`);
     });
 
     it('empty file', ()=>{
-        let path = '';
+        const path = '';
         expect(ReplaceExtensionParameters(path, 'txt', d)).toBe('');
     });
 

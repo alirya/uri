@@ -1,7 +1,7 @@
-import {TemplateParameter} from '@alirya/string/function/template';
-import {TruncateParameters} from '@alirya/string/truncate';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
+import {TemplateParameter} from '@alirya/string/function/template.js';
+import {TruncateParameters} from '@alirya/string/truncate.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
 
 const templateValid = TemplateParameter({
   string : '{subject} is valid query.'
@@ -13,7 +13,7 @@ const templateInvalid = TemplateParameter({
 export function QueryParameters(
   value : string,
   valid : boolean,
-  subject : string = ''
+  subject  = ''
 ) : string {
 
   if(valid) {

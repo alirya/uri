@@ -1,9 +1,9 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import { CallbackReturnSimple as Ipv4Return, CallbackParameters } from '@alirya/validator/validatable/callback';
-import Ipv4Boolean from '../boolean/ipv4';
-import Ipv4Message from './string/ipv4';
-import ToString from '@alirya/string/to-string';
-import AssertedToString from '@alirya/string/validatable/asserted-to-string';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import { CallbackReturnSimple as Ipv4Return, CallbackParameters } from '@alirya/validator/validatable/callback.js';
+import Ipv4Boolean from '../boolean/ipv4.js';
+import Ipv4Message from './string/ipv4.js';
+import ToString from '@alirya/string/to-string.js';
+import AssertedToString from '@alirya/string/validatable/asserted-to-string.js';
 
 export function Ipv4Parameters(
   string : string,

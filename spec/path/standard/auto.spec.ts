@@ -1,9 +1,9 @@
-import {StandardParameters} from '../../../dist/path/standard';
+import {StandardParameters} from '../../../dist/path/standard.js';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let map : {separator:string, separators:string, expectation:string, value:string}[] = [];
+const map : {separator:string, separators:string, expectation:string, value:string}[] = [];
 
 map.push({
     value:'root/parent/child/file.ext',
@@ -74,11 +74,11 @@ describe('constructor', ()=>{
 
     let i = 0;
 
-    for(let value of map) {
+    for(const value of map) {
 
         describe(`[${i}]${value.value}`, ()=>{
 
-            let standard = new StandardParameters(value.value, value.separator, value.separators);
+            const standard = new StandardParameters(value.value, value.separator, value.separators);
 
             it('delimiter', ()=>{
                 expect(standard.separator).toBe(value.separator);
@@ -104,11 +104,11 @@ describe('constructor', ()=>{
 
 describe('mutate', ()=>{
 
-    let standard = new StandardParameters('', '', '');
+    const standard = new StandardParameters('', '', '');
 
     let i = 0;
 
-    for(let value of map) {
+    for(const value of map) {
 
         describe(`[${i}]${value.value}`, ()=>{
 

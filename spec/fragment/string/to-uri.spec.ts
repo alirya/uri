@@ -1,8 +1,8 @@
-import ToUri from '../../../dist/fragment/string/to-uri';
+import ToUri from '../../../dist/fragment/string/to-uri.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let list = new Map<string, string>();
+const list = new Map<string, string>();
 
 list.set('ftp', '#ftp');
 list.set('http', '#http');
@@ -21,7 +21,7 @@ list.set('//', '#//');
 list.set('#//', '#//');
 
 
-for(let [fragment, uri] of list) {
+for(const [fragment, uri] of list) {
 
     it(fragment, ()=>{
 

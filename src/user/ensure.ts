@@ -1,9 +1,9 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import {UserParameters} from './validatable/user';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
-import {MatchType} from '@alirya/string/validatable/match';
-import UserMessage from './validatable/string/user';
-import Value from '@alirya/value/value';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {UserParameters} from './validatable/user.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import {MatchType} from '@alirya/string/validatable/match.js';
+import UserMessage from './validatable/string/user.js';
+import Value from '@alirya/value/value.js';
 
 export function EnsureParameters(
     user : string,
@@ -19,7 +19,7 @@ export function EnsureParameters<MessageT>(
     message: ValidatableParameters<string, MessageT|string, [RegExp]> = (value, valid, pattern) => UserMessage.Parameters(value, valid)
 )  : MatchType<string, MessageT|string> {
 
-    let validatable = UserParameters(user, message);
+    const validatable = UserParameters(user, message);
 
     AssertValid(validatable);
 

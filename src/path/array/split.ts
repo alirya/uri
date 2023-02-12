@@ -1,11 +1,11 @@
-import Escape from '@alirya/string/pattern/escape';
-import Path from '../path';
-import {NameArgumentPath} from '../file/string/name';
+import Escape from '@alirya/string/pattern/escape.js';
+import Path from '../path.js';
+import {NameArgumentPath} from '../file/string/name.js';
 
 export function SplitParameters(
     string : string,
-    delimiter : string = ':/\\',
-    empty : boolean = true
+    delimiter  = ':/\\',
+    empty  = true
 ) : string[] {
 
     if(string === '') {

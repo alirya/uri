@@ -1,9 +1,9 @@
-import {FragmentParameters} from '../../../dist/fragment/validatable/fragment';
+import {FragmentParameters} from '../../../dist/fragment/validatable/fragment.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-let list = new Map<string, boolean>();
+const list = new Map<string, boolean>();
 
 list.set('ftp', true);
 list.set('http', true);
@@ -19,9 +19,9 @@ list.set('//', true);
 list.set('://', false);
 
 
-for(let [fragment, valid] of list) {
+for(const [fragment, valid] of list) {
 
-    let validatable = FragmentParameters(fragment);
+    const validatable = FragmentParameters(fragment);
 
     it(fragment, ()=>{
 

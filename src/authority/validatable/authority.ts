@@ -1,14 +1,14 @@
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import {PortParameters} from '../../port/validatable/port';
-import {RemovePrefixParameters} from '@alirya/string/remove-prefix';
-import {HostParameters} from '../../host/validatable/host';
-import UserInfoInterface from '../../user-info/validatable/validatable';
-import AuthorityInterface from './validatable';
-import Message from '@alirya/message/message';
-import NotEmpty from '@alirya/string/boolean/not-empty';
-import {UserInfoParameters} from '../../user-info/validatable/user-info';
-import {SetGetterParameters} from '@alirya/object/value/value/set-getter';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import {PortParameters} from '../../port/validatable/port.js';
+import {RemovePrefixParameters} from '@alirya/string/remove-prefix.js';
+import {HostParameters} from '../../host/validatable/host.js';
+import UserInfoInterface from '../../user-info/validatable/validatable.js';
+import AuthorityInterface from './validatable.js';
+import Message from '@alirya/message/message.js';
+import NotEmpty from '@alirya/string/boolean/not-empty.js';
+import {UserInfoParameters} from '../../user-info/validatable/user-info.js';
+import {SetGetterParameters} from '@alirya/object/value/value/set-getter.js';
 
 export class AuthorityParameters<MessageType = unknown> implements AuthorityInterface<
     MessageType,
@@ -31,7 +31,7 @@ export class AuthorityParameters<MessageType = unknown> implements AuthorityInte
             let host : string|undefined = undefined;
             let userInfo : string|undefined = undefined;
 
-            let parts = value.split('@', 2);
+            const parts = value.split('@', 2);
 
             if(parts.length === 2) {
 
@@ -43,14 +43,14 @@ export class AuthorityParameters<MessageType = unknown> implements AuthorityInte
             }
 
             // try ipv 6
-            let hostPort = host.match(/\:[0-9]*$/);
+            const hostPort = host.match(/\:[0-9]*$/);
 
             if(hostPort) {
 
-                let port = hostPort[0];
+                const port = hostPort[0];
                 this.port = PortParameters(RemovePrefixParameters(port, ':'));
 
-                let remain = host.slice(0, host.length - port.length);
+                const remain = host.slice(0, host.length - port.length);
                 this.host = HostParameters(remain);
 
             } else {

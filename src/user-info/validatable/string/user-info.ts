@@ -1,6 +1,6 @@
-import {TemplateParameter} from '@alirya/string/function/template';
-import Validatable from '@alirya/validator/validatable/validatable';
-import UserInfo from '../validatable';
+import {TemplateParameter} from '@alirya/string/function/template.js';
+import Validatable from '@alirya/validator/validatable/validatable.js';
+import UserInfo from '../validatable.js';
 
 type MessageParamValid = Record<'value'|'predicate', string>;
 
@@ -65,12 +65,12 @@ export function UserInfoParameters(
 }
 
 
-export interface AuthorityArgument extends Omit<Readonly<
+export type AuthorityArgument = Omit<Readonly<
     UserInfo<string,
         Readonly<Validatable<string, string>>,
         Readonly<Validatable<string, string>>
         >
-    >, 'message'> {}
+    >, 'message'>
 
 export function UserInfoParameter(result : AuthorityArgument) : string {
 

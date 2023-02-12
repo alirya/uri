@@ -1,8 +1,8 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import {CallbackReturnSimple as Ipv4Return} from '@alirya/validator/validatable/callback';
-import Ipv4Validatable from './validatable/ipv4';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
-import Ipv4Message from './validatable/string/ipv4';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {CallbackReturnSimple as Ipv4Return} from '@alirya/validator/validatable/callback.js';
+import Ipv4Validatable from './validatable/ipv4.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import Ipv4Message from './validatable/string/ipv4.js';
 
 export function Ipv4Parameters(
     string : string,
@@ -15,7 +15,7 @@ export function Ipv4Parameters<MessageType>(
     string : string,
     message : ValidatableParameters<string, string|MessageType> = Ipv4Message.Parameters
 ) {
-    let scheme = Ipv4Validatable.Parameters(string, message);
+    const scheme = Ipv4Validatable.Parameters(string, message);
 
     AssertValid(scheme);
 

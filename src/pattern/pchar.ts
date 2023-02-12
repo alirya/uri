@@ -1,8 +1,8 @@
-import Unreserved from './unreserved';
-import Percent from './percent-encoded';
-import SubDelimiter from './sub-delimiter';
-import Escape from '@alirya/string/pattern/escape';
-import { UniqueParameters } from '@alirya/array/unique';
+import Unreserved from './unreserved.js';
+import Percent from './percent-encoded.js';
+import SubDelimiter from './sub-delimiter.js';
+import Escape from '@alirya/string/pattern/escape.js';
+import { UniqueParameters } from '@alirya/array/unique.js';
 
 const subDelimiter = SubDelimiter;
 const unreserved = Unreserved;
@@ -10,5 +10,5 @@ const extra = Escape('@:');
 
 const flag = UniqueParameters([...subDelimiter.flags, ...unreserved.flags]).join('');
 
-const Pattern : RegExp = new RegExp(`([${extra}]|${Percent.source}|${unreserved.source}|${subDelimiter.source})*`, flag);
+const Pattern  = new RegExp(`([${extra}]|${Percent.source}|${unreserved.source}|${subDelimiter.source})*`, flag);
 export default Pattern;

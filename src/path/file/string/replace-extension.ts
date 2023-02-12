@@ -1,9 +1,9 @@
-import Escape from '@alirya/string/pattern/escape';
+import Escape from '@alirya/string/pattern/escape.js';
 
 export function ReplaceExtensionParameters(
     path : string,
     extension : string,
-    delimiter : string = ':/\\'
+    delimiter  = ':/\\'
 ) : string {
 
     if(extension.length) {
@@ -11,11 +11,11 @@ export function ReplaceExtensionParameters(
         extension = '.' + extension;
     }
 
-    let escaped = Escape(delimiter);
+    const escaped = Escape(delimiter);
 
     // determine if replaced or not, in case file without extension
     // replace operation will not work
-    let replaced : boolean = false;
+    let replaced  = false;
 
     path = path.replace(new RegExp(`\\.[^${escaped}.]+$`), (substring, args) => {
 

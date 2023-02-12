@@ -1,8 +1,8 @@
-import User from '../../../dist/user/boolean/user';
+import User from '../../../dist/user/boolean/user.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let list = new Map<string, boolean>();
+const list = new Map<string, boolean>();
 
 list.set('ftp', true);
 list.set('http', true);
@@ -18,9 +18,9 @@ list.set('//', false);
 list.set('://', false);
 
 
-for(let [user, valid] of list) {
+for(const [user, valid] of list) {
 
-    let validatable = User(user);
+    const validatable = User(user);
 
     it(user, ()=>{
 

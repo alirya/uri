@@ -1,12 +1,12 @@
-import ToString from '@alirya/string/to-string';
-import SafeCast from '@alirya/string/safe-cast';
-import UserInfo from '../user-info';
+import ToString from '@alirya/string/to-string.js';
+import SafeCast from '@alirya/string/safe-cast.js';
+import UserInfo from '../user-info.js';
 
 export function ToUriParameters(user ?: ToString, password ?: ToString) : string {
 
     let usr : string = SafeCast(user);
 
-    let pass = SafeCast(password);
+    const pass = SafeCast(password);
 
     if(pass.length !== 0) {
 

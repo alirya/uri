@@ -1,12 +1,12 @@
-import UserInfoMessage from './string/user-info';
-import ReadonlyValidatable from './readonly';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import Value from '@alirya/value/value';
-import MemoizeAccessor from '@alirya/object/function/memoize-accessor';
-import ValidatableIntrface from '@alirya/validator/validatable/validatable';
-import {UserParameters} from '../../user/validatable/user';
-import {PasswordParameters} from '../../password/validatable/password';
-import NotEmpty from '@alirya/string/boolean/not-empty';
+import UserInfoMessage from './string/user-info.js';
+import ReadonlyValidatable from './readonly.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Value from '@alirya/value/value.js';
+import MemoizeAccessor from '@alirya/object/function/memoize-accessor.js';
+import ValidatableIntrface from '@alirya/validator/validatable/validatable.js';
+import {UserParameters} from '../../user/validatable/user.js';
+import {PasswordParameters} from '../../password/validatable/password.js';
+import NotEmpty from '@alirya/string/boolean/not-empty.js';
 import {Optional} from 'utility-types';
 
 export class UserInfoClassParameters<MessageType> implements ReadonlyValidatable<MessageType> {
@@ -24,7 +24,7 @@ export class UserInfoClassParameters<MessageType> implements ReadonlyValidatable
 
         if(NotEmpty(value)) {
 
-            let [user, password] = value.split(':', 2);
+            const [user, password] = value.split(':', 2);
 
             this.user = UserParameters(user);
 
@@ -99,7 +99,7 @@ export function UserInfoParameters<MessageType>(
 }
 
 
-export interface UserInfoArgument<MessageType> extends Optional<UserInfoClassArgument<MessageType>, 'message'> {}
+export type UserInfoArgument<MessageType> = Optional<UserInfoClassArgument<MessageType>, 'message'>
 
 export function UserInfoParameter(
     {

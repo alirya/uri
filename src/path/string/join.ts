@@ -1,4 +1,4 @@
-import Escape from '@alirya/string/pattern/escape';
+import Escape from '@alirya/string/pattern/escape.js';
 //
 // export default function Join(
 //     start : string,
@@ -36,18 +36,18 @@ import Escape from '@alirya/string/pattern/escape';
 
 export default function Join(
     paths : string[],
-    delimiter : string = '/',
-    delimiters : string = ':/\\',
+    delimiter  = '/',
+    delimiters  = ':/\\',
 ) : string {
 
     delimiter = delimiter[0];
 
-    let escaped = Escape(delimiters + delimiter);
+    const escaped = Escape(delimiters + delimiter);
 
     return paths.map((path, index)=>{
 
         // check ended with delimiter
-        let match = path.match(new RegExp(`[${escaped}]+$`));
+        const match = path.match(new RegExp(`[${escaped}]+$`));
 
         if(match) {
 
@@ -56,7 +56,7 @@ export default function Join(
 
 
         // check next
-        let next = paths[index + 1];
+        const next = paths[index + 1];
 
         if(next === undefined) {
 
@@ -64,7 +64,7 @@ export default function Join(
 
         } else {
 
-            let match = next.match(new RegExp(`^[${escaped}]+`));
+            const match = next.match(new RegExp(`^[${escaped}]+`));
 
             if(match) {
 

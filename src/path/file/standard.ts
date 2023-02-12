@@ -1,15 +1,15 @@
-import File from './file';
-import PathStandard from '../standard';
-import {ExtensionParameters} from './string/extension';
-import {ReplaceExtensionParameters} from './string/replace-extension';
-import {NameParameters} from './string/name';
-import {FileParameters} from './string/file';
-import {ReplaceNameParameters} from './string/replace-name';
-import {ReplaceFileParameters} from './string/replace-file';
-import SafeCast from '@alirya/string/safe-cast';
-import Join from '../string/join';
-import {RemoveSuffixParameters} from '@alirya/string/remove-suffix';
-import {StandardArgument} from '../standard';
+import File from './file.js';
+import PathStandard from '../standard.js';
+import {ExtensionParameters} from './string/extension.js';
+import {ReplaceExtensionParameters} from './string/replace-extension.js';
+import {NameParameters} from './string/name.js';
+import {FileParameters} from './string/file.js';
+import {ReplaceNameParameters} from './string/replace-name.js';
+import {ReplaceFileParameters} from './string/replace-file.js';
+import SafeCast from '@alirya/string/safe-cast.js';
+import Join from '../string/join.js';
+import {RemoveSuffixParameters} from '@alirya/string/remove-suffix.js';
+import {StandardArgument} from '../standard.js';
 
 export class StandardParameters extends PathStandard.Parameters implements File {
 

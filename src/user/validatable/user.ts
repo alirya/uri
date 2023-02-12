@@ -1,10 +1,10 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import Pattern from '../pattern/user';
-import {MatchParameters, MatchType} from '@alirya/string/validatable/match';
-import Value from '@alirya/value/value';
-import UserMessage from './string/user';
-import Validatable from '@alirya/validator/value/validatable';
-import PatternContainer from '@alirya/string/pattern/pattern/pattern';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Pattern from '../pattern/user.js';
+import {MatchParameters, MatchType} from '@alirya/string/validatable/match.js';
+import Value from '@alirya/value/value.js';
+import UserMessage from './string/user.js';
+import Validatable from '@alirya/validator/value/validatable.js';
+import PatternContainer from '@alirya/string/pattern/pattern/pattern.js';
 
 export function UserParameters(
     source : string,

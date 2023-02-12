@@ -1,9 +1,9 @@
-import {ListParameters} from '../../../dist/path/list';
+import {ListParameters} from '../../../dist/path/list.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe('single', ()=>{
-    let std = ListParameters(['root','parent','child'], '/', '/\\:');
+    const std = ListParameters(['root','parent','child'], '/', '/\\:');
 
     describe('check integrity', ()=>{
 
@@ -38,7 +38,7 @@ describe('single', ()=>{
 
 describe('single', ()=>{
 
-    let std = ListParameters([], '/', '/\\:');
+    const std = ListParameters([], '/', '/\\:');
 
     std.push('root/\\:parent','child/:\\file.ext');
 
@@ -49,7 +49,7 @@ describe('single', ()=>{
 
 describe('non asceii', ()=>{
 
-    let std = ListParameters([], '/', '/\\');
+    const std = ListParameters([], '/', '/\\');
 
     std.push('/:foo+');
 

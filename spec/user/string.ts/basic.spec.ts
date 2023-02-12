@@ -1,8 +1,8 @@
-import {EnsureParameters} from '../../../dist/user/ensure';
+import {EnsureParameters} from '../../../dist/user/ensure.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let list : [string, boolean, string][] = [];
+const list : [string, boolean, string][] = [];
 
 list.push(['ftp', true,  'ftp']);
 list.push(['http', true,  'http']);
@@ -21,7 +21,7 @@ list.push(['//', false,  '//']);
 list.push(['://', false,  '://']);
 
 
-for(let [user, valid, uri] of list) {
+for(const [user, valid, uri] of list) {
 
     it(user, ()=>{
 

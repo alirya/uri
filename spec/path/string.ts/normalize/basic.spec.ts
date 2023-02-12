@@ -1,9 +1,9 @@
-import Normalize, {NormalizeParameters} from '../../../../dist/path/string/normalize';
+import Normalize, {NormalizeParameters} from '../../../../dist/path/string/normalize.js';
 
 
 describe('constructor', ()=>{
 
-    let standard = NormalizeParameters('root/parent/../child', '/');
+    const standard = NormalizeParameters('root/parent/../child', '/');
 
     it('path', ()=>{
         expect(standard.toString()).toBe('root/child');

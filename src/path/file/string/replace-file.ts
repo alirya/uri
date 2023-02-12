@@ -1,9 +1,9 @@
-import Escape from '@alirya/string/pattern/escape';
+import Escape from '@alirya/string/pattern/escape.js';
 
 export function ReplaceFileParameters(
     path : string,
     file : string|undefined,
-    delimiter : string = ':/\\'
+    delimiter  = ':/\\'
 ) : string|undefined {
 
     const escaped = Escape(delimiter);

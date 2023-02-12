@@ -1,6 +1,6 @@
-import Value from '@alirya/value/value';
-import {PickParameters} from '@alirya/object/pick';
-import OmitUndefined from '@alirya/object/omit-undefined';
+import Value from '@alirya/value/value.js';
+import {PickParameters} from '@alirya/object/pick.js';
+import OmitUndefined from '@alirya/object/omit-undefined.js';
 import {defaultEncoder, IStringifyOptions, stringify} from 'qs';
 
 export type RecordRecursive<V> =  {
@@ -14,14 +14,14 @@ export interface FromRecordArgument extends
 
 export default class FromRecord implements Value<RecordRecursive<any>>, FromRecordArgument {
 
-    encode: boolean = true;
-    allowDots: boolean = false;
+    encode = true;
+    allowDots = false;
     charset: 'utf-8' | 'iso-8859-1' =  'utf-8';
-    charsetSentinel: boolean  = false;
-    comma: boolean = false;
-    delimiter: string = '&';
+    charsetSentinel  = false;
+    comma = false;
+    delimiter = '&';
     encoder : ((str: any, defaultEncoder: defaultEncoder, charset: string, type: 'key' | 'value') => string) | undefined = undefined;
-    strictNullHandling: boolean = false;
+    strictNullHandling = false;
     format: 'RFC1738' | 'RFC3986' = 'RFC3986';
     /**
      * specify the format of the output array
@@ -32,10 +32,10 @@ export default class FromRecord implements Value<RecordRecursive<any>>, FromReco
      * - comma a=b,c
      */
     arrayFormat: 'indices' | 'brackets' | 'repeat' | 'comma' = 'indices';
-    encodeValuesOnly: boolean = false;
-    addQueryPrefix: boolean = false;
-    indices: boolean = false;
-    skipNulls: boolean = false;
+    encodeValuesOnly = false;
+    addQueryPrefix = false;
+    indices = false;
+    skipNulls = false;
     filter: Array<string | number> | ((prefix: string, value: any) => any) | undefined = undefined;
     sort: ((a: any, b: any) => number) | undefined = undefined;
     serializeDate: ((d: Date) => string) | undefined = undefined;

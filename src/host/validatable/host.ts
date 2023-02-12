@@ -1,9 +1,9 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import { CallbackReturnSimple as HostReturn, CallbackParameters } from '@alirya/validator/validatable/callback';
-import HostBoolean from '../boolean/host';
-import HostMessage from './string/host';
-import ToString from '@alirya/string/to-string';
-import AssertedToString from '@alirya/string/validatable/asserted-to-string';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import { CallbackReturnSimple as HostReturn, CallbackParameters } from '@alirya/validator/validatable/callback.js';
+import HostBoolean from '../boolean/host.js';
+import HostMessage from './string/host.js';
+import ToString from '@alirya/string/to-string.js';
+import AssertedToString from '@alirya/string/validatable/asserted-to-string.js';
 
 export function HostParameters(
     string : string,

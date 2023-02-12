@@ -1,9 +1,9 @@
-import UserInfo from './user-info';
+import UserInfo from './user-info.js';
 import {Required} from 'utility-types';
 
 export default function Split(userInfo : string) : Required<UserInfo<string, string>, 'user'> {
 
-    let parts = userInfo.split(':', 2);
+    const parts = userInfo.split(':', 2);
 
     return {
         user : parts[0],

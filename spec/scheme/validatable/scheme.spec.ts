@@ -1,9 +1,9 @@
-import {SchemeParameters} from '../../../dist/scheme/validatable/scheme';
+import {SchemeParameters} from '../../../dist/scheme/validatable/scheme.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-let list = new Map<string, boolean>();
+const list = new Map<string, boolean>();
 
 list.set('ftp', true);
 list.set('http', true);
@@ -19,9 +19,9 @@ list.set('//', false);
 list.set('://', false);
 
 
-for(let [scheme, valid] of list) {
+for(const [scheme, valid] of list) {
 
-    let validatable = SchemeParameters(scheme);
+    const validatable = SchemeParameters(scheme);
 
     it(scheme, ()=>{
 

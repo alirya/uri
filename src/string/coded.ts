@@ -1,9 +1,9 @@
-import Value from '@alirya/value/value';
-import ValueOf from '@alirya/value/value-of/value-of';
+import Value from '@alirya/value/value.js';
+import ValueOf from '@alirya/value/value-of/value-of.js';
 
 export default class Coded implements Value<string>, ValueOf<string> {
 
-    #value : string = '';
+    #value  = '';
 
     constructor(
         value : string,

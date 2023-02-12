@@ -1,2 +1,2 @@
-const SubDelimiter : RegExp = /[!$&'()*+,;=]/;
+const SubDelimiter  = /[!$&'()*+,;=]/;
 export default SubDelimiter;

@@ -1,9 +1,9 @@
-import Fragment from '../../../dist/fragment/boolean/fragment';
+import Fragment from '../../../dist/fragment/boolean/fragment.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-let list = new Map<string, boolean>();
+const list = new Map<string, boolean>();
 
 list.set('ftp', true);
 list.set('http', true);
@@ -19,9 +19,9 @@ list.set('//', true);
 list.set('://', false);
 
 
-for(let [fragment, valid] of list) {
+for(const [fragment, valid] of list) {
 
-    let validatable = Fragment(fragment);
+    const validatable = Fragment(fragment);
 
     it(fragment, ()=>{
 

@@ -1,7 +1,7 @@
-import SubDelimiter from '../pattern/sub-delimiter';
-import Trim from './string/trim';
+import SubDelimiter from '../pattern/sub-delimiter.js';
+import Trim from './string/trim.js';
 
-let allowed : Map<string, string> = new Map<string, string>();
+const allowed : Map<string, string> = new Map<string, string>();
 
 // extra
 allowed.set('%3F', '?');
@@ -15,7 +15,7 @@ allowed.set('%3A', ':');
 allowed.set('%25', '%');
 
 // sub delimiter
-for (let char of Trim(SubDelimiter.source)) {
+for (const char of Trim(SubDelimiter.source)) {
 
     allowed.set(encodeURIComponent(char), char);
 }
@@ -24,7 +24,7 @@ export default function Encode(string : string) : string {
 
     let encoded = encodeURIComponent(string);
 
-    for(let [search, replace] of allowed) {
+    for(const [search, replace] of allowed) {
 
         encoded = encoded.replace(search, replace);
     }

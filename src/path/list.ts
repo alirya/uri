@@ -1,8 +1,8 @@
-import Path from './path';
-import {StandardParameters} from './standard';
-import {SplitParameters} from './array/split';
-import Number from '@alirya/number/boolean/number';
-import String from '@alirya/string/boolean/string';
+import Path from './path.js';
+import {StandardParameters} from './standard.js';
+import {SplitParameters} from './array/split.js';
+import Number from '@alirya/number/boolean/number.js';
+import String from '@alirya/string/boolean/string.js';
 
 export interface ListType extends Array<string>, Path {
 
@@ -95,7 +95,7 @@ export class ListContainer extends Array<string> implements ListType {
 
     toString(): string {
 
-        let standard = new StandardParameters(this.join(this.separator[0]), this.separator[0], this.separators, this.prefix);
+        const standard = new StandardParameters(this.join(this.separator[0]), this.separator[0], this.separators, this.prefix);
         return standard.toString();
     }
 }
@@ -138,10 +138,10 @@ export function ListGetterHandler() : ListGetterHandlerType {
 
 export function ListParameters (
     segments : Iterable<string> = [],
-    separator : string = '/',
-    separators : string = '/\\:',
-    empty : boolean = true,
-    prefix: boolean = false
+    separator  = '/',
+    separators  = '/\\:',
+    empty  = true,
+    prefix = false
 ) : ListType {
 
     const handler = ListGetterHandler();

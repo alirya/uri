@@ -1,8 +1,8 @@
-import {StandardParameters} from '../../../../dist/path/file/standard';
+import {StandardParameters} from '../../../../dist/path/file/standard.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let std = new StandardParameters('root\\:/parent\\:/child\\:/file.ext', '/', '/\\:');
+const std = new StandardParameters('root\\:/parent\\:/child\\:/file.ext', '/', '/\\:');
 
 describe('check integrity', ()=>{
 

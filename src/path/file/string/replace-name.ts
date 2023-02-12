@@ -1,19 +1,19 @@
-import {ExtensionParameters} from './extension';
-import {SplitParameters} from '../../array/split';
+import {ExtensionParameters} from './extension.js';
+import {SplitParameters} from '../../array/split.js';
 
 export function ReplaceNameParameters(
     path : string,
     name : string|undefined,
-    delimiter : string = ':/\\'
+    delimiter  = ':/\\'
 ) : string|undefined {
 
-    let parts = SplitParameters(path, delimiter);
+    const parts = SplitParameters(path, delimiter);
 
-    let file = parts.pop();
+    const file = parts.pop();
 
     if(file && name) {
 
-        let extension = ExtensionParameters(file);
+        const extension = ExtensionParameters(file);
 
         if(extension === '') {
 

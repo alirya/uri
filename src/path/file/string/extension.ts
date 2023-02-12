@@ -1,16 +1,16 @@
-import Escape from '@alirya/string/pattern/escape';
-import ExtensionArgumentToString from '../../path';
-import {NameArgumentPath as ExtensionArgumentPath} from './name';
+import Escape from '@alirya/string/pattern/escape.js';
+import ExtensionArgumentToString from '../../path.js';
+import {NameArgumentPath as ExtensionArgumentPath} from './name.js';
 
 
 export function ExtensionParameters(
     path : string,
-    delimiter : string = ':/\\'
+    delimiter  = ':/\\'
 ) : string {
 
-    let escaped = Escape(delimiter);
+    const escaped = Escape(delimiter);
 
-    let match = path.match(new RegExp(`\\.[^${escaped}.]*$`));
+    const match = path.match(new RegExp(`\\.[^${escaped}.]*$`));
 
     if(match) {
 

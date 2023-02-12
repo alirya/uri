@@ -1,8 +1,8 @@
-import {ListParameters} from '../../../../dist/path/file/list';
+import {ListParameters} from '../../../../dist/path/file/list.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let map : {
+const map : {
     separator:string,
     separators:string,
     file:string,
@@ -129,11 +129,11 @@ map.push({
 describe('constructor', ()=>{
 
     let i = 0;
-    for(let value of map) {
+    for(const value of map) {
 
         describe(`[${i}]` + JSON.stringify(value.value), ()=>{
 
-            let standard = ListParameters(value.value, value.separator, value.separators);
+            const standard = ListParameters(value.value, value.separator, value.separators);
 
             it('delimiter', ()=>{
                 expect(standard.separator).toBe(value.separator);
@@ -175,11 +175,11 @@ describe('constructor', ()=>{
 
 describe('mutate', ()=>{
 
-    let standard = ListParameters([], '', '');
+    const standard = ListParameters([], '', '');
 
     let i = 0;
 
-    for(let value of map) {
+    for(const value of map) {
 
         describe(`[${i}]` + JSON.stringify(value.value), ()=>{
 

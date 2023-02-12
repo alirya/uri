@@ -1,8 +1,8 @@
-import {ListParameters} from '../../../../dist/path/file/list';
+import {ListParameters} from '../../../../dist/path/file/list.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let std = ListParameters(['root','parent','child', 'file.ext'], '/', '/\\:');
+const std = ListParameters(['root','parent','child', 'file.ext'], '/', '/\\:');
 
 describe('check integrity', ()=>{
 

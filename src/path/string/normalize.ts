@@ -1,11 +1,11 @@
-import Split, {SplitParameter, SplitParameters} from '../array/split';
-import NormalizeArrays from '../array/normalize';
-import Join from './join';
+import Split, {SplitParameter, SplitParameters} from '../array/split.js';
+import NormalizeArrays from '../array/normalize.js';
+import Join from './join.js';
 
 export function NormalizeParameters(
     path: string,
-    delimiter : string = '/',
-    delimiters : string = ':/\\',
+    delimiter  = '/',
+    delimiters  = ':/\\',
 ) : string {
 
     const paths = SplitParameters(path, delimiters + delimiter, true);

@@ -1,7 +1,7 @@
-import {TemplateParameter} from '@alirya/string/function/template';
-import {TruncateParameters} from '@alirya/string/truncate';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
+import {TemplateParameter} from '@alirya/string/function/template.js';
+import {TruncateParameters} from '@alirya/string/truncate.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
 
 const templateValid = TemplateParameter({
   string : '{subject} is valid fragment.',
@@ -16,7 +16,7 @@ export function FragmentParameters(
   value : string,
   valid : boolean,
   pattern: RegExp,
-  subject : string = 'value'
+  subject  = 'value'
 ) : string {
 
   if(valid) {

@@ -1,3 +1,4 @@
-import {v4 as Ipv4} from 'is-ip';
+import IsIp from 'is-ip';
 
+const Ipv4 = IsIp.v4;
 export default Ipv4;

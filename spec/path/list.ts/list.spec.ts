@@ -1,9 +1,9 @@
-import {ListParameters} from '../../../dist/path/list';
+import {ListParameters} from '../../../dist/path/list.js';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let map : {separator:string, separators:string, expectation:string, value:string[], expectations:string[] }[] = [];
+const map : {separator:string, separators:string, expectation:string, value:string[], expectations:string[] }[] = [];
 
 map.push({
     value:['root','parent','child','file.ext'],
@@ -83,11 +83,11 @@ map.push({
 
 describe('constructor', ()=>{
 
-    for(let value of map) {
+    for(const value of map) {
 
         describe(JSON.stringify(value.value), ()=>{
 
-            let standard = ListParameters(value.value, value.separator, value.separators);
+            const standard = ListParameters(value.value, value.separator, value.separators);
 
             it('delimiter', ()=>{
                 expect(standard.separator).toBe(value.separator);
@@ -111,9 +111,9 @@ describe('constructor', ()=>{
 
 describe('mutate', ()=>{
 
-    let standard = ListParameters([], '', '');
+    const standard = ListParameters([], '', '');
 
-    for(let value of map) {
+    for(const value of map) {
 
         describe(JSON.stringify(value.value), ()=>{
 

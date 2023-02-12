@@ -1,8 +1,8 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import { CallbackReturnSimple as DomainNameReturn } from '@alirya/validator/validatable/callback';
-import DomainNameValidatable from './validatable/domain-name';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
-import DomainNameMessage from './validatable/string/domain-name';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import { CallbackReturnSimple as DomainNameReturn } from '@alirya/validator/validatable/callback.js';
+import DomainNameValidatable from './validatable/domain-name.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import DomainNameMessage from './validatable/string/domain-name.js';
 
 export function DomainNameParameters(
     string : string,
@@ -15,7 +15,7 @@ export function DomainNameParameters<MessageType>(
     string : string,
     message : ValidatableParameters<string, string|MessageType>= DomainNameMessage.Parameters
 ) {
-    let scheme = DomainNameValidatable.Parameters(string, message);
+    const scheme = DomainNameValidatable.Parameters(string, message);
 
     AssertValid(scheme);
 

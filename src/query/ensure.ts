@@ -1,9 +1,9 @@
-import {QueryParameters} from './validatable/query';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
-import {MatchParameters} from '@alirya/string/validatable/match';
-import Value from '@alirya/value/value';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import QueryMessage from './validatable/string/query';
+import {QueryParameters} from './validatable/query.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import {MatchParameters} from '@alirya/string/validatable/match.js';
+import Value from '@alirya/value/value.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import QueryMessage from './validatable/string/query.js';
 
 export function EnsureParameters(
     query : string,
@@ -19,7 +19,7 @@ export function EnsureParameters<MessageT>(
     message: ValidatableParameters<string, MessageT|string> = QueryMessage.Parameters
 )  : MatchParameters<string, MessageT|string> {
 
-    let validatable = QueryParameters(query, message);
+    const validatable = QueryParameters(query, message);
 
     AssertValid(validatable);
 

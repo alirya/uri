@@ -1,7 +1,7 @@
-import Path from './path';
-import Value from '@alirya/value/value';
-import Escape from '@alirya/string/pattern/escape';
-import Normalize, {NormalizeParameters} from './string/normalize';
+import Path from './path.js';
+import Value from '@alirya/value/value.js';
+import Escape from '@alirya/string/pattern/escape.js';
+import Normalize, {NormalizeParameters} from './string/normalize.js';
 
 export interface StandardType extends Path, Value<string> {
     value : string;

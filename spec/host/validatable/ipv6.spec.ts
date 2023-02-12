@@ -1,9 +1,9 @@
-import {Ipv6Parameters} from '../../../dist/host/validatable/ipv6';
-import {TruncateParameters} from '@alirya/string/truncate';
+import {Ipv6Parameters} from '../../../dist/host/validatable/ipv6.js';
+import {TruncateParameters} from '@alirya/string/truncate.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let list : [string, boolean][] = [];
+const list : [string, boolean][] = [];
 
 list.push(['1:2:3:4:5:6:7:8', true]);
 list.push(['2001:0db8:85a3:0000:0000:8a2e:0370:7334', true]);
@@ -17,9 +17,9 @@ list.push(['google', false]);
 list.push(['[2001:db8:85a3:8d3:1319:8a2e:370:7348]:80', false]);
 
 
-for(let [scheme, valid] of list) {
+for(const [scheme, valid] of list) {
 
-    let validatable = Ipv6Parameters(scheme);
+    const validatable = Ipv6Parameters(scheme);
 
     it(scheme, ()=>{
 

@@ -1,6 +1,8 @@
-import {v6} from 'is-ip';
-import {RemovePrefixParameters} from '@alirya/string/remove-prefix';
-import {RemoveSuffixParameters} from '@alirya/string/remove-suffix';
+import IsIp from 'is-ip';
+import {RemovePrefixParameters} from '@alirya/string/remove-prefix.js';
+import {RemoveSuffixParameters} from '@alirya/string/remove-suffix.js';
+
+const {v6} = IsIp;
 
 export default function Ipv6(string : string) : boolean {
 

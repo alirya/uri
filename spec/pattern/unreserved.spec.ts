@@ -1,9 +1,9 @@
-import Unreserved from '../../dist/pattern/unreserved';
-import {ShuffleParameters} from '@alirya/array/shuffle';
-import AlphabetLowercase from '@alirya/string/alphabet-lowercase';
-import AlphabetUppercase from '@alirya/string/alphabet-uppercase';
-import Digit from '@alirya/string/digit';
-import PercentEncodedList from './percent-encoded';
+import Unreserved from '../../dist/pattern/unreserved.js';
+import {ShuffleParameters} from '@alirya/array/shuffle.js';
+import AlphabetLowercase from '@alirya/string/alphabet-lowercase.js';
+import AlphabetUppercase from '@alirya/string/alphabet-uppercase.js';
+import Digit from '@alirya/string/digit.js';
+import PercentEncodedList from './percent-encoded.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -29,11 +29,11 @@ it('digit', ()=>{
     expect(Digit.match(Unreserved)).toBeTruthy();
 });
 
-for(let percent of PercentEncodedList()) {
+for(const percent of PercentEncodedList()) {
 
     it('all', ()=>{
 
-        let all = ShuffleParameters([symbol, percent, AlphabetLowercase, AlphabetUppercase, Digit]).join('');
+        const all = ShuffleParameters([symbol, percent, AlphabetLowercase, AlphabetUppercase, Digit]).join('');
 
         expect(all.match(Unreserved)).toBeTruthy();
     });
