@@ -1,8 +1,8 @@
 import {UserInfoClassParameters} from './validatable/user-info.js';
 import UserInfoMessage from './validatable/string/user-info.js';
-import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import AssertValid from '@axiona/validator/validatable/assert/valid.js';
 import ReadonlyValidatable from './validatable/readonly.js';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
+import {ValidatableParameters} from '@axiona/validator/message/function/validatable.js';
 import {UserInfoParameter} from './validatable/string/user-info.js';
 import {
     UserInfoClassArgument as EnsureArgument

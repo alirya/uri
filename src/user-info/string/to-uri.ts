@@ -1,5 +1,5 @@
-import ToString from '@alirya/string/to-string.js';
-import SafeCast from '@alirya/string/safe-cast.js';
+import ToString from '@axiona/string/to-string.js';
+import SafeCast from '@axiona/string/safe-cast.js';
 import UserInfo from '../user-info.js';
 
 export function ToUriParameters(user ?: ToString, password ?: ToString) : string {

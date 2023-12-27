@@ -1,5 +1,5 @@
-import {TemplateParameter} from '@alirya/string/function/template.js';
-import Validatable from '@alirya/validator/validatable/validatable.js';
+import {TemplateParameter} from '@axiona/string/function/template.js';
+import Validatable from '@axiona/validator/validatable/validatable.js';
 import UserInfoValidatable from '../../../user-info/validatable/validatable.js';
 import AuthorityValidatable from '../../validatable/validatable.js';
 

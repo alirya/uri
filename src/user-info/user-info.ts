@@ -1,4 +1,4 @@
-import ToString from '@alirya/string/to-string.js';
+import ToString from '@axiona/string/to-string.js';
 
 export default interface UserInfo<
     User extends ToString = ToString,

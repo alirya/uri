@@ -1,14 +1,14 @@
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
 import {PortParameters} from '../../port/validatable/port.js';
-import {RemovePrefixParameters} from '@alirya/string/remove-prefix.js';
+import {RemovePrefixParameters} from '@axiona/string/remove-prefix.js';
 import {HostParameters} from '../../host/validatable/host.js';
 import UserInfoInterface from '../../user-info/validatable/validatable.js';
 import AuthorityInterface from './validatable.js';
-import Message from '@alirya/message/message.js';
-import NotEmpty from '@alirya/string/boolean/not-empty.js';
+import Message from '@axiona/message/message.js';
+import NotEmpty from '@axiona/string/boolean/not-empty.js';
 import {UserInfoParameters} from '../../user-info/validatable/user-info.js';
-import {SetGetterParameters} from '@alirya/object/value/value/set-getter.js';
+import {SetGetterParameters} from '@axiona/object/value/value/set-getter.js';
 
 export class AuthorityParameters<MessageType = unknown> implements AuthorityInterface<
     MessageType,

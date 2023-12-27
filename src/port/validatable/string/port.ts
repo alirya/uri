@@ -1,6 +1,6 @@
-import {TemplateParameter} from '@alirya/string/function/template.js';
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
+import {TemplateParameter} from '@axiona/string/function/template.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
 
 const templateValid = TemplateParameter({
     string : '{subject} is valid port.'

@@ -1,5 +1,5 @@
-import {TemplateParameter} from '@alirya/string/function/template.js';
-import Validatable from '@alirya/validator/validatable/validatable.js';
+import {TemplateParameter} from '@axiona/string/function/template.js';
+import Validatable from '@axiona/validator/validatable/validatable.js';
 import UserInfo from '../validatable.js';
 
 type MessageParamValid = Record<'value'|'predicate', string>;

@@ -1,6 +1,6 @@
 import Path from './path.js';
-import Value from '@alirya/value/value.js';
-import Escape from '@alirya/string/pattern/escape.js';
+import Value from '@axiona/value/value.js';
+import Escape from '@axiona/string/pattern/escape.js';
 import Normalize, {NormalizeParameters} from './string/normalize.js';
 
 export interface StandardType extends Path, Value<string> {

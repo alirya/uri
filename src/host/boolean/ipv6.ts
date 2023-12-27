@@ -1,6 +1,6 @@
 import IsIp from 'is-ip';
-import {RemovePrefixParameters} from '@alirya/string/remove-prefix.js';
-import {RemoveSuffixParameters} from '@alirya/string/remove-suffix.js';
+import {RemovePrefixParameters} from '@axiona/string/remove-prefix.js';
+import {RemoveSuffixParameters} from '@axiona/string/remove-suffix.js';
 
 const {v6} = IsIp;
 

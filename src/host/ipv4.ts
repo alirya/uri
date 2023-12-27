@@ -1,7 +1,7 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
-import {CallbackReturnSimple as Ipv4Return} from '@alirya/validator/validatable/callback.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
+import {CallbackReturnSimple as Ipv4Return} from '@axiona/validator/validatable/callback.js';
 import Ipv4Validatable from './validatable/ipv4.js';
-import AssertValid from '@alirya/validator/validatable/assert/valid.js';
+import AssertValid from '@axiona/validator/validatable/assert/valid.js';
 import Ipv4Message from './validatable/string/ipv4.js';
 
 export function Ipv4Parameters(

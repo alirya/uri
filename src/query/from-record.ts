@@ -1,6 +1,6 @@
-import Value from '@alirya/value/value.js';
-import {PickParameters} from '@alirya/object/pick.js';
-import OmitUndefined from '@alirya/object/omit-undefined.js';
+import Value from '@axiona/value/value.js';
+import {PickParameters} from '@axiona/object/pick.js';
+import OmitUndefined from '@axiona/object/omit-undefined.js';
 import {defaultEncoder, IStringifyOptions, stringify} from 'qs';
 
 export type RecordRecursive<V> =  {

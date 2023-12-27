@@ -1,5 +1,5 @@
-import ToString from '@alirya/string/to-string.js';
-import {SuffixParameters} from '@alirya/string/suffix.js';
+import ToString from '@axiona/string/to-string.js';
+import {SuffixParameters} from '@axiona/string/suffix.js';
 
 export default function ToUri(scheme : ToString) : string {
 

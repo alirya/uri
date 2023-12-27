@@ -6,9 +6,9 @@ import {NameParameters} from './string/name.js';
 import {FileParameters} from './string/file.js';
 import {ReplaceNameParameters} from './string/replace-name.js';
 import {ReplaceFileParameters} from './string/replace-file.js';
-import SafeCast from '@alirya/string/safe-cast.js';
+import SafeCast from '@axiona/string/safe-cast.js';
 import Join from '../string/join.js';
-import {RemoveSuffixParameters} from '@alirya/string/remove-suffix.js';
+import {RemoveSuffixParameters} from '@axiona/string/remove-suffix.js';
 import {StandardArgument} from '../standard.js';
 
 export class StandardParameters extends PathStandard.Parameters implements File {

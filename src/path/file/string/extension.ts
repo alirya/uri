@@ -1,4 +1,4 @@
-import Escape from '@alirya/string/pattern/escape.js';
+import Escape from '@axiona/string/pattern/escape.js';
 import ExtensionArgumentToString from '../../path.js';
 import {NameArgumentPath as ExtensionArgumentPath} from './name.js';
 

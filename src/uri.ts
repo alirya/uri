@@ -1,5 +1,5 @@
 import AuthorityInterface from './authority/authority.js';
-import ToString from '@alirya/string/to-string.js';
+import ToString from '@axiona/string/to-string.js';
 import Path from './path/path.js';
 import Query from './query/query/query.js';
 import Scheme from './scheme/scheme/scheme.js';

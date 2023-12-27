@@ -1,8 +1,8 @@
 import Path from './path.js';
 import {StandardParameters} from './standard.js';
 import {SplitParameters} from './array/split.js';
-import Number from '@alirya/number/boolean/number.js';
-import String from '@alirya/string/boolean/string.js';
+import Number from '@axiona/number/boolean/number.js';
+import String from '@axiona/string/boolean/string.js';
 
 export interface ListType extends Array<string>, Path {
 

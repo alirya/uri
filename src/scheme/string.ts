@@ -1,7 +1,7 @@
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
+import {ValidatableParameters} from '@axiona/validator/message/function/validatable.js';
 import {SchemeParameters} from './validatable/scheme.js';
-import AssertValid from '@alirya/validator/validatable/assert/valid.js';
-import {MatchType} from '@alirya/string/validatable/match.js';
+import AssertValid from '@axiona/validator/validatable/assert/valid.js';
+import {MatchType} from '@axiona/string/validatable/match.js';
 import SchemeMessage from './validatable/string/scheme.js';
 
 export default function String(

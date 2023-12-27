@@ -1,5 +1,5 @@
 import Uri from '../uri.js';
-import {PrefixParameters} from '@alirya/string/prefix.js';
+import {PrefixParameters} from '@axiona/string/prefix.js';
 import Path from '../path/path.js';
 import JoinAuthority from '../authority/string/join.js';
 import Authority from '../authority/authority.js';

@@ -2,12 +2,12 @@ import {ListContainer as PathList, ListGetterHandler, ListType as PathListType} 
 import {ExtensionParameters} from './string/extension.js';
 import {ReplaceExtensionParameters} from './string/replace-extension.js';
 import {FileParameters} from './string/file.js';
-import SafeCast from '@alirya/string/safe-cast.js';
+import SafeCast from '@axiona/string/safe-cast.js';
 import {ReplaceFileParameters} from './string/replace-file.js';
 import {NameParameters} from './string/name.js';
 import {ReplaceNameParameters} from './string/replace-name.js';
 import {StandardParameters} from './standard.js';
-import {RemoveSuffixParameters} from '@alirya/string/remove-suffix.js';
+import {RemoveSuffixParameters} from '@axiona/string/remove-suffix.js';
 import File from './file.js';
 
 export interface ListType extends PathListType {

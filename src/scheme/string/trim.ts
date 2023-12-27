@@ -1,4 +1,4 @@
-import {RemoveSuffixParameters} from '@alirya/string/remove-suffix.js';
+import {RemoveSuffixParameters} from '@axiona/string/remove-suffix.js';
 
 export default function Trim(scheme : string) : string {
 

@@ -1,8 +1,8 @@
 import Unreserved from './unreserved.js';
 import Percent from './percent-encoded.js';
 import SubDelimiter from './sub-delimiter.js';
-import Escape from '@alirya/string/pattern/escape.js';
-import { UniqueParameters } from '@alirya/array/unique.js';
+import Escape from '@axiona/string/pattern/escape.js';
+import { UniqueParameters } from '@axiona/array/unique.js';
 
 const subDelimiter = SubDelimiter;
 const unreserved = Unreserved;

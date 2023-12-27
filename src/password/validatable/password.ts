@@ -1,7 +1,7 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import Pattern from '../pattern/password.js';
-import {MatchParameters} from '@alirya/string/validatable/match.js';
-import Value from '@alirya/value/value.js';
+import {MatchParameters} from '@axiona/string/validatable/match.js';
+import Value from '@axiona/value/value.js';
 import PasswordMessage from './string/password.js';
 
 export function PasswordParameters(

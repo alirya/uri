@@ -1,9 +1,9 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
-import { CallbackReturnSimple as Ipv6Return, CallbackParameters } from '@alirya/validator/validatable/callback.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
+import { CallbackReturnSimple as Ipv6Return, CallbackParameters } from '@axiona/validator/validatable/callback.js';
 import Ipv6Boolean from '../boolean/ipv6.js';
 import Ipv6Message from './string/ipv6.js';
-import ToString from '@alirya/string/to-string.js';
-import AssertedToString from '@alirya/string/validatable/asserted-to-string.js';
+import ToString from '@axiona/string/to-string.js';
+import AssertedToString from '@axiona/string/validatable/asserted-to-string.js';
 
 export function Ipv6Parameters(
   string : string,

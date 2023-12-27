@@ -1,4 +1,4 @@
-import {PadParameters} from '@alirya/string/pad.js';
+import {PadParameters} from '@axiona/string/pad.js';
 
 
 export default function * PercentEncodedList() {

@@ -1,4 +1,4 @@
-import ValidatableInterface from '@alirya/validator/validatable/validatable.js';
+import ValidatableInterface from '@axiona/validator/validatable/validatable.js';
 import { O } from 'ts-toolbelt';
 import Validatable from './validatable.js';
 

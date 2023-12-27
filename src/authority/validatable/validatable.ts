@@ -1,7 +1,7 @@
 import UserInfoValidatable from '../../user-info/validatable/validatable.js';
-import ValidatableInterface from '@alirya/validator/validatable/validatable.js';
+import ValidatableInterface from '@axiona/validator/validatable/validatable.js';
 import Authority from '../authority.js';
-import ToString from '@alirya/string/to-string.js';
+import ToString from '@axiona/string/to-string.js';
 
 export default interface Validatable<
     MessageType = unknown,

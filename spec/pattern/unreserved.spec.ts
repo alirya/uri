@@ -1,8 +1,8 @@
 import Unreserved from '../../dist/pattern/unreserved.js';
-import {ShuffleParameters} from '@alirya/array/shuffle.js';
-import AlphabetLowercase from '@alirya/string/alphabet-lowercase.js';
-import AlphabetUppercase from '@alirya/string/alphabet-uppercase.js';
-import Digit from '@alirya/string/digit.js';
+import {ShuffleParameters} from '@axiona/array/shuffle.js';
+import AlphabetLowercase from '@axiona/string/alphabet-lowercase.js';
+import AlphabetUppercase from '@axiona/string/alphabet-uppercase.js';
+import Digit from '@axiona/string/digit.js';
 import PercentEncodedList from './percent-encoded.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});

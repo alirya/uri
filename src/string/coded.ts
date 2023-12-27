@@ -1,5 +1,5 @@
-import Value from '@alirya/value/value.js';
-import ValueOf from '@alirya/value/value-of/value-of.js';
+import Value from '@axiona/value/value.js';
+import ValueOf from '@axiona/value/value-of/value-of.js';
 
 export default class Coded implements Value<string>, ValueOf<string> {
 

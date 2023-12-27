@@ -1,12 +1,12 @@
 import UserInfoMessage from './string/user-info.js';
 import ReadonlyValidatable from './readonly.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
-import Value from '@alirya/value/value.js';
-import MemoizeAccessor from '@alirya/object/function/memoize-accessor.js';
-import ValidatableIntrface from '@alirya/validator/validatable/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
+import Value from '@axiona/value/value.js';
+import MemoizeAccessor from '@axiona/object/function/memoize-accessor.js';
+import ValidatableIntrface from '@axiona/validator/validatable/validatable.js';
 import {UserParameters} from '../../user/validatable/user.js';
 import {PasswordParameters} from '../../password/validatable/password.js';
-import NotEmpty from '@alirya/string/boolean/not-empty.js';
+import NotEmpty from '@axiona/string/boolean/not-empty.js';
 import {Optional} from 'utility-types';
 
 export class UserInfoClassParameters<MessageType> implements ReadonlyValidatable<MessageType> {

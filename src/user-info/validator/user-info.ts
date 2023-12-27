@@ -1,7 +1,7 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import UserInfoMessage from '../validatable/string/user-info.js';
 import {UserInfoClassParameters} from '../validatable/user-info.js';
-import SimpleValidator from '@alirya/validator/simple.js';
+import SimpleValidator from '@axiona/validator/simple.js';
 import ReadonlyValidatable from '../validatable/readonly.js';
 
 export function UserInfoParameters() : SimpleValidator<string, string, string>;

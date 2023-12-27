@@ -1,7 +1,7 @@
 import SubDelimiter from '../../pattern/sub-delimiter.js';
 import Unreserved from '../../pattern/unreserved.js';
 import PercentEncoded from '../../pattern/percent-encoded.js';
-import { UniqueParameters } from '@alirya/array/unique.js';
+import { UniqueParameters } from '@axiona/array/unique.js';
 
 const subDelimiter = SubDelimiter.source;
 const unreserved = Unreserved.source;

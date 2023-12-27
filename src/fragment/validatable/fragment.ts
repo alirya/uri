@@ -1,5 +1,5 @@
-import {MatchParameters, MatchType} from '@alirya/string/validatable/match.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {MatchParameters, MatchType} from '@axiona/string/validatable/match.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import FragmentPattern from '../pattern/fragment.js';
 import FragmentMessage from './string/fragment.js';
 
@@ -20,7 +20,7 @@ export function FragmentParameters<MessageT>(
     return new MatchParameters(fragment, new RegExp(`^${FragmentPattern.source}*$`, FragmentPattern.flags), message);
 }
 
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 
 export interface FragmentArgument<MessageType> extends Value<string> {
 

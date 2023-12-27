@@ -1,14 +1,14 @@
-import {GreaterParameters} from '@alirya/number/validatable/greater.js';
-import GreaterMessage from '@alirya/number/assert/string/greater.js';
-import {LowerParameters} from '@alirya/number/validatable/lower.js';
-import LowerMessage from '@alirya/number/assert/string/lower.js';
-import String from '@alirya/string/boolean/string.js';
-import {NumericParameters} from '@alirya/string/validatable/numeric.js';
-import NumericMessage from '@alirya/string/assert/string/numeric.js';
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {GreaterParameters} from '@axiona/number/validatable/greater.js';
+import GreaterMessage from '@axiona/number/assert/string/greater.js';
+import {LowerParameters} from '@axiona/number/validatable/lower.js';
+import LowerMessage from '@axiona/number/assert/string/lower.js';
+import String from '@axiona/string/boolean/string.js';
+import {NumericParameters} from '@axiona/string/validatable/numeric.js';
+import NumericMessage from '@axiona/string/assert/string/numeric.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import PortMessage from './string/port.js';
 
 export type PortParametersType<MessageT> = Readonly<Value<string|number> & Message<MessageT> & Validatable>

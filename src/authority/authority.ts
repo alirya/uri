@@ -1,4 +1,4 @@
-import ToString from '@alirya/string/to-string.js';
+import ToString from '@axiona/string/to-string.js';
 import UserInfoInterface from '../user-info/user-info.js';
 
 export default

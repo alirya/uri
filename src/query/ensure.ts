@@ -1,8 +1,8 @@
 import {QueryParameters} from './validatable/query.js';
-import AssertValid from '@alirya/validator/validatable/assert/valid.js';
-import {MatchParameters} from '@alirya/string/validatable/match.js';
-import Value from '@alirya/value/value.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import AssertValid from '@axiona/validator/validatable/assert/valid.js';
+import {MatchParameters} from '@axiona/string/validatable/match.js';
+import Value from '@axiona/value/value.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import QueryMessage from './validatable/string/query.js';
 
 export function EnsureParameters(

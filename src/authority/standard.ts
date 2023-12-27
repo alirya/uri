@@ -1,6 +1,6 @@
 import Authority from './authority.js';
 import UserInfoInterface from '../user-info/user-info.js';
-import ToString from '@alirya/string/to-string.js';
+import ToString from '@axiona/string/to-string.js';
 
 export default
     class Standard<
